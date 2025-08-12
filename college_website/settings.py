@@ -30,8 +30,10 @@ SECRET_KEY = 'django-insecure-j@wu!d^wu#v55d11lqp@-%nhd$@0x1kl7$49&#bt@cm2or)hua
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['react-site-college.onrender.com', 'localhost', '127.0.0.1']
 
-ALLOWED_HOSTS = ['djangopro-r76a.onrender.com', 'localhost', '127.0.0.1']
+
 
 # settings.py
 
