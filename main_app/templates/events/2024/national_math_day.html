@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>National Mathematics Day | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3128/3128297.png" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f9ff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: slideFade 0.6s ease;
+    }
+
+    @keyframes slideFade {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 34px;
+      text-align: center;
+      color: #1e3a8a;
+      margin-bottom: 25px;
+    }
+
+    .content {
+      font-size: 18px;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 25px 0;
+      max-height: 420px;
+      object-fit: cover;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #2563eb, #1d4ed8);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .read-more img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>National Mathematics Day</h1>
+
+    <img src="{% static 'images/national_math_day.jpg' %}" alt="National Mathematics Day Image">
+
+    <div class="content">
+      <p>
+        Aggarwal College celebrated <strong>National Mathematics Day</strong> with great enthusiasm to honor the birth anniversary of the legendary Indian mathematician, Srinivasa Ramanujan. The celebration aimed to raise awareness about the importance of mathematics in day-to-day life and inspire young minds to explore the subject creatively.
+      </p>
+      <p>
+        Various inter-departmental activities like quiz competitions, poster making, mental math races, and puzzles were organized. Eminent mathematicians from nearby institutions delivered guest lectures on Ramanujan’s contributions and the future of applied mathematics in modern science and technology.
+      </p>
+      <p>
+        Students actively participated and showcased remarkable problem-solving skills. The department acknowledged the winners with prizes and certificates to encourage mathematical thinking.
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/national_math_day.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

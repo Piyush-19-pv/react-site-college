@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dental Health Checkup</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2784/2784483.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      color: #0f172a;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffffdd;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: #0284c7;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: #334155;
+      margin-bottom: 25px;
+    }
+
+    .image-box {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.04);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #374151;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #0284c7;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.3);
+    }
+
+    .read-more-btn:hover {
+      background-color: #0369a1;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 16px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Dental Health Checkup</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/DentalHealthCheckupCampbyYoutRedCrossUnits1504251.jpg' %}" alt="Dental Checkup Image">
+    </div>
+
+    <div class="content">
+      Aggarwal College Ballabgarh, in collaboration with a team of certified dental professionals, conducted a free Dental Health Checkup Camp for students and staff. The initiative was aimed at spreading awareness about oral hygiene and early detection of dental issues.
+      <br><br>
+      The event witnessed participation from over 300 individuals, who underwent screening for common dental conditions such as cavities, gum inflammation, plaque build-up, and tooth alignment problems. Students were also educated about the importance of brushing techniques, use of dental floss, and maintaining a balanced diet to prevent tooth decay.
+      <br><br>
+      Dentists provided personalized consultations and shared tips on how to identify symptoms of oral issues early. Free dental kits were distributed, which included a toothbrush, toothpaste, and a tongue cleaner to promote daily hygiene habits.
+      <br><br>
+      Special sessions were organized where students were shown visuals and videos on the long-term effects of poor dental hygiene. The college also took this opportunity to spread awareness about the adverse effects of tobacco, pan masala, and sugary drinks.
+      <br><br>
+      The Principal commended the health team and emphasized that such preventive healthcare events help in promoting a culture of wellness among youth. The camp was a great success and reflected the college’s commitment to the overall well-being of its academic community.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/dental_checkup_report.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

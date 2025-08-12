@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guest Lecture – Political Science | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-yellow-50 text-gray-900 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Image -->
+    <img src="{% static 'images/guest_lecture_polsc.jpg' %}" 
+         alt="Guest Lecture Political Science" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-yellow-700 mb-2">Guest Lecture – Political Science Department</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        The Department of Political Science at Aggarwal College organized an insightful guest lecture aimed at enhancing students’ understanding of modern governance, democratic values, and the evolving political landscape of India and the world.
+        <br><br>
+        The session focused on topics such as the significance of active citizenship, the challenges facing parliamentary democracies, and the relationship between politics and society. Students were introduced to the dynamics of policy-making, constitutional rights, and how institutions function in a democratic setup.
+        <br><br>
+        The resource person also discussed comparative politics and global political ideologies, giving students a broader understanding of international political structures and their impact on national decisions. Real-world examples were used to explain how politics affects everyday life and governance.
+        <br><br>
+        An important segment was dedicated to youth participation in politics, electoral awareness, and the importance of civic duties. The lecture encouraged students to critically evaluate media, political manifestos, and government policies.
+        <br><br>
+        The session concluded with a Q&A segment where students raised questions on contemporary political issues and current affairs. The lecture was not only informative but also thought-provoking, inspiring students to take interest in public service and civil discourse.
+      </p>
+
+      <!-- Read More PDF -->
+      <a href="{% static 'pdf/guest_lecture_polsc.pdf' %}" target="_blank"
+         class="inline-block bg-yellow-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-yellow-700 transition-all duration-300">
+        🏛️ Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

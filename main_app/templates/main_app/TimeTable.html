@@ -1,0 +1,146 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>College Time Table</title>
+  <link rel="stylesheet" href="{% static 'css/timetable.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f8ff;
+  color: #333;
+}
+
+.tt-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.tt-heading {
+  font-size: 2.5rem;
+  color: #203864;
+  margin-bottom: 10px;
+  animation: slideDown 0.7s ease-in-out;
+}
+
+.tt-description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.tt-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.tt-btn {
+  padding: 14px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  color: white;
+}
+
+.win1 {
+  background: #0077b6;
+}
+
+.win1:hover {
+  background: #005f87;
+}
+
+.win2 {
+  background: #52b788;
+}
+
+.win2:hover {
+  background: #3a9f6f;
+}
+
+.tt-note {
+  margin-top: 40px;
+  font-style: italic;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .tt-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+</style>
+</head>
+<body>
+  <a href="/" 
+     style="
+       position: fixed;
+       top: 20px;
+       right: 20px;
+       background: #e63946;
+       color: white;
+       padding: 10px 18px;
+       border-radius: 30px;
+       font-weight: bold;
+       text-decoration: none;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+       transition: all 0.3s ease;
+       z-index: 999;
+     "
+     onmouseover="this.style.transform='scale(1.1)'"
+     onmouseout="this.style.transform='scale(1)'"
+  >🏠 Home</a>
+<section class="tt-container">
+  <h1 class="tt-heading">Aggarwal College – Class Time Table</h1>
+  <p class="tt-description">
+    Below are the academic schedules for different WINs of Aggarwal College. Click the respective buttons to view or download the time table in PDF format.
+  </p>
+
+  <div class="tt-buttons">
+    <a href="{% static 'images/TimeTablewing1even2025.pdf' %}" target="_blank" class="tt-btn win1">
+      📅 WIN - 1 Time Table
+    </a>
+    <a href="{% static 'TimetableEvenSemester2025.pdf' %}" target="_blank" class="tt-btn win2">
+      📅 WIN - 2 Time Table
+    </a>
+  </div>
+
+  <div class="tt-note">
+    <p>🔔 * Please check regularly for any updates or changes to the schedule.</p>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>On Programmes - Aggarwal College Ballabgarh</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdfefe;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .home-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: red;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 30px;
+      font-size: 16px;
+      text-decoration: none;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+
+    .home-btn i {
+      margin-right: 6px;
+    }
+
+    .home-btn:hover {
+      background-color: red;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 100px auto 50px;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #1a5276;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 17px;
+      line-height: 1.7;
+      text-align: justify;
+      margin-bottom: 30px;
+    }
+
+    .btn-download {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn-download a {
+      background-color: red;
+      color: white;
+      padding: 14px 28px;
+      font-size: 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-download a:hover {
+      background-color: #0e6655;
+    }
+
+    @media (max-width: 600px) {
+      .title { font-size: 24px; }
+      .description { font-size: 15px; }
+      .btn-download a { font-size: 16px; padding: 12px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Home Button -->
+  <a href="{% url 'home' %}" class="home-btn">
+    <i class="fas fa-home"></i> Home
+  </a>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="title">On Programmes</div>
+
+    <div class="description">
+      Aggarwal College Ballabgarh offers a variety of academic and vocational programmes tailored to meet the evolving needs of students and society. Our programmes are designed to promote excellence in education, foster skill development, and encourage critical thinking. With strong industry-academic partnerships, our curriculum integrates theory with real-world application to ensure that students are well-prepared for professional success and lifelong learning.
+    </div>
+
+    <div class="btn-download">
+      <a href="{% static 'pdf/Organogram.pdf' %}" target="_blank">
+        <i class="fas fa-file-pdf"></i> View Full PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

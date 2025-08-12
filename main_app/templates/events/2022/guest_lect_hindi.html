@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guest Lecture - Hindi Dept.</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon"/>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .fade-in {
+      animation: fadeIn 0.8s ease-out both;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .hindi-glow {
+      text-shadow: 0 0 6px #f97316;
+    }
+  </style>
+</head>
+<body class="bg-orange-50 dark:bg-gray-900 text-gray-900 dark:text-white p-6 min-h-screen flex items-center justify-center">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-full font-semibold shadow-lg transition z-50">
+    🏠 Home
+  </a>
+
+  <!-- Main Card -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 fade-in">
+
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-orange-600 hindi-glow mb-6">
+      Guest Lecture by Hindi Department
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/guest_lect_hindi.jpg' %}" alt="Guest Lecture Hindi Dept" class="rounded-xl w-full md:w-3/4 shadow-xl"/>
+    </div>
+
+    <!-- Description -->
+    <div class="text-base md:text-lg leading-relaxed text-justify">
+      <p class="mb-4">
+        हिंदी विभाग द्वारा <strong>अतिथि व्याख्यान</strong> का आयोजन किया गया, जिसमें <strong>डॉ. संजय मिश्रा</strong> (कवि एवं आलोचक, कुरुक्षेत्र विश्वविद्यालय) ने <em>"समकालीन हिंदी साहित्य और समाज"</em> विषय पर व्याख्यान दिया।
+      </p>
+      <p class="mb-4">
+        उन्होंने युवाओं को साहित्यिक चेतना और भाषा की महत्ता से अवगत कराया। छात्रों को लेखन कौशल, आलोचनात्मक चिंतन और समकालीन लेखन की दिशा में मार्गदर्शन प्राप्त हुआ।
+      </p>
+      <p class="mb-4">
+        व्याख्यान अत्यंत प्रभावशाली रहा और छात्रों ने प्रश्नोत्तर सत्र में उत्साहपूर्वक भाग लिया।
+      </p>
+    </div>
+
+    <!-- PDF Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/guest_lect_hindi.pdf' %}" target="_blank"
+         class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>

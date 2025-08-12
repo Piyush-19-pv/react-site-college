@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Environment Protection - Aggarwal College</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .slide-fade {
+      animation: slideFadeIn 1s ease-out;
+    }
+
+    @keyframes slideFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .glow-text {
+      text-shadow: 0 0 6px #10b981, 0 0 12px #047857;
+    }
+  </style>
+</head>
+<body class="bg-emerald-50 dark:bg-gray-900 text-gray-900 dark:text-white p-6 flex justify-center items-center min-h-screen">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full shadow-md transition z-50">
+    🏠 Home
+  </a>
+
+  <!-- Content Card -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6 slide-fade">
+
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-emerald-700 mb-6 glow-text">
+      Environment Protection Drive
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/env_protection.jpg' %}" alt="Environment Protection" class="rounded-lg w-full md:w-2/3 shadow-lg"/>
+    </div>
+
+    <!-- Description -->
+    <div class="text-justify text-base md:text-lg leading-relaxed">
+      <p class="mb-4">
+        Aggarwal College initiated a powerful <strong>Environment Protection Drive</strong> to spread awareness about conservation practices, pollution control, and sustainability. The event brought together students, staff, and volunteers to pledge action for safeguarding nature.
+      </p>
+      <p class="mb-4">
+        Activities included poster making, a green rally, tree plantation, and a panel discussion on renewable energy. Distinguished speakers from the Forest Department emphasized the importance of collective responsibility toward reducing environmental degradation.
+      </p>
+      <p class="mb-4">
+        The event inspired participants to take actionable steps like reducing plastic use, saving energy, and promoting biodiversity.
+      </p>
+    </div>
+
+    <!-- Read More Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/env_protection.pdf' %}" target="_blank"
+         class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>

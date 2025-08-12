@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Academic Calendar - Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/calendar.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8fbff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.calendar-section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+}
+
+.calendar-title {
+  font-size: 2.8rem;
+  color: #114b8b;
+  margin-bottom: 10px;
+}
+
+.calendar-intro {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.calendar-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.calendar-buttons a {
+  background: #0a66c2;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-buttons a:hover {
+  background: #004b8a;
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .calendar-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+</style>
+</head>
+<body>
+  <a href="/" 
+     style="
+       position: fixed;
+       top: 20px;
+       right: 20px;
+       background: #e63946;
+       color: white;
+       padding: 10px 18px;
+       border-radius: 30px;
+       font-weight: bold;
+       text-decoration: none;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+       transition: all 0.3s ease;
+       z-index: 999;
+     "
+     onmouseover="this.style.transform='scale(1.1)'"
+     onmouseout="this.style.transform='scale(1)'"
+  >🏠 Home</a>
+  <section class="calendar-section">
+    <h1 class="calendar-title">Academic Calendar</h1>
+    <p class="calendar-intro">
+      Here you can find the official academic calendars of Aggarwal College for various years and sessions. Click on any calendar to view or download the PDF in a new tab.
+    </p>
+
+    <div class="calendar-buttons">
+      <a href="{% static 'pdf/AnnualCalendar2025.pdf' %}" target="_blank">Annual Calendar Jan–May 2025</a>
+      <a href="{% static 'pdf/academicCalendarjundec2024.pdf' %}" target="_blank">Annual Calendar June–Dec 2024</a>
+      <a href="{% static 'pdf/AnnualCalendar2024.pdf' %}" target="_blank">Annual Calendar Jan–May 2024</a>
+      <a href="{% static 'pdf/4.pdf'%}" target="_blank">Annual Calendar Jan–Dec 2023</a>
+      <a href="{% static 'pdf/5.pdf' %}" target="_blank">Annual Calendar Jan–Dec 2022</a>
+      <a href="{% static 'pdf/6.pdf' %}" target="_blank">Annual Calendar Jan–May 2021</a>
+      <a href="{% static 'pdf/7.pdf' %}" target="_blank">Annual Calendar Jan–May 2020</a>
+      <a href="{% static 'pdf/8.pdf'  %}" target="_blank">Annual Calendar July–Dec 2019</a>
+      <a href="{% static 'pdf/8.pdf' %}" target="_blank">Annual Calendar Jan–April 2019</a>
+      <a href="{% static 'pdf/9.pdf' %}" target="_blank">Annual Calendar July–Dec 2018</a>
+      <a href="{% static 'pdf/9.pdf' %}" target="_blank">Annual Calendar Jan–April 2018</a>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentary on POSH</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1049/1049028.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f1f5f9, #e2e8f0);
+      color: #0f172a;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffffde;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      animation: slideIn 1s ease;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: #be123c;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: #475569;
+      margin-bottom: 25px;
+    }
+
+    .image-box {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.5s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.04);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #374151;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #be123c;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(190, 18, 60, 0.4);
+    }
+
+    .read-more-btn:hover {
+      background-color: #9f1239;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 16px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Documentary on POSH</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/DocumentaryICC0404251.jpg' %}" alt="POSH Awareness Image">
+    </div>
+
+    <div class="content">
+      In a step toward ensuring a safe, respectful, and inclusive environment, Aggarwal College Ballabgarh organized a **Documentary Screening on POSH (Prevention of Sexual Harassment)** at the workplace. This initiative was led by the ICC (Internal Complaints Committee) under the guidance of college authorities.
+      <br><br>
+      The event focused on spreading awareness about gender sensitivity, rights of women at the workplace, and institutional mechanisms available to address grievances. The documentary highlighted real-life narratives, legal frameworks such as the POSH Act 2013, and the role of ICCs in educational and corporate settings.
+      <br><br>
+      Students and faculty members attended the screening in large numbers, followed by an open discussion on how colleges can foster a culture of respect, dignity, and zero-tolerance for harassment. The ICC also provided handouts and FAQs related to reporting mechanisms, confidentiality rights, and procedural fairness.
+      <br><br>
+      A key highlight of the event was a short awareness quiz conducted post-screening, helping attendees reflect on their understanding of the POSH law and ethics. Informational posters were displayed across the campus to reinforce key takeaways from the session.
+      <br><br>
+      The college Principal appreciated the ICC’s initiative, emphasizing that educational spaces must remain safe and empowering for every individual regardless of gender. The event served not only as a legal orientation but also a cultural message that safety and dignity are everyone's right.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/posh_documentary_report.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NSS Day | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3409/3409541.png" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3f4f6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeSlide 0.6s ease;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 34px;
+      text-align: center;
+      color: #b91c1c;
+      margin-bottom: 25px;
+    }
+
+    .content {
+      font-size: 18px;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 25px 0;
+      max-height: 420px;
+      object-fit: cover;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #dc2626, #991b1b);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .read-more img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(220, 38, 38, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>NSS Day</h1>
+
+    <img src="{% static 'images/nss_day.jpg' %}" alt="NSS Day Celebration">
+
+    <div class="content">
+      <p>
+        Aggarwal College celebrated <strong>NSS Day</strong> to acknowledge the selfless service and spirit of the National Service Scheme volunteers. The event served as a tribute to the unwavering commitment of students working towards community welfare and national development.
+      </p>
+      <p>
+        The program began with an inspiring speech from the NSS Coordinator highlighting the core values of social responsibility, civic duty, and service. Volunteers shared their experiences from camps, cleanliness drives, and awareness rallies conducted throughout the year.
+      </p>
+      <p>
+        A special felicitation ceremony was held for outstanding volunteers followed by cultural performances emphasizing social themes like education, hygiene, and health. The event concluded with a pledge reaffirming the NSS motto: <em>“Not Me But You.”</em>
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/nss_day.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

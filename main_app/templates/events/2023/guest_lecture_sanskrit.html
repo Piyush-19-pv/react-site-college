@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guest Lecture – Sanskrit | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-orange-50 text-gray-800 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Static Image -->
+    <img src="{% static 'images/guest_lecture_sanskrit.jpg' %}" 
+         alt="Guest Lecture Sanskrit" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-orange-700 mb-2">Guest Lecture – Sanskrit Department</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        The Sanskrit Department of Aggarwal College recently organized an intellectually enriching guest lecture to promote classical learning and deeper appreciation of Sanskrit literature. The session aimed to connect students with the timeless knowledge embedded in ancient Indian scriptures and texts.
+        <br><br>
+        The lecture explored key themes in Vedic literature, classical poetry, and Sanskrit grammar. The importance of Sanskrit in understanding the roots of Indian culture, philosophy, and linguistics was emphasized throughout the discussion.
+        <br><br>
+        Students were introduced to the application of Sanskrit in modern academic research, computational linguistics, and yoga studies. The event provided valuable insights into how the language serves as a gateway to India's intellectual heritage and spiritual traditions.
+        <br><br>
+        The interactive nature of the session helped students actively engage with ancient verses and meanings, enhancing both their linguistic skills and cultural knowledge. Discussions on Panini’s grammar, Kalidasa’s literary excellence, and Sanskrit’s role in preserving knowledge through oral tradition were highlights of the event.
+        <br><br>
+        The lecture concluded with a motivating message to preserve and promote Sanskrit in contemporary education. Students expressed keen interest in further exploring Sanskrit texts and participating in related academic activities.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/guest_lecture_sanskrit.pdf' %}" target="_blank"
+         class="inline-block bg-orange-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-orange-700 transition-all duration-300">
+        📜 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

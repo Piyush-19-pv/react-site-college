@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aggarwal College Workshops</title>
+  <link rel="icon" type="image/png" href="{% static 'icons/favicon-workshop.png' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+      padding: 40px 16px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 2.2rem;
+      color: #1e3a8a;
+    }
+
+    .header p {
+      font-size: 1rem;
+      color: #4b5563;
+    }
+
+    .workshop-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .workshop-button {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 12px;
+      padding: 14px 18px;
+      text-decoration: none;
+      color: #111827;
+      font-weight: 500;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .workshop-button:hover {
+      background: #e0f2fe;
+      transform: translateY(-3px);
+    }
+
+    .workshop-button i {
+      margin-right: 12px;
+      color: #10b981;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .home-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #ef4444;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      z-index: 999;
+    }
+
+    .home-button:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 500px) {
+      .header h1 {
+        font-size: 1.5rem;
+      }
+
+      .workshop-button {
+        padding: 12px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="/" class="home-button">🏠 Home</a>
+
+  <div class="container">
+    <div class="header">
+      <h1>🏫 Aggarwal College Workshops</h1>
+      <p>Explore our knowledge-driven events, workshops, and training programs organized by various departments.</p>
+    </div>
+
+    <div class="workshop-buttons">
+      <a href="{% static 'workshops/workshop-1.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> ONE DAY WORKSHOP ON EFFECTIVE USE OF LEARNING MANAGEMENT SYSTEM
+      </a>
+      <a href="{% static 'workshops/workshop-2.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> ONE DAY WORKSHOP ON FRAMEWORK OF SPATIAL MANAGEMENT AT WORKPLACE
+      </a>
+      <a href="{% static 'workshops/workshop-3.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> ONE DAY WORKSHOP ON STRESS & SILENCE FROM COM. SC. DEPT
+      </a>
+      <a href="{% static 'workshops/workshop-4.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> ONE DAY WORKSHOP ON TRANSFORM TRANSPORT GREEN SUSTAIN BY COM. S.C. & MATH DEPT
+      </a>
+      <a href="{% static 'workshops/workshop-5.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> ONE DAY WORKSHOP ON DIGITAL BANKING AWARENESS
+      </a>
+      <a href="{% static 'workshops/workshop-6.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> ONE DAY WORKSHOP ON SUPPLY AND LOGICAL BASED SOLUTIONS
+      </a>
+      <a href="{% static 'workshops/workshop-7.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> ONE DAY WORKSHOP ON THE ART OF LIVING UNDER STRESS
+      </a>
+      <a href="{% static 'workshops/workshop-8.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> ONE DAY WORKSHOP ON STRESS RELIEF - COMMERCE DEPT
+      </a>
+      <a href="{% static 'workshops/workshop-9.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> ONE DAY ORIENTATION WORKSHOP ON RECOGNITION WRITING AND PUBLISHING BY DEPARTMENT OF CHEMISTRY
+      </a>
+      <a href="{% static 'workshops/workshop-10.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> ORIENTATION ON SOFTWARE DEVELOPMENT AND METHODOLOGY BY CHEM DEPARTMENT
+      </a>
+       <a href="{% static 'workshops/workshop-1.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> ONE DAY WORKSHOP ON DIFFERENT DIMENSIONS OF RESEARCH METHODOLOGY BY HINDI DEPT
+      </a>
+      <a href="{% static 'workshops/workshop-2.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> ONE DAY WORKSHOP FOR PROMOTING INTELLECTUAL PROPERTY RIGHTS CULTURE IN HEIS
+      </a>
+      <a href="{% static 'workshops/workshop-3.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> ONE DAY WORKSHOP ON TESTING OF WASTE WATER UNDER INSTITUTION INNOVATION COUNCIL BY MATHS DEPT
+      </a>
+      <a href="{% static 'workshops/workshop-4.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> ONE DAY WORKSHOP ON ROLE OF INTELLECTUAL PROPERTY RIGHTS (IPRS)
+      </a>
+      <a href="{% static 'workshops/workshop-5.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> ONE DAY WORKSHOP ON SOLAR RESEARCH
+      </a>
+      <a href="{% static 'workshops/workshop-6.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> FIVE DAY WORKSHOP ON FUNDAMENTALS OF TRANSFORMER FOR NON-TEACHING STAFF BY COMPUTER SCIENCE DEPT
+      </a>
+      <a href="{% static 'workshops/workshop-7.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> WORKSHOP ON ETHICAL HACKING BY COMPUTER SCIENCE DEPT
+      </a>
+      <a href="{% static 'workshops/workshop-8.pdf' %}" class="workshop-button" target="_blank">
+        <i class="fas fa-book-open"></i> WORKSHOP ON "DEBATE ABOUT INTELLECTUAL PROPERTY RIGHTS"
+      </a>
+    </div>
+  </div>
+</body>
+</html>

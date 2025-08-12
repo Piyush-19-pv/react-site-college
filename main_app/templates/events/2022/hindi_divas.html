@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>हिन्दी दिवस</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon"/>
+
+  <style>
+    .fade-in {
+      animation: fadeInUp 1s ease-out both;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .glow {
+      text-shadow: 0 0 6px rgba(204, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body class="bg-yellow-50 dark:bg-gray-900 text-gray-800 dark:text-white p-6 min-h-screen flex items-center justify-center">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full shadow-lg font-semibold z-50">
+    🏠 होम
+  </a>
+
+  <!-- Main Card -->
+  <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 max-w-4xl w-full fade-in">
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-red-700 glow mb-6">
+      हिन्दी दिवस समारोह
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/hindi_divas.jpg' %}" alt="Hindi Divas" class="rounded-xl w-full md:w-3/4 shadow-md"/>
+    </div>
+
+    <!-- Description -->
+    <div class="text-base md:text-lg leading-relaxed text-justify">
+      <p class="mb-4">
+        हमारे महाविद्यालय में <strong>हिन्दी दिवस</strong> बड़े हर्षोल्लास के साथ मनाया गया। इस अवसर पर विभिन्न प्रतियोगिताएँ जैसे <em>निबंध लेखन, वाद-विवाद</em> एवं <em>काव्य पाठ</em> का आयोजन किया गया जिसमें विद्यार्थियों ने उत्साहपूर्वक भाग लिया।
+      </p>
+      <p class="mb-4">
+        कार्यक्रम का उद्देश्य हिंदी भाषा के प्रति सम्मान और गौरव की भावना को जाग्रत करना था। मुख्य वक्ता <strong>डॉ. कविता शर्मा</strong> ने हिंदी की वैश्विक महत्ता पर प्रकाश डाला।
+      </p>
+      <p class="mb-4">
+        छात्रों ने सांस्कृतिक प्रस्तुतियाँ भी दीं और पूरे आयोजन में भाषा प्रेम की झलक दिखाई दी।
+      </p>
+    </div>
+
+    <!-- Read More Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/hindi_divas.pdf' %}" target="_blank"
+         class="bg-red-700 hover:bg-red-800 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 पूरी रिपोर्ट पढ़ें
+      </a>
+    </div>
+  </div>
+</body>
+</html>

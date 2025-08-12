@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hemoglobin Test | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8f0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #c62828;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin: 25px 0;
+    }
+
+    .content {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    .btn-read {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #d32f2f, #e57373);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .btn-read img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+
+    .btn-read:hover {
+      transform: scale(1.06);
+      box-shadow: 0 6px 15px rgba(211, 47, 47, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Hemoglobin Test Camp</h1>
+
+    <img src="{% static 'images/hemoglobin_test.jpg' %}" alt="Hemoglobin Test Camp">
+
+    <div class="content">
+      <p>
+        The <strong>Hemoglobin Test Camp</strong> organized at <strong>Aggarwal College</strong> aimed to raise awareness regarding anemia and general health conditions related to hemoglobin levels, especially among young students.
+      </p>
+      <p>
+        The camp was conducted in collaboration with local healthcare professionals and witnessed the participation of hundreds of students and faculty members. Proper guidance was provided on nutrition and lifestyle changes to maintain healthy hemoglobin levels.
+      </p>
+      <p>
+        Each participant was provided their test results with recommendations for further steps in case of any deficiencies. The health cell of the college coordinated the event ensuring smooth execution.
+      </p>
+      <p>
+        It was a remarkable initiative toward promoting health consciousness and proactive medical check-ups in the academic environment.
+      </p>
+    </div>
+
+    <a class="btn-read" href="{% static 'pdfs/hemoglobin_test.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

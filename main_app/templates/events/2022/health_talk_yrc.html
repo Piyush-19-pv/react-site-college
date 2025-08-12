@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Talk – YRC</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon"/>
+
+  <style>
+    .fade-in {
+      animation: fadeInUp 0.8s ease-out both;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .glow {
+      text-shadow: 0 0 6px rgba(255,0,0,0.5);
+    }
+  </style>
+</head>
+<body class="bg-red-50 dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen flex items-center justify-center p-6">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full shadow-lg font-semibold z-50">
+    🏠 Home
+  </a>
+
+  <!-- Main Content -->
+  <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 max-w-4xl w-full fade-in">
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-red-700 glow mb-6">
+      Health Talk by Youth Red Cross
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/health_talk_yrc.jpg' %}" alt="Health Talk YRC" class="rounded-xl w-full md:w-3/4 shadow-md"/>
+    </div>
+
+    <!-- Description -->
+    <div class="text-base md:text-lg leading-relaxed text-justify">
+      <p class="mb-4">
+        Youth Red Cross (YRC) Unit of the college organized a health talk session titled <strong>“Your Health is Your Wealth”</strong>. The talk was delivered by <strong>Dr. Seema Bhatia</strong>, a renowned public health expert.
+      </p>
+      <p class="mb-4">
+        She discussed vital topics such as mental health, lifestyle diseases, hygiene practices, and stress management. The session emphasized building healthy habits and creating awareness about common health issues faced by youth.
+      </p>
+      <p class="mb-4">
+        Students actively participated in the interactive Q&A session and appreciated the initiative taken by the YRC team for enhancing health consciousness.
+      </p>
+    </div>
+
+    <!-- Read More PDF Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/health_talk_yrc.pdf' %}" target="_blank"
+         class="bg-red-700 hover:bg-red-800 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+  </div>
+</body>
+</html>

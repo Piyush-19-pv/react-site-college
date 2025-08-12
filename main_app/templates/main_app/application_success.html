@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Application Submitted - Thank You</title>
+
+  <!-- Lottie player (CDN) -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <style>
+    :root{
+      --g1: #004e92;
+      --g2: #000428;
+      --accent: #ff416c;
+      --glass: rgba(255,255,255,0.06);
+      --white-trans: rgba(255,255,255,0.9);
+    }
+
+    *{box-sizing: border-box; margin:0; padding:0;}
+    html,body{height:100%;}
+    body{
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(135deg, var(--g1), var(--g2));
+      color: white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:30px;
+    }
+
+    .card{
+      width:100%;
+      max-width:920px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border-radius:18px;
+      padding:28px;
+      display:flex;
+      gap:24px;
+      align-items:center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.06);
+      animation: floatUp 0.9s cubic-bezier(.2,.9,.3,1);
+    }
+
+    /* Left: animation */
+    .anim-wrap{
+      flex: 0 0 320px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    lottie-player, .gif-fallback {
+      width:320px;
+      height:320px;
+      display:block;
+    }
+
+    .gif-fallback{
+      display:none; /* shown only if lottie fails via JS */
+      object-fit:cover;
+      border-radius: 12px;
+    }
+
+    /* Right: message */
+    .msg{
+      flex:1;
+      padding-right:6px;
+    }
+
+    h1{
+      font-size:28px;
+      color:var(--white-trans);
+      margin-bottom:10px;
+      letter-spacing:0.6px;
+    }
+
+    p{
+      color: rgba(255,255,255,0.88);
+      margin-bottom:18px;
+      line-height:1.5;
+      font-size:16px;
+    }
+
+    .meta{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+
+    .meta .chip{
+      background: rgba(255,255,255,0.04);
+      padding:8px 12px;
+      border-radius:999px;
+      border: 1px solid rgba(255,255,255,0.03);
+      font-size:14px;
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+
+    .btns{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:12px 18px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      transition:all .22s ease;
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+    }
+
+    .btn-primary{
+      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+      color:white;
+      box-shadow: 0 6px 20px rgba(255,65,108,0.24);
+      border:none;
+    }
+    .btn-primary:hover{ transform: translateY(-3px); box-shadow:0 12px 30px rgba(255,65,108,0.32); }
+
+    .btn-link{
+      background: transparent;
+      color: rgba(255,255,255,0.9);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding:10px 16px;
+    }
+    .btn-link:hover{ background: rgba(255,255,255,0.03); transform: translateY(-2px); }
+
+    .small-note{
+      margin-top:16px;
+      font-size:13px;
+      color: rgba(255,255,255,0.65);
+    }
+
+    @keyframes floatUp{
+      from { opacity:0; transform: translateY(20px) scale(.995); }
+      to { opacity:1; transform: translateY(0) scale(1); }
+    }
+
+    /* Responsive */
+    @media (max-width:880px){
+      .card{flex-direction:column; padding:20px;}
+      .anim-wrap{flex:unset;}
+      lottie-player, .gif-fallback{width:260px; height:260px;}
+      h1{font-size:22px;}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" role="region" aria-labelledby="thankTitle">
+    <div class="anim-wrap" aria-hidden="false">
+      <!-- Lottie animation JSON (celebration). It autoplays + loops -->
+      <lottie-player
+        id="successLottie"
+        src="https://assets10.lottiefiles.com/packages/lf20_jbrw3hcz.json"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay>
+      </lottie-player>
+
+      <!-- GIF fallback (hidden by default) -->
+      <img class="gif-fallback" id="gifFallback" src="https://media.giphy.com/media/111ebonMs90YLu/giphy.gif" alt="Thank you animation fallback">
+    </div>
+
+    <div class="msg">
+      <h1 id="thankTitle">🎉 Application Submitted Successfully!</h1>
+      <p>Thank you for applying. Your application has been received and our admissions team will contact you within 2–3 working days. Keep your phone and WhatsApp active for updates.</p>
+
+      <div class="meta">
+        <div class="chip"><i class="fa-regular fa-circle-check"></i> Submission ID: <strong>&nbsp;{{ submission_id|default:"—" }}</strong></div>
+        <div class="chip"><i class="fa-regular fa-clock"></i> Estimated response: <strong>&nbsp;2–3 days</strong></div>
+      </div>
+
+      <div class="btns">
+        <!-- Home button (adjust URL as needed) -->
+        <a href="{% url 'home' %}" class="btn btn-primary"><i class="fa-solid fa-house"></i> Go to Home</a>
+
+        <!-- Download copy (optional) - you can wire this up to a view that returns PDF -->
+        <a href="#" onclick="alert('Download feature not configured'); return false;" class="btn btn-link"><i class="fa-solid fa-download"></i> Download Copy</a>
+      </div>
+
+      <div class="small-note">If you don't see an email, check your spam folder. For any queries, contact admissions at <strong>admissions@example.com</strong>.</div>
+    </div>
+  </div>
+
+
+  <!-- FontAwesome for icons (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" integrity="" crossorigin="anonymous"></script>
+
+  <script>
+    // Simple fallback: if lottie-player doesn't load within 3s, show gif
+    const lottie = document.getElementById('successLottie');
+    const gif = document.getElementById('gifFallback');
+
+    let loaded = false;
+    // lottie-player fires 'load' event when ready
+    lottie.addEventListener && lottie.addEventListener('load', ()=> { loaded = true; });
+
+    // If not loaded within 3 seconds, use fallback GIF
+    setTimeout(()=> {
+      if (!loaded){
+        lottie.style.display = 'none';
+        gif.style.display = 'block';
+      }
+    }, 3000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eye Checkup Camp - Aggarwal College</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon"/>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .fade-slide {
+      animation: fadeInSlide 1s ease-in-out;
+    }
+
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .text-glow {
+      text-shadow: 0 0 6px #0ea5e9, 0 0 10px #0284c7;
+    }
+  </style>
+</head>
+<body class="bg-sky-50 dark:bg-gray-900 text-gray-800 dark:text-white p-6 flex justify-center items-center min-h-screen">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded-full shadow-md transition z-50">
+    🏠 Home
+  </a>
+
+  <!-- Main Content Card -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 fade-slide">
+
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-sky-700 mb-6 text-glow">
+      Eye Checkup Camp
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/eye_checkup.jpg' %}" alt="Eye Checkup Camp" class="rounded-lg w-full md:w-2/3 shadow-lg" />
+    </div>
+
+    <!-- Description -->
+    <div class="text-justify text-base md:text-lg leading-relaxed">
+      <p class="mb-4">
+        Aggarwal College organized a free <strong>Eye Checkup Camp</strong> in collaboration with reputed ophthalmologists and health professionals. The aim was to promote vision awareness and offer accessible eye care services to students and staff.
+      </p>
+      <p class="mb-4">
+        During the event, participants underwent visual acuity tests, eye pressure checks, and counseling on common eye problems like dry eyes, screen strain, and refractive errors. Eyeglasses were recommended where necessary.
+      </p>
+      <p class="mb-4">
+        The initiative was highly appreciated and helped many identify unnoticed issues. The college plans to conduct more health camps regularly.
+      </p>
+    </div>
+
+    <!-- Read More Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/eye_checkup.pdf' %}" target="_blank"
+         class="inline-block bg-sky-600 hover:bg-sky-700 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>

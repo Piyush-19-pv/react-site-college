@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Awareness Programme - Aggarwal College</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .glow {
+      text-shadow: 0 0 8px #facc15, 0 0 14px #facc15;
+    }
+  </style>
+</head>
+<body class="bg-yellow-50 dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen p-6 flex items-center justify-center">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 z-50">
+    🏠 Home
+  </a>
+
+  <!-- Content Card -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-6 fade-in">
+
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-yellow-600 glow mb-6">
+      Career Awareness Programme
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/career_awareness.jpg' %}" alt="Career Awareness Event" class="rounded-xl w-full md:w-2/3 shadow-lg" />
+    </div>
+
+    <!-- Text Content -->
+    <div class="text-justify text-base md:text-lg leading-relaxed">
+      <p class="mb-4">
+        Aggarwal College organized an insightful <strong>Career Awareness Programme</strong> to guide students towards meaningful career paths and help them align their academic journey with future aspirations. The event was conducted in collaboration with experienced career counselors and industry professionals.
+      </p>
+      <p class="mb-4">
+        The session included expert talks, skill development strategies, resume building tips, and interactive Q&A segments. Students received clarity on diverse fields like civil services, corporate jobs, higher education, startups, and creative industries.
+      </p>
+      <p class="mb-4">
+        The event motivated students to plan proactively and provided valuable resources for career planning. Certificates of participation were distributed at the end of the session.
+      </p>
+    </div>
+
+    <!-- Read More PDF Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/career_awareness.pdf' %}" target="_blank"
+         class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded-full transform transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+  </div>
+</body>
+</html>

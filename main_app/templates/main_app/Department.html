@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Departments - Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7faff;
+  color: #333;
+  margin: 0;
+}
+
+.dept-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.dept-title {
+  font-size: 2.7rem;
+  color: #1d3557;
+  margin-bottom: 15px;
+  animation: fadeInDown 1s ease;
+}
+
+.dept-intro {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #555;
+  animation: fadeInUp 1s ease;
+}
+
+.dept-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dept-buttons a {
+  background: #0077b6;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dept-buttons a:hover {
+  background: #005f87;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .dept-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <a href="/" 
+  style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #e63946;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 999;
+  "
+  onmouseover="this.style.transform='scale(1.1)'"
+  onmouseout="this.style.transform='scale(1)'"
+>🏠 Home</a>
+  <section class="dept-container">
+    <h1 class="dept-title">Departments at Aggarwal College</h1>
+    <p class="dept-intro">
+      Our college offers a wide range of academic departments aimed at delivering quality education and research opportunities across disciplines. Select a department below to explore more.
+    </p>
+
+    <div class="dept-buttons">
+      <a href="{% url 'department_computer_science' %}" target="_blank">Department of Computer Science</a>
+      <a href="{% url 'department_commerce' %}" target="_blank">Department of Commerce</a>
+      <a href="{% url 'department_economics' %}" target="_blank">Department of Economics</a>
+      <a href="{% url 'department_hindi' %}" target="_blank">Department of Hindi</a>
+      <a href="{% url 'department_management' %}" target="_blank">Department of Management</a>
+      <a href="{% url 'department_mathematics' %}" target="_blank">Department of Mathematics</a>
+      <a href="{% url 'department_physics' %}" target="_blank">Department of Physics</a>
+      <a href="{% url 'department_physical_education' %}" target="_blank">Department of Physical Education</a>
+      <a href="{% url 'department_environmental_science' %}" target="_blank">Department of Environmental Science</a>
+      <a href="{% url 'department_chemistry' %}" target="_blank">Department of Chemistry</a>
+      <a href="{% url 'department_sanskrit' %}" target="_blank">Department of Sanskrit</a>
+      <a href="{% url 'department_history' %}" target="_blank">Department of History</a>
+      <a href="{% url 'department_vocational_studies' %}" target="_blank">Department of Vocational Studies</a>
+      <a href="{% url 'department_library_science' %}" target="_blank">Department of Library Science</a>
+    </div>
+  </section>
+
+</body>
+</html>

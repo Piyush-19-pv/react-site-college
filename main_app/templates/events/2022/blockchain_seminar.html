@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blockchain Seminar - Aggarwal College</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animation Style -->
+  <style>
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .glow {
+      text-shadow: 0 0 10px #0ea5e9, 0 0 20px #0ea5e9;
+    }
+  </style>
+</head>
+<body class="bg-blue-50 dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen flex flex-col items-center justify-center p-6">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 z-50">
+    🏠 Home
+  </a>
+
+  <!-- Main Content -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 shadow-xl rounded-2xl overflow-hidden p-6 fade-in">
+
+    <!-- Heading -->
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-blue-600 glow mb-4">
+      Blockchain Seminar 2023
+    </h1>
+
+    <!-- Image Section -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/blockchain.jpg' %}" alt="Blockchain Seminar" class="rounded-xl w-full md:w-2/3 shadow-md" />
+    </div>
+
+    <!-- Description -->
+    <div class="text-justify text-base md:text-lg leading-relaxed">
+      <p class="mb-4">
+        Aggarwal College recently organized an enlightening <strong>Blockchain Seminar</strong> aimed at educating students on the future of decentralized technology. Industry experts from the blockchain sector were invited to share their knowledge and real-world insights.
+      </p>
+      <p class="mb-4">
+        The session covered topics such as cryptocurrencies, smart contracts, NFTs, and how blockchain is revolutionizing finance, education, and governance. Students also got a chance to participate in a live Q&A with speakers.
+      </p>
+      <p class="mb-4">
+        The seminar proved to be highly interactive and informative, providing students with a strong foundation in one of the fastest-growing fields in technology. Certificates were distributed to all attendees.
+      </p>
+    </div>
+
+    <!-- PDF Report Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/blockchain_seminar.pdf' %}" target="_blank"
+         class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition-transform transform hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+  </div>
+</body>
+</html>

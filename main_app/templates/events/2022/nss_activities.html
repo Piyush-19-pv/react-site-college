@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NSS Activities</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon"/>
+
+  <style>
+    .fade-in {
+      animation: fadeInUp 0.9s ease-in-out both;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen flex items-center justify-center p-6">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full font-semibold shadow-md z-50">
+    🏠 Home
+  </a>
+
+  <!-- Main Content -->
+  <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 max-w-4xl w-full fade-in">
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-red-600 mb-6">
+      Activities by NSS
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'aids4.jpg' %}" alt="NSS Activities" class="rounded-xl w-full md:w-3/4 shadow-lg"/>
+    </div>
+
+    <!-- Text Content -->
+    <div class="text-base md:text-lg leading-relaxed text-justify">
+      <p class="mb-4">
+        The NSS unit of Aggarwal College has consistently engaged students in nation-building activities. With a vision of community service and personality development, various events were conducted throughout the year.
+      </p>
+      <p class="mb-4">
+        These included cleanliness drives, plantation programs, awareness campaigns on health and hygiene, blood donation camps, and visits to villages under the "Adopt a Village" initiative. Students participated enthusiastically, learning the values of discipline, teamwork, and social responsibility.
+      </p>
+      <p class="mb-4">
+        NSS remains an integral part of student life, helping young minds grow into responsible citizens dedicated to community welfare.
+      </p>
+    </div>
+
+    <!-- Read More Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/nss_activities.pdf' %}" target="_blank"
+         class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-full transition-transform transform hover:scale-105">
+        📄 View Full Report
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

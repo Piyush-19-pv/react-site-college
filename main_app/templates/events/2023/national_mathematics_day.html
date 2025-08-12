@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>National Mathematics Day | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-gray-900 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Image -->
+    <img src="{% static 'images/national_math_day.jpg' %}" 
+         alt="National Mathematics Day" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-indigo-700 mb-2">National Mathematics Day</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        Aggarwal College celebrated National Mathematics Day with great academic spirit and creativity, paying tribute to the legendary mathematician Srinivasa Ramanujan. The event aimed to ignite curiosity and promote mathematical thinking among students across various departments.
+        <br><br>
+        A mathematics exhibition was set up where students presented innovative models, puzzles, and posters that explained complex mathematical concepts in simplified forms. From geometry and algebra to modern applications in data science, the exhibits covered diverse areas.
+        <br><br>
+        Competitions like Math Quiz, Sudoku Challenges, and Mental Math Races were conducted to test logical reasoning and problem-solving speed. Winners were recognized with appreciation certificates and trophies.
+        <br><br>
+        A special seminar was held where the importance of mathematics in daily life and technological advancements was discussed. Students were also introduced to Ramanujan’s extraordinary contributions such as infinite series, continued fractions, and his collaboration with Hardy.
+        <br><br>
+        The event concluded with a positive message that mathematics is not just a subject but a way of thinking — helping to build analytical minds and better decision-makers. The celebration left students motivated to explore the subject more deeply.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/national_math_day.pdf' %}" target="_blank"
+         class="inline-block bg-indigo-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-indigo-700 transition-all duration-300">
+        ➕ Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

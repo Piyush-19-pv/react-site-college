@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trip – Comp Sc & Mgmt Dept</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/854/854894.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f0fff4, #ecfdf5);
+      color: #1e293b;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      animation: fadeSlide 0.8s ease-in-out;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #10b981;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 17px;
+      color: #64748b;
+      margin-bottom: 30px;
+    }
+
+    .image-box {
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.05);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #334155;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #10b981;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(16, 185, 129, 0.3);
+    }
+
+    .read-more-btn:hover {
+      background-color: #047857;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 15px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Trip – Comp Sc & Mgmt Dept</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/TripToSurajGarhFarm2603251.jpg' %}" alt="Trip">
+    </div>
+
+    <div class="content">
+      The **Computer Science and Management Departments** of Aggarwal College jointly organized an educational trip aimed at combining academic exposure with cultural enrichment. The trip included visits to tech companies, management institutions, and historical sites that aligned with the subjects and aspirations of both departments.
+      <br><br>
+      The trip itinerary included destinations known for innovation and entrepreneurship. Students visited a software development firm where they interacted with industry professionals who shared insights on real-world software development life cycles, emerging technologies like AI/ML, and startup journeys. The management students explored an incubation centre and engaged in live business case discussions.
+      <br><br>
+      Apart from academic exposure, the students enjoyed team-building activities, cultural programs, and sightseeing to create a wholesome experience. Key locations included city monuments, innovation parks, and tech zones. Faculty ensured discipline and safety throughout while fostering free interaction and experiential learning.
+      <br><br>
+      This initiative was highly successful in bridging classroom learning with practical understanding. Students expressed joy and satisfaction, describing the trip as both educational and refreshing. The memories and knowledge gained will undoubtedly help shape their academic and professional growth. Such trips are now being planned annually for continuous engagement.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/trip_comp_mgmt.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

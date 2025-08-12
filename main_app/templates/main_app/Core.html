@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Core Values - Aggarwal College Ballabgarh</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fefefe;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .home-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #c0392b;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 30px;
+      font-size: 16px;
+      text-decoration: none;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+
+    .home-btn i {
+      margin-right: 6px;
+    }
+
+    .home-btn:hover {
+      background-color: #a93226;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 100px auto 50px;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .heading {
+      text-align: center;
+      color: #c0392b;
+      font-size: 30px;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+
+    .text-section {
+      font-size: 17px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .text-section h3 {
+      color: #d35400;
+      margin-top: 25px;
+    }
+
+    .text-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .text-section ul li {
+      margin-bottom: 20px;
+    }
+
+    .text-section ul li h4 {
+      color: #2980b9;
+      margin-bottom: 5px;
+    }
+
+    .certificate-img {
+      width: 100%;
+      margin-top: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in;
+    }
+
+    @media (max-width: 600px) {
+      .heading { font-size: 22px; }
+      .text-section { font-size: 15px; }
+      .home-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Home Button -->
+  <a href="{% url 'home' %}" class="home-btn">
+    <i class="fas fa-home"></i> Home
+  </a>
+
+  <!-- Container Content -->
+  <div class="container">
+    <div class="heading">Core Values</div>
+
+    <div class="text-section">
+      <p>
+        The core values are a set of principles that are aligned with the mission of Aggarwal College Ballabgarh and guide the practice and development of curriculum, faculty, students, and the Staff.
+      </p>
+      <ul>
+        <li>
+          <h4>Ethics and Dignity</h4>
+          <p>We foster a learning environment that promotes responsible, principled behavior which respects the dignity of all members of the community...</p>
+        </li>
+        <li>
+          <h4>Excellence</h4>
+          <p>We strive for excellence in all our academic pursuits. We are committed to innovation in our teaching, research and outreach...</p>
+        </li>
+        <li>
+          <h4>Quality</h4>
+          <p>We provide educational programs that lead to the acquisition of knowledge and skills necessary to achieve information literacy...</p>
+        </li>
+        <li>
+          <h4>Integrity</h4>
+          <p>We conduct all activities in an ethical manner, commit to practices that are fair, honest, and objective in dealing with all stakeholders...</p>
+        </li>
+        <li>
+          <h4>Student Service</h4>
+          <p>We strive to ensure that curriculum delivery and support services respond to inquiries, requests and concerns in an appropriate and timely manner...</p>
+        </li>
+        <li>
+          <h4>Collaboration and Public Engagement</h4>
+          <p>We commit to working collegially and cooperatively in establishing productive partnerships...</p>
+        </li>
+        <li>
+          <h4>Diversity</h4>
+          <p>We embrace all aspects of human diversity and value its necessity to ensure a vibrant learning community...</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Certificate Image -->
+    <img src="{% static 'images/corevalues.png' %}" alt="Core Values Certificate" class="certificate-img"/>
+  </div>
+
+</body>
+</html>

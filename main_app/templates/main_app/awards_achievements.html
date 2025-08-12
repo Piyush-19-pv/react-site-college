@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Awards & Achievements | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      color: #333;
+    }
+
+    .header {
+      background: #004080;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    .header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.9;
+      font-size: 1.1rem;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .btn-area {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin: 40px 0;
+    }
+
+    .btn-animated {
+      background-color: #007acc;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 15px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .btn-animated:hover {
+      background-color: #005fa3;
+      transform: scale(1.05);
+    }
+
+    .btn-animated i {
+      font-size: 1.5rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media screen and (max-width: 600px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      .btn-animated {
+        font-size: 1rem;
+        padding: 12px 20px;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="header">
+    <h1>Awards & Achievements</h1>
+    <p>Celebrating Excellence and Recognizing Dedication</p>
+  </div>
+
+  <div class="content">
+    <p>
+      At Aggarwal College Ballabgarh, excellence is not just a goal—it’s a tradition. The institution has consistently garnered accolades for its commitment to academic distinction, community service, innovation, and leadership. These awards reflect the tireless efforts of our dedicated faculty, talented students, and visionary administration.
+    </p>
+    <p>
+      From national recognitions by UGC and NAAC to regional awards in innovation, environmental sustainability, and social outreach, the college stands as a beacon of integrity and success. Our faculty members have also received individual honors from prestigious academic bodies, research councils, and government agencies, affirming their impactful contributions to education and knowledge advancement.
+    </p>
+    <p>
+      These achievements motivate us to raise the bar higher every year. They validate our vision and inspire current and future generations to carry forward our legacy of brilliance.
+    </p>
+  </div>
+
+  <div class="btn-area">
+    <a href="{% static 'pdfs/institutional_awards.pdf' %}" target="_blank" class="btn-animated">
+      <i class="fas fa-trophy"></i> Institutional Awards
+    </a>
+    <a href="{% static 'pdfs/faculty_awards.pdf' %}" target="_blank" class="btn-animated">
+      <i class="fas fa-user-graduate"></i> Faculty Awards
+    </a>
+  </div>
+
+</body>
+</html>

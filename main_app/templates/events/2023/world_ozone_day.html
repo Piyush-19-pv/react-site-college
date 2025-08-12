@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Ozone Day | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-sky-50 text-gray-900 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Image -->
+    <img src="{% static 'images/ozone_day.jpg' %}" 
+         alt="World Ozone Day" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-sky-700 mb-2">World Ozone Day</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Celebrated at Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        On the occasion of **World Ozone Day**, Aggarwal College organized a thoughtful and informative program to raise awareness about the importance of protecting the ozone layer. The event highlighted this year’s global theme and aligned with the United Nations' commitment to safeguarding the environment.
+        <br><br>
+        Students and faculty gathered to commemorate this international day, recognizing the vital role the ozone layer plays in shielding life on Earth from harmful ultraviolet rays. The celebration included poster presentations, slogan writing, and a documentary screening on the discovery of the ozone hole and the success of the Montreal Protocol.
+        <br><br>
+        A special guest lecture was delivered by an environmental scientist who elaborated on how global cooperation has led to significant recovery of the ozone layer and what actions individuals and institutions can take to continue this progress. The session was highly engaging, with interactive Q&A from students.
+        <br><br>
+        Eco Club members took the initiative to plant saplings in the college premises as a symbolic gesture toward environmental responsibility. A pledge ceremony was also held where students vowed to reduce the use of ozone-depleting substances and promote sustainable habits like using public transport, reducing plastic use, and supporting eco-friendly products.
+        <br><br>
+        The principal appreciated the efforts of the organizing team and emphasized that small actions can lead to big environmental impact when carried out consistently. Certificates of appreciation were distributed to all participants who contributed through artwork, poetry, and awareness activities.
+        <br><br>
+        Through this event, Aggarwal College reinforced its role in spreading environmental consciousness and educating the youth about global environmental issues. The college looks forward to conducting more such awareness programs in the future.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/ozone_day.pdf' %}" target="_blank"
+         class="inline-block bg-sky-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-sky-700 transition-all duration-300">
+        📘 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

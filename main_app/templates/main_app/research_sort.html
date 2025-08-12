@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Srot Publications | Aggarwal College</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'icons/srot-favicon.png' %}" type="image/png" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 to-blue-100 text-gray-800 font-sans">
+
+  <div class="max-w-3xl mx-auto mt-14 px-6">
+    <div class="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-lg p-8">
+      <h1 class="text-3xl font-bold text-blue-700 mb-8 text-center">
+        📚 Publications – <span class="text-gray-700">Srot</span>
+      </h1>
+
+      <ul class="space-y-6">
+
+        <!-- Srot 2022-23 -->
+        <li class="flex items-center justify-between bg-white hover:bg-blue-50 border border-gray-200 rounded-lg p-4 transition duration-200 shadow-sm hover:shadow-md group">
+          <div class="flex items-center gap-4">
+            <img src="{% static 'icons/pdf-icon.png' %}" alt="PDF Icon" class="w-6 h-6 group-hover:scale-110 transition-transform">
+            <span class="text-lg font-semibold">Srot 2022–23</span>
+          </div>
+          <a href="{% static 'research/SROT2022-23.pdf' %}" target="_blank"
+             class="bg-blue-600 text-white px-5 py-1.5 rounded-md text-sm hover:bg-blue-700 transition">
+            📥 Open
+          </a>
+        </li>
+
+        <!-- Srot 2021-22 -->
+        <li class="flex items-center justify-between bg-white hover:bg-blue-50 border border-gray-200 rounded-lg p-4 transition duration-200 shadow-sm hover:shadow-md group">
+          <div class="flex items-center gap-4">
+            <img src="{% static 'icons/pdf-icon.png' %}" alt="PDF Icon" class="w-6 h-6 group-hover:scale-110 transition-transform">
+            <span class="text-lg font-semibold">Srot 2021–22</span>
+          </div>
+          <a href="{% static 'research/SROT2021-22.pdf' %}" target="_blank"
+             class="bg-blue-600 text-white px-5 py-1.5 rounded-md text-sm hover:bg-blue-700 transition">
+            📥 Open
+          </a>
+        </li>
+
+        <!-- Srot 2020-21 -->
+        <li class="flex items-center justify-between bg-white hover:bg-blue-50 border border-gray-200 rounded-lg p-4 transition duration-200 shadow-sm hover:shadow-md group">
+          <div class="flex items-center gap-4">
+            <img src="{% static 'icons/pdf-icon.png' %}" alt="PDF Icon" class="w-6 h-6 group-hover:scale-110 transition-transform">
+            <span class="text-lg font-semibold">Srot 2020–21</span>
+          </div>
+          <a href="{% static 'research/SROT2021-22 (1).pdf' %}" target="_blank"
+             class="bg-blue-600 text-white px-5 py-1.5 rounded-md text-sm hover:bg-blue-700 transition">
+            📥 Open
+          </a>
+        </li>
+
+        <!-- Srot 2019-20 -->
+        <li class="flex items-center justify-between bg-white hover:bg-blue-50 border border-gray-200 rounded-lg p-4 transition duration-200 shadow-sm hover:shadow-md group">
+          <div class="flex items-center gap-4">
+            <img src="{% static 'icons/pdf-icon.png' %}" alt="PDF Icon" class="w-6 h-6 group-hover:scale-110 transition-transform">
+            <span class="text-lg font-semibold">Srot 2019–20</span>
+          </div>
+          <a href="{% static 'research/SROT2019-20.pdf' %}" target="_blank"
+             class="bg-blue-600 text-white px-5 py-1.5 rounded-md text-sm hover:bg-blue-700 transition">
+            📥 Open
+          </a>
+        </li>
+
+        <!-- Srot 2018-19 -->
+        <li class="flex items-center justify-between bg-white hover:bg-blue-50 border border-gray-200 rounded-lg p-4 transition duration-200 shadow-sm hover:shadow-md group">
+          <div class="flex items-center gap-4">
+            <img src="{% static '' %}" alt="PDF Icon" class="w-6 h-6 group-hover:scale-110 transition-transform">
+            <span class="text-lg font-semibold">Srot 2018–19</span>
+          </div>
+          <a href="{% static 'research/SROT2018-19.pdf' %}" target="_blank"
+             class="bg-blue-600 text-white px-5 py-1.5 rounded-md text-sm hover:bg-blue-700 transition">
+            📥 Open
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

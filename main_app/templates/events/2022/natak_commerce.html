@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natak by Commerce Students</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon" />
+
+  <style>
+    .fade-in {
+      animation: fadeInUp 1s ease-out both;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white p-6 min-h-screen flex items-center justify-center">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full font-semibold shadow-lg z-50">
+    🏠 Home
+  </a>
+
+  <!-- Event Card -->
+  <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 max-w-4xl w-full fade-in">
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-red-700 mb-6">
+      Natak by Commerce Students
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/natak_commerce.jpg' %}" alt="Natak Performance" class="rounded-xl w-full md:w-3/4 shadow-md" />
+    </div>
+
+    <!-- Description -->
+    <div class="text-base md:text-lg leading-relaxed text-justify">
+      <p class="mb-4">
+        The Commerce students of Aggarwal College organized a powerful and engaging street play (Natak) on a socially relevant theme. The performance aimed to spread awareness and provoke thought among viewers through strong dialogue and creative expression.
+      </p>
+      <p class="mb-4">
+        The event was well received by the audience, with students showcasing their talent in acting, scriptwriting, and coordination. The Natak brought attention to real-world issues through humor, drama, and emotion.
+      </p>
+      <p class="mb-4">
+        The objective of this activity was to encourage students to use art as a medium of change, while building teamwork, creativity, and public speaking skills. It was performed in the college campus courtyard and was applauded by all present.
+      </p>
+    </div>
+
+    <!-- PDF Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/natak_commerce.pdf' %}" target="_blank"
+         class="bg-red-700 hover:bg-red-800 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 View Full Report
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

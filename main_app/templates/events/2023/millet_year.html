@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Millet Year | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-green-50 text-gray-900 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Image -->
+    <img src="{% static 'images/millet_year.jpg' %}" 
+         alt="International Millet Year" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-green-700 mb-2">International Year of Millets</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        Aggarwal College celebrated the International Year of Millets to spread awareness about the nutritional and environmental benefits of millet crops. The event highlighted India’s initiative at the global level to promote millets as a smart and sustainable food option for a healthier future.
+        <br><br>
+        A series of activities were organized during the week, including millet-based food exhibitions, poster making competitions, nutrition awareness talks, and cooking demonstrations using millets. Students prepared dishes like ragi laddoos, bajra khichdi, and millet pancakes which were shared and tasted by everyone.
+        <br><br>
+        The guest speakers emphasized how millets are rich in protein, fiber, and essential minerals while being gluten-free and environmentally friendly crops that require less water and chemicals. Students learned how millets can play a role in combating lifestyle diseases and climate change.
+        <br><br>
+        Informational charts and infographics displayed on campus helped students and faculty understand the global significance of millet cultivation, India’s leadership in its promotion, and how farmers can benefit from switching to millet farming.
+        <br><br>
+        The event successfully combined education, sustainability, and cultural heritage, leaving a lasting impression about the power of traditional grains in modern times. Aggarwal College continues to support health-conscious and eco-conscious initiatives among its student community.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/millet_year.pdf' %}" target="_blank"
+         class="inline-block bg-green-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-green-700 transition-all duration-300">
+        🌾 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

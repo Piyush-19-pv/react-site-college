@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Principal's Message - Aggarwal College Ballabgarh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/principal_message.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f1f6f9;
+  color: #333;
+}
+
+.message-container {
+  padding: 60px 20px;
+  animation: fadeIn 1.3s ease-in-out;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.image-box {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeSlide 1s ease;
+}
+
+.text-box {
+  flex: 2;
+  min-width: 300px;
+  text-align: justify;
+}
+
+.text-box h1 {
+  font-size: 2.4rem;
+  color: #0a3d62;
+  margin-bottom: 10px;
+}
+
+.text-box h2 {
+  font-size: 1.6rem;
+  color: #2e86de;
+  margin-bottom: 10px;
+}
+
+.text-box p {
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-box {
+    text-align: left;
+  }
+}
+
+</style>
+</head>
+<body>
+  <a href="/" 
+     style="
+       position: fixed;
+       top: 20px;
+       right: 20px;
+       background: #e63946;
+       color: white;
+       padding: 10px 18px;
+       border-radius: 30px;
+       font-weight: bold;
+       text-decoration: none;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+       transition: all 0.3s ease;
+       z-index: 999;
+     "
+     onmouseover="this.style.transform='scale(1.1)'"
+     onmouseout="this.style.transform='scale(1)'"
+  >🏠 Home</a>
+  <section class="message-container">
+    <div class="content">
+      <div class="image-box">
+        <img src="{% static 'images\sanjeevgupta1.jpg' %}" alt="Dr. Sanjeev Gupta - Principal">
+      </div>
+      <div class="text-box">
+        <h1>Welcome to the  Aggarwal College</h1>
+        <h2>Message from the Principal</h2>
+        <p><strong>Dr. Sanjeev Gupta</strong></p>
+        <p>
+          The objective of Aggarwal College Ballabgarh is to impart education with creation, dissemination, and application of knowledge in an integrated form. Since its inception in 1971, the college has attained greater heights in all disciplines.
+        </p>
+        <p>
+          NAAC accredited A++ with CGPA 3.57 in 2019, the college is preparing itself for the 4th cycle of accreditation. We offer comprehensive UG and PG programmes along with extra-curricular and co-curricular activities.
+        </p>
+        <p>
+          The college is equipped with excellent infrastructure—Auditorium, RFID-enabled Library, e-Library, Language Lab, Smart Classrooms, Wi-Fi campus, Science Labs, Computer Labs, Sports and Cultural avenues. Our students have even excelled at Olympic level.
+        </p>
+        <p>
+          We believe in balancing academics with holistic development. Our teaching-learning is based on motivation and a stress-free environment. Faculty members are research-oriented and committed to academic excellence.
+        </p>
+        <p>
+          In alignment with NEP-2020, we strive to prepare students holistically for the job market. The placement cell is active and supports students in securing placements with handsome packages. Scholarships and loans are also available.
+        </p>
+        <p>
+          When knowledge is rooted in Indian culture yet reflects the world, we create a truly global institution.
+        </p>
+        <p><strong>I extend my best wishes for your success. May education at Aggarwal College Ballabgarh be a milestone in your future!</strong></p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

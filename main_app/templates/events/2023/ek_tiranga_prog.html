@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ek Tiranga Program | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in { animation: fadeIn 1.2s ease-in-out; }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-2xl rounded-xl overflow-hidden fade-in">
+
+    <!-- Online Image -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Indian_Flag.jpg/1200px-Indian_Flag.jpg" alt="Ek Tiranga" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-green-600 mb-2">Ek Tiranga Program</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        "Ek Tiranga" is not just a patriotic slogan; it represents the unity, identity, and spirit of our great nation.
+        To celebrate this spirit, Aggarwal College organized a vibrant and meaningful **Ek Tiranga Program** aimed at promoting national pride, awareness, and solidarity among students.
+        <br><br>
+        The program began with the ceremonial hoisting of the Indian national flag by the Principal, accompanied by the singing of the National Anthem.
+        The college campus was decorated in saffron, white, and green – reflecting the pride and dignity of the Indian tricolor.
+        Hundreds of students participated with great enthusiasm, waving flags and singing patriotic songs.
+        <br><br>
+        A major highlight of the program was the unity march where students from different streams walked together, carrying the longest Tiranga flag created by NSS volunteers.
+        This visual symbol of unity moved hearts and inspired everyone to contribute to the betterment of the nation.
+        <br><br>
+        Various competitions were held, including:
+        - Patriotic poem recitation  
+        - Painting on themes like freedom and sacrifice  
+        - Group song and skit performances  
+        - Best tricolor-themed attire contest
+        <br><br>
+        In addition, the faculty organized a storytelling session where stories of India’s independence heroes like Bhagat Singh, Rani Laxmi Bai, and Netaji Subhash Chandra Bose were shared with students.
+        Everyone was deeply moved and gained a fresh sense of patriotism and responsibility.
+        <br><br>
+        A special digital pledge-taking ceremony was also held where students and staff vowed to uphold democratic values, work for social justice, and support national development.
+        The event was live-streamed on the college's YouTube channel to include alumni and parents as well.
+        <br><br>
+        Students displayed handmade flags, creative posters, and wore badges symbolizing their commitment to India's progress.
+        The event concluded with a beautiful group photo session in the form of the Indian Flag using color-coded outfits.
+        <br><br>
+        Principal Sir, in his closing speech, said, "India is not just a country. It is an emotion. It is our shared history, our dreams, and our duties that keep us connected.
+        This program reflects the heart of Aggarwal College – unity, diversity, and love for the motherland."
+        <br><br>
+        The entire event not only strengthened national values among the students but also reminded everyone that true patriotism lies in respecting each other, following the law, and working for the growth of our nation in every possible way.
+        <br><br>
+        Going forward, Aggarwal College has planned to conduct similar awareness events every year under the banner of "Azadi Ka Amrit Mahotsav" to keep the flame of patriotism alive in every student.
+      </p>
+
+      <!-- PDF Button -->
+      <a href="{% static 'pdf/ek-tiranga-report.pdf' %}" target="_blank"
+         class="inline-block bg-green-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-green-700 transition-all duration-300">
+        🇮🇳 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

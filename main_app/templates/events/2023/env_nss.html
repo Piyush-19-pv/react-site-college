@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Environment Day & NSS Program | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in { animation: fadeIn 1.2s ease-in-out; }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-green-50 text-gray-800 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Online Image -->
+    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1350&q=80"
+         alt="Environment NSS" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-green-700 mb-2">Environment Day & NSS Program</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        Aggarwal College observed Environment Day through a collaborative program organized by the NSS unit. The event aimed to raise awareness about environmental protection and encourage students to adopt eco-friendly habits. The celebration began with a tree plantation drive where students planted various saplings across the college campus. This initiative symbolized the importance of greenery and a cleaner future.
+        <br><br>
+        After the plantation, students participated in different awareness activities like poster-making, slogan writing, and essay competitions. The themes focused on nature conservation, reducing plastic use, and sustainable living. Students used creative expressions to convey strong environmental messages.
+        <br><br>
+        A short skit performed by NSS volunteers highlighted the daily damage caused by pollution and careless waste disposal. It reminded the audience how small changes in daily habits can bring a big impact on the planet.
+        <br><br>
+        Many students took an eco-pledge to reduce plastic, save water, and keep their surroundings clean. They also signed a digital wall with their environmental commitments. The enthusiasm of the participants showed their dedication towards building a greener society.
+        <br><br>
+        The program concluded with a group photo of all volunteers holding handmade placards that displayed environmental slogans. This collective effort inspired all attendees to take small but meaningful steps to protect our Earth.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/environment_nss_report.pdf' %}" target="_blank"
+         class="inline-block bg-green-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-green-700 transition-all duration-300">
+        🌿 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guest Lecture – Political Science Dept</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2972/2972406.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fefce8, #fef9c3);
+      color: #1e293b;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #78350f;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 17px;
+      color: #4b5563;
+      margin-bottom: 30px;
+    }
+
+    .image-box {
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.04);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #374151;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #ca8a04;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(202, 138, 4, 0.3);
+    }
+
+    .read-more-btn:hover {
+      background-color: #a16207;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 15px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Guest Lecture – Political Science Department</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/GuestLectureByPoliticalScience0104251.jpg' %}" alt="Political Science Lecture">
+    </div>
+
+    <div class="content">
+      The Political Science Department at Aggarwal College Ballabgarh organized a thought-provoking Guest Lecture on “Democracy and Governance in Contemporary India.” The lecture was delivered by Dr. Anjana Rawat, an eminent scholar from Delhi University with extensive research in comparative politics and Indian governance.
+      <br><br>
+      Dr. Rawat highlighted the evolution of democratic structures in India, the role of constitutional values, and the dynamic challenges that modern governance faces. She elaborated on federalism, political accountability, and the changing behavior of voters influenced by social media and mass movements.
+      <br><br>
+      The event encouraged critical engagement as students debated issues like electoral reforms, judicial activism, and the role of youth in shaping India’s political future. Discussions also included India's global diplomatic stance, democratic backsliding in other nations, and how India maintains its unique democratic identity.
+      <br><br>
+      The lecture not only deepened theoretical understanding but also enhanced practical knowledge of real-world political issues. The department appreciated Dr. Rawat’s inputs and honored her with a token of gratitude. Certificates were awarded to participating students, concluding the session on a high note.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/guest_lecture_pol_sci.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NSS Camp | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-red-50 text-gray-900 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Image -->
+    <img src="{% static 'images/nss_camp.jpg' %}" 
+         alt="NSS Camp" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-red-700 mb-2">NSS Camp</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        Aggarwal College recently organized a highly impactful 7-day NSS (National Service Scheme) Camp to promote community service, discipline, and social awareness among students. The camp brought together enthusiastic volunteers from various streams who actively participated in a range of activities aimed at building a sense of responsibility towards society.
+        <br><br>
+        The camp commenced with an orientation program where students were introduced to the goals and values of NSS. Each day of the camp was structured around specific themes including cleanliness drives, tree plantation, health awareness, women empowerment, and rural outreach.
+        <br><br>
+        Students actively participated in a cleanliness campaign under the "Swachh Bharat Abhiyan", covering nearby areas and public spaces. Volunteers cleaned roads, painted walls with awareness slogans, and motivated the local community to maintain hygiene and proper sanitation.
+        <br><br>
+        In the plantation drive, students planted over 100 saplings within the college and nearby areas to promote environmental sustainability. A health awareness rally was also organized, where pamphlets on nutrition, first-aid, and hygiene were distributed to villagers.
+        <br><br>
+        A special session on women empowerment included street plays and speeches by students highlighting the need for gender equality and education for girls. Another important session involved visiting local households and educating them about government welfare schemes.
+        <br><br>
+        The evenings were filled with reflective group discussions, yoga, and cultural performances that fostered bonding and shared learning among volunteers. The final day concluded with a valedictory function where students shared their experiences and took a collective pledge to continue serving society.
+        <br><br>
+        The NSS camp proved to be a life-changing experience for many participants, instilling in them values of empathy, discipline, and leadership. Aggarwal College continues to inspire students to engage in nation-building through such meaningful initiatives.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/nss_camp.pdf' %}" target="_blank"
+         class="inline-block bg-red-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-red-700 transition-all duration-300">
+        🏕️ Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

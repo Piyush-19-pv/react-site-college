@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Women Cell | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4388/4388530.png" type="image/png">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #fffafc;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 30px;
+      color: #d63384;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .content {
+      font-size: 17px;
+      color: #444;
+      line-height: 1.8;
+    }
+
+    img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin: 25px 0;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #e83e8c, #d63384);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: 0.3s ease;
+    }
+
+    .read-more img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.06);
+      box-shadow: 0 6px 15px rgba(214, 51, 132, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 24px; }
+      .content { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Women Cell Awareness Program</h1>
+
+    <img src="{% static 'images/women_cell.jpg' %}" alt="Women Cell Event">
+
+    <div class="content">
+      <p>
+        The Women Cell at Aggarwal College organized an impactful awareness session addressing women’s rights, self-empowerment, and gender sensitivity. The event aimed to educate students on gender equality and the importance of a respectful and safe environment for all.
+      </p>
+      <p>
+        Guest speakers highlighted legal rights of women, self-defense strategies, and real-life issues women face in academic and professional spaces. Interactive Q&A sessions allowed students to express concerns and seek guidance.
+      </p>
+      <p>
+        Students actively participated in the discussion and took a pledge to promote equality and speak against any form of discrimination or harassment.
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/women_cell.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

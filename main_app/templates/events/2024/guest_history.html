@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guest Lecture – History Dept | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3917/3917522.png" type="image/png" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8e1;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeSlide 0.8s ease;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #6d4c41;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 25px 0;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .btn-read {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #8d6e63, #a1887f);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .btn-read img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+
+    .btn-read:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(141, 110, 99, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Guest Lecture – History Department</h1>
+
+    <img src="{% static 'images/guest_history.jpg' %}" alt="Guest Lecture History Department">
+
+    <div class="content">
+      <p>
+        The <strong>Department of History</strong> at <strong>Aggarwal College, Ballabgarh</strong> organized an insightful <strong>Guest Lecture</strong> on the topic <em>“Indian Freedom Movement – Unsung Heroes”</em> to deepen students’ understanding of India’s rich historical journey.
+      </p>
+      <p>
+        Renowned historian <strong>Dr. Meera Chopra</strong> from Kurukshetra University was invited to share her research on lesser-known but significant contributors to India’s struggle for independence. She highlighted the stories of tribal leaders, regional revolutionaries, and women warriors often left out of mainstream narratives.
+      </p>
+      <p>
+        The lecture sparked engaging discussions on historical bias, colonial records, and the importance of archival research. Dr. Chopra encouraged students to explore local history and even document family stories from the freedom era.
+      </p>
+      <p>
+        The session concluded with a vote of thanks by Dr. Sunita Rani, Head of the History Department. She emphasized the need for young historians to critically analyze the past to shape a more inclusive future.
+      </p>
+    </div>
+
+    <a class="btn-read" href="{% static 'pdfs/guest_history.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

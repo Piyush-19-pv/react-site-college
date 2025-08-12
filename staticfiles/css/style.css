@@ -1,0 +1,333 @@
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  flex-shrink: 0;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  background: rgba(255,255,255,0.8);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.carousel-item-box {
+  text-align: center;
+  flex: 1 1 150px;
+  min-width: 120px;
+}
+
+.carousel-item-box i {
+  font-size: 2rem;
+  color: #002244;
+  margin-bottom: 0.3rem;
+}
+
+.carousel-item-box h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.carousel-item-box p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+    
+    /* mainsection css */
+
+    .container {
+      background: linear-gradient(135deg, #e8f0fe, #ffffff);
+      font-family: 'Segoe UI', sans-serif;
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100vh;
+    }
+
+    .text-section {
+      flex: 1 1 500px;
+      padding-right: 20px;
+    }
+
+    .text-section h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .text-section p {
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .btn-explore {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #0056ff;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn-explore:hover {
+      background: #003bbd;
+    }
+
+    .images-section {
+      flex: 1 1 400px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .images-section img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    .badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #32ecc0;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .team-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .team-info img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #fff;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    .team-info span {
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 30px 0;
+      }
+
+      .text-section {
+        padding: 0;
+      }
+    }
+  
+/* MAIN ABOUT SECTION STYLES */
+.about-us {
+    background: linear-gradient(135deg, #e8f0fe, #ffffff);
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeInUp 1.5s ease;
+  }
+  
+  .about-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease;
+  }
+  .about-image img:hover {
+    transform: rotateY(10deg) scale(1.05);
+  }
+  
+  .about-content {
+    flex: 1;
+    min-width: 300px;
+    animation: fadeInRight 1.2s ease;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    color: #1a237e;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  }
+  
+  .chairman-msg {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+  
+  .chairman-name {
+    font-weight: bold;
+    color: #4a148c;
+  }
+  
+  /* COLLEGE INFO */
+  .college-info {
+    margin-top: 40px;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+    animation: zoomIn 1.5s ease;
+  }
+  
+  .college-info p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+  }
+  
+  /* VIDEO */
+  .about-video {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    animation: popIn 1.2s ease;
+  }
+  
+  .about-video video {
+    width: 90%;
+    max-width: 720px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .about-video video:hover {
+    transform: scale(1.03);
+  }
+  
+  /* RESPONSIVE DESIGN */
+  @media screen and (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-content, .about-image {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .about-video video {
+      width: 100%;
+    }
+  
+    .section-title {
+      font-size: 22px;
+    }
+  }
+  
+  /* KEYFRAME ANIMATIONS */
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(60px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      transform: translateX(-60px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes popIn {
+    0% {
+      transform: scale(0.5) rotateY(30deg);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1) rotateY(0deg);
+      opacity: 1;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+

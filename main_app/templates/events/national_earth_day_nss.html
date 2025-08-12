@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>National Earth Day – NSS Unit</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/427/427735.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #e0f2f1);
+      color: #1e293b;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #065f46;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 17px;
+      color: #4b5563;
+      margin-bottom: 30px;
+    }
+
+    .image-box {
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.04);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #334155;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #10b981;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(16, 185, 129, 0.3);
+    }
+
+    .read-more-btn:hover {
+      background-color: #059669;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 15px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">National Earth Day – NSS Unit</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/NationalEarthDayNSS.jpg' %}" alt="Earth Day Event">
+    </div>
+
+    <div class="content">
+      On the occasion of **National Earth Day**, the NSS Unit of Aggarwal College Ballabgarh conducted a series of activities to raise awareness about environmental conservation and sustainable living. The event emphasized the importance of preserving our planet for future generations.
+      <br><br>
+      Volunteers planted over 200 saplings around the campus and in local parks. A rally was organized to encourage the use of eco-friendly practices such as reducing plastic use, conserving water, and supporting renewable energy. Faculty members, students, and local residents enthusiastically participated in the event.
+      <br><br>
+      The college also hosted a poster-making competition and eco-quiz, focusing on biodiversity, climate change, and green technology. Winners were felicitated with certificates and eco-friendly gifts.
+      <br><br>
+      Through these impactful initiatives, the NSS Unit reinforced the message: "Every day is Earth Day." The event concluded with a pledge to promote green living and make our surroundings cleaner and healthier.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/national_earth_day.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

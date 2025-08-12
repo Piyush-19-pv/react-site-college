@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blood Donation Camp | Aggarwal College</title>
+  <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out both;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.05);
+      transition: 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-2xl rounded-lg overflow-hidden fade-in">
+
+    <!-- Image -->
+    <img src="{% static 'images/blood-donation.jpg' %}" alt="Blood Donation" class="w-full h-64 object-cover hover-scale">
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-red-600 mb-2">Blood Donation Camp</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="mb-6 text-justify">
+        Blood donation is not just a noble act, but a life-saving gesture that creates a real difference in the lives of patients in need.
+        Aggarwal College, renowned for its dedication to social and humanitarian causes, organized a successful blood donation camp under the NSS unit on campus.
+        The event was held in collaboration with a reputed blood bank and saw enthusiastic participation from students, faculty, and staff members.
+        <br><br>
+        The core purpose behind this event was to raise awareness about the importance of donating blood regularly and its significance in emergencies such as surgeries, accidents, and critical illnesses like thalassemia or cancer.
+        The camp began with an inauguration by the Principal of Aggarwal College, who expressed his pride in the students and emphasized the role of youth in community welfare.
+        The venue was decorated with posters and informative displays explaining the benefits of blood donation and dispelling myths around it.
+        <br><br>
+        More than 150 students registered as voluntary donors, with the entire process supervised by a certified medical team. Safety and hygiene were maintained to the highest standards, ensuring a comfortable and secure experience for all donors.
+        Post-donation refreshments and certificates of appreciation were distributed to recognize their contribution.
+        <br><br>
+        Various awareness speeches were also delivered by doctors and NSS volunteers. They spoke about the blood replenishment cycle, eligibility criteria for donors, and the need to develop a habit of donating blood every 3–4 months.
+        The audience listened attentively and interacted with the experts during an open Q&A session.
+        <br><br>
+        The event also featured a storytelling session where real-life recipients of donated blood shared how timely donation had saved their lives. These stories touched hearts and left a lasting impact on all attendees.
+        <br><br>
+        Aggarwal College plans to conduct more such camps every semester and will soon launch a "College Blood Donor Club" to maintain a registry of regular donors.
+        This initiative aims to respond quickly to emergencies and also guide new students toward the spirit of donation and selfless service.
+        <br><br>
+        In conclusion, the Blood Donation Camp was more than just a college event—it was a life-changing experience for many.
+        It not only collected over 100 units of blood but also instilled compassion and civic responsibility in students.
+        Aggarwal College once again proved its commitment to community development and social awareness through this successful event.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/blood-donation-report.pdf' %}" target="_blank"
+        class="inline-block bg-red-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-red-700 transition-all duration-300">
+        📄 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+*.rar
+*.zip
+*.mp4
+*.mov
+*.avi
+
+
+# Python/Django specific
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.env
+db.sqlite3
+
+# Python/Django specific
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.env
+db.sqlite3
+*.rar
+*.zip
+*.mp4
+*.mov
+*.avi
+*.rar
+*.zip
+*.mp4
+*.avi
+*.mov

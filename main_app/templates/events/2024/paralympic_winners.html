@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Paralympic Winners | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4322/4322991.png" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0fdf4;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeSlide 0.6s ease;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 34px;
+      text-align: center;
+      color: #065f46;
+      margin-bottom: 25px;
+    }
+
+    .content {
+      font-size: 18px;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 25px 0;
+      max-height: 420px;
+      object-fit: cover;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #059669, #065f46);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .read-more img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(5, 150, 105, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Honouring Paralympic Winners</h1>
+
+    <img src="{% static 'images/paralympic_winners.jpg' %}" alt="Paralympic Winners Event">
+
+    <div class="content">
+      <p>
+        Aggarwal College proudly celebrated the inspirational achievements of India’s <strong>Paralympic Winners</strong>, who have defied odds and emerged victorious at international sporting events. The event aimed to recognize their courage, dedication, and indomitable spirit.
+      </p>
+      <p>
+        A powerful audio-visual presentation showcased their journeys filled with challenges and triumphs. Faculty and students expressed admiration for their perseverance and sportsmanship through speeches and creative performances.
+      </p>
+      <p>
+        A panel discussion followed, focusing on inclusivity in sports and the need for increased accessibility and awareness. The college reaffirmed its commitment to supporting differently-abled individuals and promoting equal opportunities in education and extracurricular activities.
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/paralympic_winners.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

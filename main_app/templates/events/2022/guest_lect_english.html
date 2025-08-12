@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guest Lecture - English Dept.</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon"/>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .fade-in {
+      animation: fadeIn 0.8s ease-out both;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .glow-text {
+      text-shadow: 0 0 6px #a78bfa;
+    }
+  </style>
+</head>
+<body class="bg-violet-50 dark:bg-gray-900 text-gray-900 dark:text-white p-6 min-h-screen flex items-center justify-center">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-violet-700 hover:bg-violet-800 text-white px-4 py-2 rounded-full font-semibold shadow-lg transition z-50">
+    🏠 Home
+  </a>
+
+  <!-- Main Container -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 fade-in">
+
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-violet-700 glow-text mb-6">
+      Guest Lecture by English Department
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/guest_lect_english.jpg' %}" alt="Guest Lecture English Dept." class="rounded-xl w-full md:w-3/4 shadow-xl"/>
+    </div>
+
+    <!-- Content -->
+    <div class="text-base md:text-lg leading-relaxed text-justify">
+      <p class="mb-4">
+        The Department of English organized a <strong>Guest Lecture</strong> on <em>“Language, Literature, and Identity”</em> to enrich students’ understanding of the dynamic relationship between language and social narratives. The session was conducted by <strong>Dr. Kavita Bansal</strong>, a literature scholar from Delhi University.
+      </p>
+      <p class="mb-4">
+        The lecture explored postcolonial perspectives, the impact of regional languages, and literary analysis techniques. Students actively participated in discussions and presented thoughtful questions.
+      </p>
+      <p class="mb-4">
+        The session encouraged critical thinking and inspired students to delve deeper into literary theory and interdisciplinary research. It proved to be an intellectually stimulating experience for all participants.
+      </p>
+    </div>
+
+    <!-- Read More Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/guest_lect_english.pdf' %}" target="_blank"
+         class="inline-block bg-violet-700 hover:bg-violet-800 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>

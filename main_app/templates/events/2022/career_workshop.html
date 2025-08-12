@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Workshop - Aggarwal College</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .fade-in {
+      animation: fadeInUp 0.9s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .neon {
+      text-shadow: 0 0 8px #3b82f6, 0 0 14px #60a5fa;
+    }
+  </style>
+</head>
+<body class="bg-blue-50 dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen flex items-center justify-center p-6">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 z-50">
+    🏠 Home
+  </a>
+
+  <!-- Main Content -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 fade-in">
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-blue-600 neon mb-6">
+      A Workshop on Career Development
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/career_workshop.jpg' %}" alt="Career Workshop" class="rounded-xl w-full md:w-2/3 shadow-md" />
+    </div>
+
+    <!-- Description -->
+    <div class="text-justify text-base md:text-lg leading-relaxed">
+      <p class="mb-4">
+        Aggarwal College organized a comprehensive <strong>Workshop on Career Development</strong> to empower students with insights and strategies essential for successful career building. The event aimed to bridge the gap between academics and industry readiness.
+      </p>
+      <p class="mb-4">
+        The workshop covered key topics like resume building, interview preparation, effective communication, digital presence, and entrepreneurship. Renowned career mentors and industry experts engaged with students through interactive sessions and activities.
+      </p>
+      <p class="mb-4">
+        The practical exposure and motivational guidance during the workshop helped students discover their strengths and align their goals accordingly. Feedback from students indicated high satisfaction and enthusiasm.
+      </p>
+    </div>
+
+    <!-- PDF Read More Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/career_workshop.pdf' %}" target="_blank"
+         class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transform transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lohri Function | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1998/1998704.png" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff7ed;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 34px;
+      text-align: center;
+      color: #9a3412;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+    }
+
+    .content {
+      font-size: 18px;
+      color: #4b2e16;
+      line-height: 1.7;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 14px;
+      margin: 25px 0;
+      max-height: 420px;
+      object-fit: cover;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #f97316, #ea580c);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .read-more img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(234, 88, 12, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Lohri Function</h1>
+
+    <img src="{% static 'images/lohri_function.jpg' %}" alt="Lohri Function Image">
+
+    <div class="content">
+      <p>
+        Aggarwal College celebrated the vibrant festival of <strong>Lohri</strong> with traditional zeal and cultural fervor. The event began with a bonfire lighting ceremony followed by folk dances like Bhangra and Gidda performed by enthusiastic students.
+      </p>
+      <p>
+        Faculty members joined the celebration and shared the significance of Lohri, a festival that marks the end of winter and the harvesting of crops in Punjab. Traditional songs and sweets like rewari, popcorn, and peanuts added to the joyous vibe.
+      </p>
+      <p>
+        The cultural committee beautifully decorated the venue with Punjabi motifs, and the spirit of togetherness and tradition echoed throughout the evening.
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/lohri_function.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

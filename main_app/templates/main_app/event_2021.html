@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Events 2021</title>
+    <link rel="stylesheet" href="{% static 'events2021/styles.css' %}">
+    <style>
+        .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.events-grid a {
+    display: block;
+    background-color: #005f9e;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.events-grid a:hover {
+    background-color: #004b7a;
+}
+
+@media (max-width: 600px) {
+    .events-grid a {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+     <a href="/" 
+     style="
+       position: fixed;
+       top: 20px;
+       right: 20px;
+       background: #e63946;
+       color: white;
+       padding: 10px 18px;
+       border-radius: 30px;
+       font-weight: bold;
+       text-decoration: none;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+       transition: all 0.3s ease;
+       z-index: 999;
+     "
+     onmouseover="this.style.transform='scale(1.1)'"
+     onmouseout="this.style.transform='scale(1)'"
+  >🏠 Home</a>
+    <h2 style="text-align:center; color:#006fa6;">College Events 2021</h2>
+    <div class="events-grid">
+        <a href="{% url 'unnat_bharat_abhiyan' %}">Unnat Bharat Abhiyan</a>
+<a href="{% url 'webinar_data_analytics' %}">Webinar on Data Analytics</a>
+<a href="{% url 'career_guidance' %}">Seminar Career Guidance</a>
+<a href="{% url 'maths_webinar' %}">Maths Webinar</a>
+<a href="{% url 'ptm' %}">PTM</a>
+<a href="{% url 'seminar_comp_sc' %}">Seminar Comp. Sc.</a>
+<a href="{% url 'nat_web_commerce' %}">Nat. Web Commerce</a>
+<a href="{% url 'pol_sci_webinar' %}">Pol. Sci. Webinar</a>
+<a href="{% url 'math_webinar' %}">Math Seminar</a>
+<a href="{% url 'guest_mgmt' %}">Guest Lecture Mgmt</a>
+<a href="{% url 'career_counselling' %}">Career Counselling</a>
+<a href="{% url 'azadi_ka_amrit' %}">Azadi Ka Amrit</a>
+<a href="{% url 'recruitment_drive' %}">Recruitment Drive</a>
+<a href="{% url 'covid_vaccination' %}">COVID Vaccination</a>
+<a href="{% url 'webinar_commerce' %}">Webinar Commerce</a>
+<a href="{% url 'guest_commerce' %}">Guest Lecture Commerce</a>
+<a href="{% url 'blood_donation' %}">Blood Donation Camp</a>
+<a href="{% url 'wd_comp_sc' %}">Webinar Comp. Sc.</a>
+<a href="{% url 'archery_comp' %}">Archery Competition</a>
+<a href="{% url 'navy_day' %}">Navy Day</a>
+<a href="{% url 'guest_gandhi' %}">Guest Lecture on Gandhi</a>
+<a href="{% url 'swachh_bharat' %}">Swachh Bharat</a>
+<a href="{% url 'fla_webinar' %}">FLA Webinar</a>
+<a href="{% url 'health_talk' %}">Health Talk</a>
+<a href="{% url 'world_aids_day' %}">World AIDS Day</a>
+<a href="{% url 'constitution_day' %}">Constitution Day</a>
+<a href="{% url 'guest_comp_sc' %}">Guest Comp. Sc.</a>
+<a href="{% url 'poster_comp_sc' %}">Poster Making Comp.</a>
+<a href="{% url 'audio_project' %}">Audio Project</a>
+<a href="{% url 'history_lecture' %}">History Lecture</a>
+<a href="{% url 'seminar_comm' %}">Seminar Comm.</a>
+<a href="{% url 'report_making' %}">Report Making</a>
+<a href="{% url 'health_checkup' %}">Health Checkup Camp</a>
+<a href="{% url 'rangoli_comp' %}">Rangoli Competition</a>
+<a href="{% url 'interactive_session' %}">Interactive Session</a>
+<a href="{% url 'vigilance_week' %}">Vigilance Week</a>
+
+       
+    </div>
+</body>
+</html>
+

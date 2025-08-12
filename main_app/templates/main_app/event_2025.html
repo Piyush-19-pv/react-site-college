@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Events 2025</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+      margin: 0;
+      background: linear-gradient(to right, #f3f4f6, #e0f7fa);
+      min-height: 100vh;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .home-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 12px 20px;
+      background-color: #ff5722;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+      z-index: 999;
+    }
+
+    .home-button:hover {
+      transform: scale(1.1);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 10px;
+    }
+
+    .event-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 20px;
+      background: linear-gradient(to right, #2196F3, #21CBF3);
+      color: #fff;
+      border-radius: 30px;
+      font-weight: 600;
+      text-transform: capitalize;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(33, 203, 243, 0.4);
+    }
+
+    .event-btn i {
+      font-size: 18px;
+    }
+
+    .event-btn:hover {
+      transform: translateY(-4px);
+      background: linear-gradient(to right, #21CBF3, #2196F3);
+    }
+
+    @media (max-width: 500px) {
+      .event-btn {
+        font-size: 14px;
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="/" class="home-button">🏠 Home</a>
+  <h2>College Events 2025</h2>
+
+  <div class="grid">
+    <a class="event-btn" href="{% url 'tringa' %}"><i class="fas fa-globe"></i> Tringa Yatra</a>
+    <a class="event-btn" href="{% url 'world_thalassemia_day' %}"><i class="fas fa-heartbeat"></i> World Thalassemia Day</a>
+    <a class="event-btn" href="{% url 'retirement_ceremony' %}"><i class="fas fa-user-clock"></i> Retirement Ceremony</a>
+    <a class="event-btn" href="{% url 'awareness_lect_icc' %}"><i class="fas fa-chalkboard-teacher"></i> Awareness Lect. ICC</a>
+    <a class="event-btn" href="{% url 'farewell_party_wing2' %}"><i class="fas fa-handshake"></i> Farewell Party Wing II</a>
+    <a class="event-btn" href="{% url 'mega_job_fair' %}"><i class="fas fa-briefcase"></i> Mega Job Fair</a>
+    <a class="event-btn" href="{% url 'world_ipr_day' %}"><i class="fas fa-globe"></i> World IPR Day</a>
+    <a class="event-btn" href="{% url 'farewell_cs_dept' %}"><i class="fas fa-laptop-code"></i> Farewell CS Dept</a>
+    <a class="event-btn" href="{% url 'farewell_mgmt_dept' %}"><i class="fas fa-building"></i> Farewell MGMT Dept</a>
+    <a class="event-btn" href="{% url 'farewell_commerce_dept' %}"><i class="fas fa-chart-line"></i> Farewell Commerce Dept</a>
+    <a class="event-btn" href="{% url 'slogan_writing_comp' %}"><i class="fas fa-pen-nib"></i> Slogan Writing Comp</a>
+    <a class="event-btn" href="{% url 'self_defense_training' %}"><i class="fas fa-shield-alt"></i> Self Defense Training</a>
+    <a class="event-btn" href="{% url 'red_cross_camp' %}"><i class="fas fa-medkit"></i> Red Cross Camp</a>
+    <a class="event-btn" href="{% url 'national_earth_day_nss' %}"><i class="fas fa-seedling"></i> National Earth Day NSS</a>
+    <a class="event-btn" href="{% url 'guest_lec_mgt_dept' %}"><i class="fas fa-users"></i> Guest Lec. MGT Dept</a>
+    <a class="event-btn" href="{% url 'youth_red_cross_training' %}"><i class="fas fa-user-nurse"></i> Youth Red Cross Training</a>
+    <a class="event-btn" href="{% url 'world_earth_day_by_icc' %}"><i class="fas fa-globe-asia"></i> World Earth Day ICC</a>
+    <a class="event-btn" href="{% url 'talk_show' %}"><i class="fas fa-microphone-alt"></i> Talk Show</a>
+    <a class="event-btn" href="{% url 'world_heritage_day' %}"><i class="fas fa-monument"></i> World Heritage Day</a>
+    <a class="event-btn" href="{% url 'dental_health_checkup' %}"><i class="fas fa-tooth"></i> Dental Health Checkup</a>
+    <a class="event-btn" href="{% url 'industrial_visit_mgt_dept' %}"><i class="fas fa-industry"></i> Industrial Visit MGT Dept</a>
+    <a class="event-btn" href="{% url 'guest_lec_maths_dept' %}"><i class="fas fa-square-root-alt"></i> Guest Lec. Maths Dept</a>
+    <a class="event-btn" href="{% url 'fire_awareness_camp' %}"><i class="fas fa-fire-extinguisher"></i> Fire Awareness Camp</a>
+    <a class="event-btn" href="{% url 'guest_lec_b_voc' %}"><i class="fas fa-user-graduate"></i> Guest Lec. B.VOC</a>
+    <a class="event-btn" href="{% url 'first_aid_camp' %}"><i class="fas fa-briefcase-medical"></i> First Aid Camp</a>
+    <a class="event-btn" href="{% url 'poster_making_comp_icc' %}"><i class="fas fa-paint-brush"></i> Poster Making Comp ICC</a>
+    <a class="event-btn" href="{% url 'world_health_day_by_yrc' %}"><i class="fas fa-heart"></i> World Health Day YRC</a>
+    <a class="event-btn" href="{% url 'prize_distribution_by_iyc' %}"><i class="fas fa-award"></i> Prize Distribution IYC</a>
+    <a class="event-btn" href="{% url 'awareness_on_helmets' %}"><i class="fas fa-motorcycle"></i> Awareness On Helmets</a>
+    <a class="event-btn" href="{% url 'nukkad_natak' %}"><i class="fas fa-theater-masks"></i> Nukkad Natak</a>
+    <a class="event-btn" href="{% url 'documentary_on_posh' %}"><i class="fas fa-film"></i> Documentary On POSH</a>
+    <a class="event-btn" href="{% url 'guest_lect_comp_dept' %}"><i class="fas fa-code"></i> Guest Lect. Comp Dept</a>
+    <a class="event-btn" href="{% url 'guest_lec_pol_sci_dept' %}"><i class="fas fa-landmark"></i> Guest Lec. Pol Sci Dept</a>
+    <a class="event-btn" href="{% url 'women_safety_program' %}"><i class="fas fa-female"></i> Women Safety Program</a>
+    <a class="event-btn" href="{% url 'career_prog_comm_dept' %}"><i class="fas fa-briefcase"></i> Career Prog Comm Dept</a>
+    <a class="event-btn" href="{% url 'guest_lec_hist_dept' %}"><i class="fas fa-book"></i> Guest Lec Hist Dept</a>
+    <a class="event-btn" href="{% url 'trip_comp_sc_mgmt_dept' %}"><i class="fas fa-bus"></i> Trip Comp Sc, MGMT Dept</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poster Making (Hindi) | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3463/3463635.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fef3c7;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: slideFade 0.6s ease;
+    }
+
+    @keyframes slideFade {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 34px;
+      text-align: center;
+      color: #92400e;
+      margin-bottom: 25px;
+    }
+
+    .content {
+      font-size: 18px;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 25px 0;
+      max-height: 420px;
+      object-fit: cover;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #f59e0b, #b45309);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .read-more img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(180, 83, 9, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>पोस्टर प्रतियोगिता (हिंदी विभाग)</h1>
+
+    <img src="{% static 'images/poster_hindi.jpg' %}" alt="Poster Competition Hindi Dept.">
+
+    <div class="content">
+      <p>
+        हिंदी विभाग द्वारा आयोजित पोस्टर मेकिंग प्रतियोगिता में छात्रों ने हिंदी भाषा, समाजिक जागरूकता, पर्यावरण संरक्षण और डिजिटल भारत जैसे विषयों पर रचनात्मक प्रस्तुति दी। इस आयोजन का उद्देश्य भाषा के प्रति प्रेम और सामाजिक जागरूकता को बढ़ावा देना था।
+      </p>
+      <p>
+        प्रतियोगिता में 40 से अधिक छात्रों ने भाग लिया। उनकी रचनात्मकता, संदेश की स्पष्टता, और कलात्मक दृष्टिकोण के आधार पर मूल्यांकन किया गया। कार्यक्रम ने छात्रों में विचारशीलता और भाषा के सौंदर्य को उजागर करने का अवसर प्रदान किया।
+      </p>
+      <p>
+        विजेताओं को प्रमाणपत्र एवं स्मृति चिह्न प्रदान किए गए। यह आयोजन छात्रों के लिए एक प्रेरणास्रोत बन गया है जो रचनात्मकता और सामाजिक विषयों पर जागरूकता दोनों को बढ़ावा देता है।
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/poster_hindi.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

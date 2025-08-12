@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industrial Visit – B.Com | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-blue-50 text-gray-900 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Image -->
+    <img src="{% static 'images/industrial_visit_bcom.jpg' %}" 
+         alt="Industrial Visit BCom" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-blue-800 mb-2">Industrial Visit – B.Com Department</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        The B.Com Department of Aggarwal College organized a highly educational and interactive industrial visit for its students, aimed at bridging the gap between theoretical knowledge and real-world business practices. The visit was a vital part of the academic curriculum, helping students experience the actual functioning of the corporate world.
+        <br><br>
+        During the visit, students explored operational processes such as production, supply chain management, inventory control, and human resource practices. Industry professionals interacted with the students, explaining how departments work in unison to achieve organizational goals.
+        <br><br>
+        The visit also gave insights into real-time accounting practices, financial documentation, GST implementation, and the use of ERP software in managing business transactions. Students witnessed firsthand how marketing strategies are applied in live environments.
+        <br><br>
+        This experience not only enhanced students' understanding of business operations but also motivated them to think innovatively about entrepreneurship and business leadership. The practical exposure encouraged active participation, question-asking, and collaborative learning.
+        <br><br>
+        Overall, the industrial visit proved to be a great success in shaping students' future perspectives, making them more confident and industry-ready as they continue their journey through commerce education at Aggarwal College.
+      </p>
+
+      <!-- Read More PDF -->
+      <a href="{% static 'pdf/industrial_visit_bcom.pdf' %}" target="_blank"
+         class="inline-block bg-blue-700 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-blue-800 transition-all duration-300">
+        🏭 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

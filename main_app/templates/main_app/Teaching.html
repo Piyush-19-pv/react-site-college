@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teaching & Non-Teaching Staff - Aggarwal College Ballabgarh</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fefefe;
+      color: #212121;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .home-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #c0392b;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 30px;
+      font-size: 16px;
+      text-decoration: none;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+
+    .home-btn i {
+      margin-right: 6px;
+    }
+
+    .home-btn:hover {
+      background-color: #922b21;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 100px auto 50px;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #b00000;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 17px;
+      line-height: 1.7;
+      text-align: justify;
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .buttons a {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 14px 28px;
+      font-size: 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .buttons a:hover {
+      background-color: #b00000;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .title { font-size: 24px; }
+      .description { font-size: 15px; }
+      .buttons a { font-size: 16px; padding: 12px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Home Button -->
+  <a href="{% url 'home' %}" class="home-btn">
+    <i class="fas fa-home"></i> Home
+  </a>
+
+  <!-- Main Container -->
+  <div class="container">
+    <div class="title">Teaching & Non-Teaching Staff</div>
+
+    <div class="description">
+      At Aggarwal College Ballabgarh, we take immense pride in our dedicated teaching and non-teaching staff who form the backbone of our institution. Our teaching faculty are passionate educators committed to excellence in academics and research. Equally important, our non-teaching staff ensure smooth administrative and operational functioning across departments. Together, they create an environment conducive to holistic learning and student support.
+    </div>
+
+    <div class="buttons">
+      <a href="{% static 'pdf/teachin1.pdf' %}" target="_blank">
+        <i class="fas fa-file-pdf"></i> View Teaching Staff PDF
+      </a>
+      <a href="{% static 'pdf/NonTeachingStaffList24.pdf' %}" target="_blank">
+        <i class="fas fa-file-pdf"></i> View Non-Teaching Staff PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

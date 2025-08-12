@@ -1,0 +1,158 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Computer Certificate Courses</title>
+  <link rel="stylesheet" href="{% static 'css/cep_courses.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f9ff;
+  color: #333;
+}
+
+.cep-container {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.heading {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #203864;
+  animation: slideDown 0.8s ease;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.course-card {
+  background: white;
+  padding: 25px;
+  width: 280px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s;
+  animation: fadeInUp 1s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+}
+
+.icon {
+  font-size: 42px;
+  color: #007acc;
+  margin-bottom: 15px;
+}
+
+.pdf-download {
+  margin-top: 50px;
+}
+
+.btn {
+  padding: 12px 26px;
+  background-color: #007acc;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #005f99;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .courses {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+</style>
+</head>
+<body>
+  <a href="/" 
+     style="
+       position: fixed;
+       top: 20px;
+       right: 20px;
+       background: #e63946;
+       color: white;
+       padding: 10px 18px;
+       border-radius: 30px;
+       font-weight: bold;
+       text-decoration: none;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+       transition: all 0.3s ease;
+       z-index: 999;
+     "
+     onmouseover="this.style.transform='scale(1.1)'"
+     onmouseout="this.style.transform='scale(1)'"
+  >🏠 Home</a>
+  <section class="cep-container">
+    <h1 class="heading">Certificate Courses in Computer Science</h1>
+
+    <div class="courses">
+      <div class="course-card">
+        <i class="fas fa-code icon"></i>
+        <h2>Web Development</h2>
+        <p>Learn HTML, CSS, JavaScript, and modern frameworks like React to build stunning websites.</p>
+      </div>
+
+      <div class="course-card">
+        <i class="fas fa-chart-line icon"></i>
+        <h2>Data Analytics</h2>
+        <p>Master Excel, Python, Power BI & data visualization to uncover trends and insights.</p>
+      </div>
+
+      <div class="course-card">
+        <i class="fab fa-python icon"></i>
+        <h2>Python Programming</h2>
+        <p>From basics to advanced OOP, automation, and problem solving with real-world projects.</p>
+      </div>
+
+      <div class="course-card">
+        <i class="fas fa-desktop icon"></i>
+        <h2>Computer Fundamentals</h2>
+        <p>Essential computer knowledge for beginners – MS Office, internet basics, and IT skills.</p>
+      </div>
+    </div>
+
+    <div class="pdf-download">
+      <a href="{% static 'images/ceep.pdf' %}" target="_blank" class="btn">📄 View Course PDF</a>
+    </div>
+  </section>
+
+</body>
+</html>

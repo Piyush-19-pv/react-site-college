@@ -1,0 +1,2753 @@
+{% load static %}
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Static CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Reset and global settings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      color: #000;
+      overflow-x: hidden;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    
+    /* === Top Header === */
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to right, #004e92, #000428);
+      color: #fff;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    
+    .top-header .left {
+      display: flex;
+      align-items: center;
+    }
+    .top-header .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-right: 15px;
+      border: 2px solid #fff;
+      box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    }
+    
+    .college-name h1 {
+      font-size: 27px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .college-name p {
+      font-size: 18px;
+      color: #eee;
+    }
+    
+    .right-buttons {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    
+    /* Buttons */
+    .btn-icon,
+    .dropbtn {
+      background-color: #fff;
+      color: #004e92;
+      padding: 8px 12px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-icon:hover,
+    .dropbtn:hover {
+      background-color: #004e92;
+      color: #fff;
+      box-shadow: 0 0 10px #fff;
+    }
+    
+    /* Quick Links Dropdown */
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: #fff;
+      min-width: 250px;
+      max-height: 400px;
+      overflow-y: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+    .dropdown-content a {
+      color: #004e92;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      border-bottom: 1px solid #eee;
+    }
+    .dropdown-content a:hover {
+      background-color: #004e92;
+      color: #fff;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    /* === Navbar === */
+    .nav-container {
+      width: 100%;
+      background: linear-gradient(to right, #004e92, #000428);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      flex-wrap: wrap;
+      color: #fff;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+       font-size: 20px; 
+      flex-wrap: wrap;
+      margin-left: auto; /
+    }
+    
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+          font-weight: bold;
+    }
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+    
+    .nav-dropdown {
+      position: relative;
+    }
+    .nav-dropbtn {
+      background: none;
+      border: none;
+      color: #fff;
+      margin: 0 12px;
+      font-weight: bold;
+         font-size: 20px; 
+      cursor: pointer;
+    }
+    .nav-dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      min-width: 220px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+    .nav-dropdown-content a {
+      color: #004e92;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+    .nav-dropdown-content a:hover {
+      background-color: #004e92;
+      color: white;
+    }
+    .nav-dropdown:hover .nav-dropdown-content {
+      display: block;
+    }
+    
+    /* Nav Right Icons */
+    .nav-right button {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    .nav-right button:hover {
+      color: #ffd700;
+    }
+    
+    /* Hamburger + Mobile Panel */
+    #hamburger {
+      display: none;
+    }
+    #mobile-panel {
+      display: none;
+      width: 100%;
+      background: #001f3f;
+      padding: 15px;
+      flex-direction: column;
+    }
+    #mobile-panel a {
+      color: white;
+      padding: 10px 0;
+      border-bottom: 1px solid #444;
+      text-decoration: none;
+    }
+    
+    /* === DARK MODE CLASSES === */
+    .dark-mode .nav-container,
+    .dark-mode .top-header {
+      background: linear-gradient(to right, #222, #000);
+    }
+    .dark-mode .dropdown-content,
+    .dark-mode .nav-dropdown-content {
+      background-color: #1e1e1e;
+    }
+    .dark-mode .dropdown-content a,
+    .dark-mode .nav-dropdown-content a {
+      color: #ddd;
+    }
+    .dark-mode .dropdown-content a:hover,
+    .dark-mode .nav-dropdown-content a:hover {
+      background-color: #444;
+      color: #fff;
+    }
+    .dark-mode .btn-icon,
+    .dark-mode .dropbtn {
+      background-color: #333;
+      color: #ddd;
+    }
+    .dark-mode .btn-icon:hover,
+    .dark-mode .dropbtn:hover {
+      background-color: #555;
+      color: #fff;
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .nav-left {
+        display: none;
+      }
+      #hamburger {
+        display: inline-block;
+      }
+      #mobile-panel.show {
+        display: flex;
+      }
+      .right-buttons {
+        justify-content: center;
+        width: 100%;
+      }
+      .top-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+    }
+
+
+    .mobile-dropdown {
+  width: 100%;
+}
+.mobile-dropbtn {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  padding: 10px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.mobile-dropbtn:hover {
+  background-color: #004e92;
+}
+.mobile-dropdown-content {
+  display: none;
+  flex-direction: column;
+  background-color: #001f3f;
+  padding-left: 20px;
+}
+.mobile-dropdown-content a {
+  padding: 8px 0;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom: 1px solid #333;
+}
+.mobile-dropdown-content a:hover {
+  color: white;
+}
+.mobile-dropdown.show .mobile-dropdown-content {
+  display: flex;
+}
+</style>
+
+</head>
+<body>
+
+  <!-- ✅ Top Header / College Name + Logo + Affiliation -->
+  <div class="top-header">
+    <div class="left">
+      <img src="{% static 'images\logo12.jpg' %}" alt="Logo" class="logo" />
+      <div class="college-name">
+        <h1>Aggarwal College</h1>
+        <p>Affiliated to M.D.U, Rohtak</p>
+      </div>
+    </div>
+
+    <div class="right-buttons">
+      <a href="http://acb.collegemanagement.in/login" target="_blank" class="btn-icon">
+        <i class="fas fa-user-graduate"></i> Student Portal
+      </a>
+      <a href="/faculty-register/" class="btn-icon">
+        <i class="fas fa-chalkboard-teacher"></i> Faculty Portal
+      </a>
+
+      <!-- ✅ Quick Links Dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn" id="quickLinksToggle"><i class="fas fa-link"></i> Quick Links</button>
+        <div class="dropdown-content" id="quickLinksMenu">
+        <a href="http://acb.collegemanagement.in/login" target="_blank"><i class="fas fa-user-graduate"></i> Student Portal</a>
+   <a href="{% url 'faculty_register' %}"><i class="fas fa-chalkboard-teacher"></i> Faculty</a>
+   <a href="{% url 'students-corner' %}"><i class="fas fa-users"></i> Students Corner</a>
+   <a href="{% url 'institutional-policies' %}"><i class="fas fa-university"></i> Institutional Policies</a>
+   <a href="{% url 'awards-achievements' %}"><i class="fas fa-trophy"></i> Awards & Achievements</a>
+   <a href="{% url 'annual-reports' %}"><i class="fas fa-file-alt"></i> Annual Reports</a>
+   <a href="{% url 'alumni-association' %}"><i class="fas fa-user-friends"></i> Alumni Association</a>
+   <a href="https://ballabgarh.ebookcentral.proquest.com/libCentral/Login.aspx?r=needlogin"><i class="fas fa-book"></i> eBooks</a>
+   <a href="{% url 'about-admission' %}"><i class="fas fa-info-circle"></i> About Admission</a>
+   <a href="{% url 'newsletter' %}"><i class="fas fa-newspaper"></i> Newsletter</a>
+   <a href="{% url 'placement' %}" target="_blank" class="btn-animated">
+  <i class="fas fa-briefcase"></i> Placement
+</a>
+   <a href="{% static 'metting\BeyondAcademics.pdf' %}"><i class="fas fa-lightbulb"></i> Beyond Academics</a>
+   <a href="http://www.aggarwalcollege.ac.in/LMS2022/LMS1.html"><i class="fas fa-laptop"></i> LMS</a>
+   <a href="#"><i class="fas fa-archive"></i> Learning Resources</a>
+   <a href="#"><i class="fas fa-hand-holding-usd"></i> Scholarships</a>
+   <a href="#"><i class="fas fa-briefcase"></i> Career Support</a>
+   <a href="#"><i class="fas fa-handshake"></i> Conferences</a>
+<a href="{% url 'workshops' %}"><i class="fas fa-chalkboard"></i> Workshops</a>
+<a href="#"><i class="fas fa-star"></i> Annual Function</a>
+<a href="#"><i class="fas fa-certificate"></i> Certificate</a>
+<a href="#"><i class="fas fa-graduation-cap"></i> Convocation</a>
+<a href="{% static 'anualrepot/member-ship performa (2).doc' %}"><i class="fas fa-id-card"></i> Membership Form</a>
+<a href="{% static 'anualrepot/ACB Alumni Registration.pdf' %}"><i class="fas fa-edit"></i> Registration Certificate</a>
+   <a href="{% url 'allforms' %}"><i class="fas fa-book"></i>Forms</a>
+<a href="#"><i class="fas fa-basketball-ball"></i> Sports</a>
+<a href="{% static 'pdf/IDP Signed.pdf' %}" target="_blank" class="pdf-button"> <i class="fas fa-file-alt"></i> Institutional Development Plan (2022–2027) </a>
+ <a href="{% static 'pdfs/iic.pdf' %}" target="_blank" class="pdf-button"><i class="fas fa-university"></i> IIC </a>
+ <a href="{% static 'pdfs/ncc.pdf' %}" target="_blank" class="pdf-button"> <i class="fas fa-users"></i> NCC</a>
+ <a href="{% static 'pdfs/code_of_conduct.pdf' %}" target="_blank" class="pdf-button"><i class="fas fa-book"></i> Handbook of Code of Conduct </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- secondnavbar -->
+  <!-- ✅ Full Responsive Navbar HTML (Django Format) -->
+<nav class="nav-container">
+  <div class="nav-left">
+    <a href="{% url 'home' %}" class="nav-link">Home</a>
+
+    <!-- About Dropdown -->
+    <div class="nav-dropdown">
+      <button class="nav-dropbtn">About</button>
+      <div class="nav-dropdown-content">
+       <a href="{% url 'Gen' %}">General  Secretary Message</a>
+        <a href="{% url 'PrincipalMsg' %}">Principal's Message</a>
+        <a href="{% url 'Vision' %}">Vision</a>
+        <a href="{% url 'Mission' %}">Mission</a>
+        <a href="{% url 'Culture' %}">Culture</a>
+        <a href="{% url 'Core' %}">Core Values</a>
+        <a href="{% url 'Code' %}">Code of Ethices</a>
+        <a href="{% url 'Governing' %}">Governing Body</a>
+        <a href="{% url 'Organogram' %}">Organogram</a>
+        <a href="{% static 'pdf/sanjeevguptaCV24.pdf' %}" target="_blank">Principal Profile </a>
+        <a href="{% url 'Teaching' %}">Teaching and Non-teaching staff</a>
+      </div>
+    </div>
+
+    <a href="" class="nav-link">Research</a>
+
+    <!-- Academics Dropdown -->
+    <div class="nav-dropdown">
+      <button class="nav-dropbtn">Academics</button>
+      <div class="nav-dropdown-content">
+         <a href="{% url 'Programmes' %}">Programmes</a>
+        <a href="{% url 'CeepCourses' %}">Ceep Courses</a>
+        <a href="{% url 'Certificate' %}">Certificate/Diploma/advance/diplome</a>
+        <a href="{% url 'Department' %}">Department</a>
+        <a href="{% url 'LessonPlans' %}">Lesson Plans</a>
+        <a href="{% url 'AcadmicCalender' %}">Acadmic Calender</a>
+        <a href="{% url 'TimeTable' %}">Time Table</a>
+        <a href="{% url 'copopso' %}">COPoPSO</a>
+
+      </div>
+    </div>
+
+    <!-- Services Dropdown -->
+    <div class="nav-dropdown">
+      <button class="nav-dropbtn">Services</button>
+      <div class="nav-dropdown-content">
+        <a href="{% url 'library' %}">📚 Library</a>
+    <a href="{% url 'OurLearningResource' %}">🧠 Our Learning Resource</a>
+    <a href="{% url 'OPCA' %}">🏢 OPCA</a>
+      </div>
+    </div>
+
+    <!-- Events Dropdown -->
+    <div class="nav-dropdown">
+      <button class="nav-dropbtn">Events</button>
+      <div class="nav-dropdown-content">
+       <a href="{% url 'cultural_fest' %}">📦 All Events</a>
+    <a href="{% url 'job_fair' %}">💼 Job Fair</a>
+      </div>
+    </div>
+
+    <!-- NAAC Dropdown -->
+    <div class="nav-dropdown">
+      <button class="nav-dropbtn">NAAC</button>
+      <div class="nav-dropdown-content">
+        <a href="{% url 'ncc' %}">NAAC Accreditation Certificate</a>
+        <a href="{% url 'Aqar' %}">AQAR</a>
+        <a href="{% url 'ssr' %}">SSR</a>
+      </div>
+    </div>
+
+    <a href="{% url 'nirf' %}" class="nav-link">NIRF</a>
+    <a href="{% url 'rti' %}" class="nav-link">RTI</a>
+    <a href="{% url 'iqac' %}" class="nav-link">IQAC</a>
+
+    <!-- Career Dropdown -->
+    <div class="nav-dropdown">
+      <button class="nav-dropbtn">Career</button>
+      <div class="nav-dropdown-content">
+         <a href="{% static 'carer/CareerOpportunitiesforGraduateandPost-GraduateStudents18.pdf' %}">📌 Research Assistant Library</a>
+    <a href="{% static 'carer/CompendiumofAcademicCourses(After 10+2).pdf' %}">📘 Courses After 10+2</a>
+    <a href="{% static 'carer/CompendiumofAcademicCourses(After10).pdf' %}">📗 Courses After 10</a>
+    <a href="{% static 'carer/CareerOpportunitiesforGraduateandPost-GraduateStudents18.pdf' %}">🎓 Career Opportunities</a>
+    <a href="{% static '' %}">📄 Current Opening</a>
+    <a href="{% static 'carer/TeachingVacancyForm SFS2024.pdf' %}">📝 Teaching Form</a>
+    <a href="{% static 'carer/NonTeachingForm(Aided).pdf' %}">📋 Non-teaching Form</a>
+    <a href="{% static '' %}">📢 Corrigendum - Teaching Post</a>
+      </div>
+    </div>
+
+    <a href="{% url 'feedback_view' %}" class="nav-link">Feedback</a>
+    <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+  </div>
+
+  <div class="nav-right">
+    <button id="search-toggle"><i class="fas fa-search"></i></button>
+    <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+    <button id="hamburger"><i class="fas fa-bars"></i></button>
+  </div>
+
+  <div id="mobile-panel">
+    <!-- Mobile dropdown can be auto-generated or repeated here -->
+    <a href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a>
+
+    <!-- About -->
+    <div class="mobile-dropdown">
+      <button class="mobile-dropbtn"><i class="fas fa-info-circle"></i> About</button>
+      <div class="mobile-dropdown-content">
+       <a href="{% url 'Gen' %}">General  Secretary Message</a>
+        <a href="{% url 'PrincipalMsg' %}">Principal's Message</a>
+        <a href="{% url 'Vision' %}">Vision</a>
+        <a href="{% url 'Mission' %}">Mission</a>
+        <a href="{% url 'Culture' %}">Culture</a>
+        <a href="{% url 'Core' %}">Core Values</a>
+        <a href="{% url 'Code' %}">Code of Ethices</a>
+        <a href="{% url 'Governing' %}">Governing Body</a>
+        <a href="{% url 'Organogram' %}">Organogram</a>
+        <a href="{% static 'pdf/sanjeevguptaCV24.pdf' %}" target="_blank">Principal Profile </a>
+        <a href="{% url 'Teaching' %}">Teaching and Non-teaching staff</a>
+
+      </div>
+    </div>
+  
+    <a href="#"><i class="fas fa-flask"></i> Research</a>
+  
+    <!-- Academics -->
+    <div class="mobile-dropdown">
+      <button class="mobile-dropbtn"><i class="fas fa-book"></i> Academics</button>
+      <div class="mobile-dropdown-content">
+   <a href="{% url 'Programmes' %}">Programmes</a>
+        <a href="{% url 'CeepCourses' %}">Ceep Courses</a>
+        <a href="{% url 'Certificate' %}">Certificate/Diploma/advance/diplome</a>
+        <a href="{% url 'Department' %}">Department</a>
+        <a href="{% url 'LessonPlans' %}">Lesson Plans</a>
+        <a href="{% url 'AcadmicCalender' %}">Acadmic Calender</a>
+        <a href="{% url 'TimeTable' %}">Time Table</a>
+        <a href="{% url 'copopso' %}">COPoPSO</a>
+      </div>
+    </div>
+  
+    <!-- Services -->
+    <div class="mobile-dropdown">
+      <button class="mobile-dropbtn"><i class="fas fa-tools"></i> Services</button>
+      <div class="mobile-dropdown-content">
+      <a href="{% url 'library' %}">📚 Library</a>
+    <a href="{% url 'OurLearningResource' %}">🧠 Our Learning Resource</a>
+    <a href="{% url 'OPCA' %}">🏢 OPCA</a>
+      </div>
+    </div>
+  
+    <!-- Events -->
+    <div class="mobile-dropdown">
+      <button class="mobile-dropbtn"><i class="fas fa-calendar-alt"></i> Events</button>
+      <div class="mobile-dropdown-content">
+      <a href="{% url 'cultural_fest' %}">📦 All Events</a>
+    <a href="{% url 'job_fair' %}">💼 Job Fair</a>
+      </div>
+    </div>
+  
+    <!-- NAAC -->
+    <div class="mobile-dropdown">
+      <button class="mobile-dropbtn"><i class="fas fa-award"></i> NAAC</button>
+      <div class="mobile-dropdown-content">
+          <a href="{% url 'ncc' %}">📄 NAAC Certificate</a>
+    <a href="{% url 'Aqar' %}">📑 AQAR</a>
+    <a href="{% url 'ssr' %}">🗂️ SSR</a>
+      </div>
+    </div>
+  
+    <a href="{% url 'nirf' %}"><i class="fas fa-university"></i> NIRF</a>
+    <a href="{% url 'rti' %}"><i class="fas fa-bullhorn"></i> RTI</a>
+    <a href="{% url 'iqac' %}"><i class="fas fa-network-wired"></i> IQAC</a>
+  
+    <!-- Career -->
+    <div class="mobile-dropdown">
+      <button class="mobile-dropbtn"><i class="fas fa-user-tie"></i> Career</button>
+      <div class="mobile-dropdown-content">
+         <a href="{% static 'carer/CareerOpportunitiesforGraduateandPost-GraduateStudents18.pdf' %}">📌 Research Assistant Library</a>
+    <a href="{% static 'carer/CompendiumofAcademicCourses(After 10+2).pdf' %}">📘 Courses After 10+2</a>
+    <a href="{% static 'carer/CompendiumofAcademicCourses(After10).pdf' %}">📗 Courses After 10</a>
+    <a href="{% static 'carer/CareerOpportunitiesforGraduateandPost-GraduateStudents18.pdf' %}">🎓 Career Opportunities</a>
+    <a href="{% static '' %}">📄 Current Opening</a>
+    <a href="{% static 'carer/TeachingVacancyForm SFS2024.pdf' %}">📝 Teaching Form</a>
+    <a href="{% static 'carer/NonTeachingForm(Aided).pdf' %}">📋 Non-teaching Form</a>
+    <a href="{% static '' %}">📢 Corrigendum - Teaching Post</a>
+      </div>
+    </div>
+  
+    <a href="{% url 'feedback_view' %}"><i class="fas fa-comments"></i> Feedback</a>
+    <a href="{% url 'contact' %}"><i class="fas fa-phone"></i> Contact</a>
+  </div>
+  </div>
+</nav>
+<style>
+/* ✅ Video Banner Styling */
+    .video-banner {
+      position: relative;
+      width: 100%;
+      height: 700px;
+      /* overflow: hidden; */
+    }
+
+    .video-banner video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (max-width: 768px) {
+      .video-banner {
+        height: 250px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .video-banner {
+        height: 200px;
+      }
+    }
+
+    /* Optional Overlay Text */
+    .video-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+      z-index: 5;
+    }
+  </style>
+<div class="video-banner">
+  <video autoplay muted loop playsinline>
+    <source src="{% static 'videos\newvideo.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <!-- Optional: Text on Video -->
+  <!-- <div class="video-text">Welcome to Aggarwal College</div>
+</div> -->
+<style>
+  .marquee-wrapper {
+    width: 100%;
+    background: linear-gradient(90deg, #8E2DE2, #4A00E0); /* Royal Purple Gradient */
+    overflow: hidden;
+    white-space: nowrap;
+    height: auto;
+    padding: 1px 0;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+border-radius: 6px;
+
+  }
+
+  .marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 20s linear infinite;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 0.5px;
+  }
+
+  .marquee-wrapper:hover .marquee-content {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>
+
+<!-- ✅ Marquee Section -->
+<div class="marquee-wrapper">
+  <div class="marquee-content">
+    🎓 Admissions Open 2025–26 for BCA, MCA, MBA, BBA, B.Sc, M.Sc, BA, B.Com, M.Com 📚 | 📢Apply-Now| ⚖️ BBA LL.B, BA LL.B, LL.B – Apply Now Fast! 📝 | 📍 Limited Seats, Hurry Up! 🚀
+  </div>
+</div>
+
+<style>
+  .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 40px;
+    }
+    .image-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 320px;
+    }
+    .image-box img {
+      width: 100%;
+      border-radius: 20px;
+    }
+    .content-box {
+      max-width: 700px;
+    }
+    .content-box h2 {
+      font-size: 32px;
+      color: #122c51;
+      margin-bottom: 10px;
+    }
+    .content-box p {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+    }
+    .course-btn {
+      background: #fff;
+      padding: 12px;
+      text-align: center;
+      border-radius: 12px;
+      font-weight: 600;
+      color: #0b2341;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .course-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+    .apply-btn {
+      display: block;
+      margin: 30px auto 0;
+      padding: 14px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(to right, #7b2ff7, #f107a3);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+    .apply-btn:hover {
+      opacity: 0.9;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 30px 15px;
+      }
+      .content-box {
+        text-align: center;
+      }
+    }
+</style>
+
+
+<!-- ✅ Courses We Offer Section -->
+<div class="container">
+  <div class="image-box">
+    <img src="{% static 'images\1SIE.png' %}" alt="Courses Offered">
+  </div>
+
+  <div class="content-box">
+    <h2>Courses We Offer</h2>
+    <p>Explore a variety of professional and integrated programs designed for your future.</p>
+    <div class="courses-grid">
+      <div class="course-btn">BCA</div>
+      <div class="course-btn">MCA</div>
+      <div class="course-btn">B.Com</div>
+      <div class="course-btn">M.Com</div>
+      <div class="course-btn">BBA</div>
+      <div class="course-btn">MBA</div>
+      <div class="course-btn">B.Sc</div>
+      <div class="course-btn">M.Sc</div>
+      <div class="course-btn">BBA LL.B</div>
+      <div class="course-btn">BA LL.B</div>
+      <div class="course-btn">LL.B</div>
+    </div>
+<a href="{% url 'apply_now' %}" class="apply-btn" 
+   style="
+      display:inline-block;
+      padding:12px 28px;
+      background:linear-gradient(135deg, #ff512f, #dd2476);
+      color:#fff;
+      font-size:18px;
+      font-weight:bold;
+      border-radius:50px;
+      text-decoration:none;
+      box-shadow:0 4px 15px rgba(0,0,0,0.2);
+      position:relative;
+      overflow:hidden;
+      animation: pulseGlow 2s infinite;
+      transition: all 0.4s ease;
+   "
+   onmouseover="this.style.transform='scale(1.1) rotate(1deg)'; this.style.boxShadow='0 0 25px #ff4081, 0 0 50px #ff4081';"
+   onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
+   Apply Now
+</a>
+
+<style>
+@keyframes pulseGlow {
+  0% { box-shadow:0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081; }
+  50% { box-shadow:0 0 20px #ff4081, 0 0 40px #ff4081, 0 0 60px #ff4081; }
+  100% { box-shadow:0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081; }
+}
+</style>
+
+
+  </div>
+</div>
+
+
+  
+
+
+  <style>
+.chairman-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 5%;
+  background: #f8fafc;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* LEFT: Image Styling */
+.chairman-image {
+  flex: 1 1 280px;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.chairman-image img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: popIn 0.6s ease-in-out;
+}
+
+.chairman-image img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(59, 130, 246, 0.8);
+}
+
+/* RIGHT: Text Styling */
+.chairman-text {
+  flex: 1 1 500px;
+  max-width: 750px;
+  font-size: 1rem;
+  color: #1f2937;
+  line-height: 1.7;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.chairman-text h2 {
+  font-size: 2rem;
+  color: #1e40af;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.chairman-text p {
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+.signature {
+  font-weight: bold;
+  font-style: italic;
+  color: #0f172a;
+  margin-top: 30px;
+}
+
+/* Animations */
+@keyframes popIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chairman-section {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .chairman-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .chairman-text {
+    font-size: 1rem;
+    padding-top: 10px;
+  }
+
+  .chairman-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .signature {
+    text-align: center;
+  }
+}
+</style>
+
+
+
+
+
+
+
+<div class="chairman-section">
+  <!-- LEFT: IMAGE -->
+  <div class="chairman-image">
+    <img src="{% static 'images\23chairman124.JPG' %}" alt="Chairman Image" />
+  </div>
+
+  <!-- RIGHT: MESSAGE -->
+  <div class="chairman-text">
+    <h2>Chairman’s Message</h2>
+    <p>
+      I am delighted to welcome you all to another exciting academic year at Aggarwal College Ballabgarh... 
+      As we embark on this journey together, I want to extend my heartfelt greetings and share a few thoughts 
+      that I hope will inspire and guide us in the year ahead.
+    </p>
+    <p>
+      In the last five decades the college has obtained a name at the National and International Level. It has 
+      been awarded 'A++' grade with CGPA 3.57 by the National Assessment and Accreditation Council Bengaluru in 2019.
+    </p>
+    <p>
+      At Aggarwal College, we have always been committed to excellence in education, fostering an environment 
+      that encourages intellectual growth, innovation, and personal development. Our institution has a rich history 
+      of producing graduates who have gone on to make significant contributions to their fields, their communities, 
+      and the world at large.
+    </p>
+    <p>
+      As we move forward, our commitment to providing a world-class education remains unwavering. We are dedicated 
+      to continuously enhancing our curriculum, embracing emerging technologies, and adapting to the ever-evolving 
+      needs of our students. Our exceptional faculty members, staff, and administrators are here to support your 
+      academic journey and ensure that you have access to the resources and guidance necessary to succeed.
+    </p>
+    <p>
+      We encourage you to actively participate in the numerous clubs, organizations, and extracurricular activities 
+      that will enrich your college experience and help you grow as individuals.
+    </p>
+    <p>
+      In closing, I would like to extend my best wishes to each and every one of you for a successful and fulfilling 
+      academic year. Thank you for being part of the Aggarwal College family. Together, we will create a brighter and 
+      more promising future.
+    </p>
+
+    <p class="signature">Best Wishes,<br>President, Governing Body</p>
+  </div>
+</div>
+
+<style>
+
+
+  /* Wrapper */
+  .tour-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 5%;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* Left Side Image */
+  .tour-image {
+    position: relative;
+    flex: 1 1 400px;
+    max-width: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  .tour-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+  }
+  
+  .tour-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #ff5722;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(255, 87, 34, 0.4);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .tour-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Right Side Info */
+  .tour-info {
+    flex: 1 1 400px;
+    max-width: 600px;
+  }
+  
+  /* Apply Now Button */
+  .apply-btn {
+    background: #1e293b;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .apply-btn:hover {
+    background: #111827;
+  }
+  
+  /* Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 20px;
+  }
+  
+  .stat-card {
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+  .stat-card:hover {
+    transform: translateY(-4px);
+  }
+  .stat-card h2 {
+    font-size: 2rem;
+    margin: 0;
+    color: #1e293b;
+  }
+  .stat-card p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #374151;
+  }
+  .stat-card span {
+    color: #6b7280;
+    font-size: 13px;
+  }
+  
+  /* Video Modal */
+  .video-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .video-modal video {
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    border-radius: 12px;
+  }
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+  .tour-section {
+    flex-direction: column;
+    padding: 20px;
+    align-items: center; /* center image + text */
+    text-align: center;
+  }
+
+  .tour-image,
+  .tour-info {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .tour-btn {
+    font-size: 13px;
+    padding: 10px 14px;
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .apply-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .stat-card {
+    width: 90%;
+    text-align: center;
+  }
+
+  .stat-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .stat-card p {
+    font-size: 0.95rem;
+  }
+}
+
+  </style>
+<div class="tour-section">
+  <!-- Left Image -->
+  <div class="tour-image">
+    <img src="{% static 'images\4 - Copy.jpg' %}" alt="Campus" />
+    <div class="tour-btn" onclick="openVideo()">360°<br>Take a Virtual Tour</div>
+  </div>
+
+  <!-- Right Stats -->
+  <div class="tour-info">
+<a href="{% url 'apply_now' %}" class="apply-btn" 
+   style="
+      display:inline-block;
+      padding:12px 28px;
+      background:linear-gradient(135deg, #ff512f, #dd2476);
+      color:#fff;
+      font-size:18px;
+      font-weight:bold;
+      border-radius:50px;
+      text-decoration:none;
+      box-shadow:0 4px 15px rgba(0,0,0,0.2);
+      position:relative;
+      overflow:hidden;
+      animation: pulseGlow 2s infinite;
+      transition: all 0.4s ease;
+   "
+   onmouseover="this.style.transform='scale(1.1) rotate(1deg)'; this.style.boxShadow='0 0 25px #ff4081, 0 0 50px #ff4081';"
+   onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
+   Apply Now
+</a>
+
+<style>
+@keyframes pulseGlow {
+  0% { box-shadow:0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081; }
+  50% { box-shadow:0 0 20px #ff4081, 0 0 40px #ff4081, 0 0 60px #ff4081; }
+  100% { box-shadow:0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081; }
+}
+</style>
+
+
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h2>72+</h2>
+        <p><strong>Years of Legacy</strong><br><span>of Excellence</span></p>
+      </div>
+      <div class="stat-card">
+        <h2>59+</h2>
+        <p><strong>Campus Based</strong><br><span>Programs</span></p>
+      </div>
+      <div class="stat-card">
+        <h2>17000+</h2>
+        <p><strong>Students in</strong><br><span>Campus</span></p>
+      </div>
+      <div class="stat-card">
+        <h2>100+</h2>
+        <p><strong>National & International</strong><br><span>Collaborations</span></p>
+      </div>
+      <div class="stat-card">
+        <h2>750+</h2>
+        <p><strong>Passionate</strong><br><span>Faculty Members</span></p>
+      </div>
+      <div class="stat-card">
+        <h2>3+</h2>
+        <p><strong>NBA Accredited</strong><br><span>Programs</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Video Modal -->
+<div class="video-modal" id="videoModal">
+  <span class="close-btn" onclick="closeVideo()">&times;</span>
+  <video id="campusVideo" controls autoplay>
+    <source src="{% static 'videos\Untitled video - Made with Clipchamp (online-video-cutter.com).mp4' %}" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+<style>
+
+
+  .why-choose-section {
+    padding: 70px 5% 90px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+  }
+
+  .why-heading {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #1e40af;
+    position: relative;
+    animation: fadeDown 1s ease;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+  }
+
+  .why-card {
+    position: relative;
+    border-radius: 20px;
+    padding: 35px 25px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    opacity: 0;
+    transform: translateY(60px);
+    overflow: hidden;
+  }
+
+  .why-card::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    z-index: -1;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    border-radius: inherit;
+    transition: opacity 0.3s;
+  }
+
+  .why-card.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .why-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+  }
+
+  .why-icon {
+    font-size: 2.7rem;
+    color: #2563eb;
+    margin-bottom: 15px;
+    animation: pulse 2s infinite ease-in-out;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .why-card:hover .why-icon {
+    transform: scale(1.25);
+    color: #1e3a8a;
+  }
+
+  .why-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 10px;
+  }
+
+  .why-card p {
+    font-size: 0.95rem;
+    color: #374151;
+    line-height: 1.6;
+  }
+
+  /* Animations */
+  @keyframes fadeDown {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.15);
+      opacity: 0.75;
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .why-heading {
+      font-size: 2rem;
+      margin-bottom: 35px;
+    }
+
+    .why-card {
+      padding: 25px 15px;
+    }
+
+    .why-card h3 {
+      font-size: 1.15rem;
+    }
+
+    .why-card p {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+  
+
+<!-- Why Choose Section -->
+<section class="why-choose-section">
+  <h2 class="why-heading">Why Choose Aggarwal College</h2>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-icon"><i class="fas fa-graduation-cap"></i></div>
+      <h3>Academic Excellence</h3>
+      <p>Top-tier faculty and curriculum ensure outstanding results and career readiness.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <div class="why-icon"><i class="fas fa-globe"></i></div>
+      <h3>Global Exposure</h3>
+      <p>International collaborations and opportunities to learn beyond borders.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <div class="why-icon"><i class="fas fa-laptop-code"></i></div>
+      <h3>Tech-Driven Campus</h3>
+      <p>Smart classrooms, high-speed internet & modern labs for innovation.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <div class="why-icon"><i class="fas fa-hand-holding-heart"></i></div>
+      <h3>Student-Centric Culture</h3>
+      <p>Focus on growth, mentorship, and a wide range of clubs & activities.</p>
+    </div>
+  </div>
+</section>
+
+
+  
+<style>
+  /* Main Wrapper */
+  .share-wrapper {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+  }
+  
+  /* Floating Share Button */
+  .share-toggle {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .share-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #6366f1;
+  }
+  
+  /* Panel Container */
+  .share-panel {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: all 0.4s ease;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px 12px;
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    flex-wrap: nowrap;
+  }
+  
+  /* Show State */
+  .share-panel.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  
+  /* Share Icon Styles */
+  .share-panel a {
+    font-size: 20px;
+    color: white;
+    background: #1e3a8a;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(30, 58, 138, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  .share-panel a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+    background: #3b82f6;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 480px) {
+    .share-wrapper {
+      bottom: 15px;
+      left: 15px;
+    }
+  
+    .share-toggle {
+      width: 45px;
+      height: 45px;
+      font-size: 18px;
+    }
+  
+    .share-panel {
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 10px;
+      max-width: 250px;
+    }
+  
+    .share-panel a {
+      font-size: 18px;
+      padding: 9px;
+    }
+  }
+  </style>
+  
+
+<!-- Fixed Share Button -->
+<div class="share-wrapper">
+  <div class="share-toggle" onclick="toggleShare()">
+    <i class="fas fa-share-alt"></i>
+  </div>
+
+  <div class="share-panel" id="sharePanel">
+    <a href="https://www.youtube.com/@AggarwalCollege" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://api.whatsapp.com/send?text=Check%20out%20Aggarwal%20College:%20https://www.aggarwalcollege.ac.in" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.facebook.com/people/Aggarwal-College-Ballabgarh/100064717483976/?ref=embed_page" target="_blank" rel="noreferrer">   
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/aggarwalcollegeofficial/?utm_source=qr&igsh=MWEwZnhrejdmYXVycw%3D%3D#" target="_blank" rel="noreferrer">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://x.com/aggarwalcollege" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="mailto:admin@aggarwalcollege.ac.in?subject=Enquiry&body=Hello,%20please%20share%20info%20about%20Aggarwal%20College.%0AWebsite:%20https://www.aggarwalcollege.ac.in" title="Email"><i class="fas fa-envelope"></i></a>
+  </div>
+</div>
+
+
+<style>
+  .chatbot-floating-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+  }
+  
+  .chatbot-toggle {
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, #3b82f6, #9333ea);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .chatbot-toggle img {
+    width: 60%;
+    animation: pulse 2s infinite;
+  }
+  
+  .chatbot-toggle:hover {
+    transform: scale(1.1);
+  }
+  
+  .chatbot-floating-panel {
+    display: none;
+    flex-direction: column;
+    width: 300px;
+    background: linear-gradient(135deg, #1e40af, #0f766e);
+    backdrop-filter: blur(14px);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    margin-bottom: 80px;
+    color: white;
+    animation: slideFadeIn 0.5s ease-in-out;
+  }
+  
+  .chatbot-floating-panel.show {
+    display: flex;
+    animation: slideFadeIn 0.5s ease-in-out;
+  }
+  
+  .chatbot-floating-panel h3 {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .chatbot-floating-panel p {
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0;
+    color: #f3f4f6;
+  }
+  
+  .chatbot-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .chatbot-controls select {
+    flex: 1;
+    padding: 6px;
+    border-radius: 8px;
+    border: none;
+    font-size: 13px;
+    background: #1e3a8a;
+    color: white;
+    margin-right: 8px;
+  }
+  
+  .chatbot-controls button {
+    padding: 7px 10px;
+    background: #f59e0b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .whatsapp-btn {
+    text-align: center;
+    background: #25D366;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.5);
+    transition: background 0.3s ease;
+  }
+  
+  .whatsapp-btn:hover {
+    background: #1da851;
+  }
+  
+  @keyframes slideFadeIn {
+    0% { transform: scale(0.95) translateY(15px); opacity: 0; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  @media (max-width: 480px) {
+    .chatbot-floating-panel {
+      width: 85vw;
+    }
+  }
+  </style>
+  <div class="chatbot-floating-wrapper">
+    <!-- Bot Icon (Toggle Button) -->
+    <div class="chatbot-toggle" onclick="toggleChatbotPanel()">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712033.png" alt="ChatBot Icon" />
+    </div>
+  
+    <!-- Sliding Panel -->
+    <div class="chatbot-floating-panel" id="chatbotPanel">
+      <h3>Admissions Open</h3>
+      <p id="chatbotMessage">Apply for BCA, BBA, BCom, BSc, MSc, MCom, MA Now!</p>
+      <div class="chatbot-controls">
+        <select id="langSelect" onchange="translateAndSpeak()">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="ta">Tamil</option>
+          <option value="bn">Bengali</option>
+        </select>
+        <button onclick="speakMessage()">🔊</button>
+      </div>
+      <a href="https://wa.me/919999999999" class="whatsapp-btn" target="_blank">💬 WhatsApp Now</a>
+    </div>
+  </div>
+
+
+    
+  <section class="recruiters-section">
+    <h2 class="recruiter-heading">Top Recruiters & Placement Partners</h2>
+    <div class="recruiter-carousel">
+      <div class="recruiter-track">
+        {% comment %} <div class="recruiter-logo">
+          <img src="{% static 'images/tata-consultancy-services-logo.png' %}" alt="TCS">
+          <p class="company-name">TCS</p>
+        </div> {% endcomment %}
+        {% comment %} <div class="recruiter-logo">
+          <img src="{% static 'images/Wipro_Primary_Logo_Color_RGB.svg.png' %}" alt="Wipro">
+          <p class="company-name">Wipro</p>
+        </div>
+        <div class="recruiter-logo">
+          <img src="{% static 'images/infoys.webp' %}" alt="Infosys">
+          <p class="company-name">Infosys</p>
+        </div>
+        <div class="recruiter-logo">
+          <img src="{% static 'images/ibm-abstract-letter-design-modern-260nw-2631815623.webp' %}" alt="IBM">
+          <p class="company-name">IBM</p>
+        </div>
+        <div class="recruiter-logo">
+          <img src="{% static 'images/capgemini.webp' %}" alt="Capgemini">
+          <p class="company-name">Capgemini</p>
+        </div>
+        <div class="recruiter-logo">
+          <img src="{% static 'images/hdfc.webp' %}" alt="HDFC">
+          <p class="company-name">HDFC Bank</p>
+        </div> {% endcomment %}
+
+        <div class="recruiter-logo">
+          <img src="{% static 'company ogo\sony.webp' %}" alt="SONY">
+          <p class="company-name">Sony</p>
+        </div>
+        <div class="recruiter-logo">
+          <img src="{% static 'company ogo\DGL.webp' %}" alt="DGL">
+          <p class="company-name">DGL</p>
+        </div>
+        <div class="recruiter-logo">
+          <img src="{% static 'company ogo\iciabank.webp' %}" alt="ICI">
+          <p class="company-name">ICI Bank</p>
+        </div>
+        <div class="recruiter-logo">
+          <img src="{% static 'company ogo\halidram.webp' %}" alt="HALIDRAM">
+          <p class="company-name">Halidram</p>
+        </div>
+        <div class="recruiter-logo">
+          <img src="{% static 'company ogo\paytm.webp' %}" alt="PAYTM">
+          <p class="company-name">PAYTM</p>
+        </div>
+        
+        <div class="recruiter-logo">
+          <img src="{% static 'company ogo\sbi.webp' %}" alt="SBI">
+          <p class="company-name">SBI</p>
+        </div>
+        
+        <div class="recruiter-logo">
+          <img src="{% static 'company ogo\Muthoot.webp' %}" alt="Muthoot">
+          <p class="company-name">Muthoot Finance</p>
+        </div>
+        <div class="recruiter-logo">
+          <img src="{% static 'company ogo\imperialauto.webp' %}" alt="Imperial Autos">
+          <p class="company-name">Imperial Autos</p>
+        </div>
+
+        <div class="recruiter-logo">
+          <img src="{% static 'company ogo\teachmanhidra.jpeg' %}" alt="Teachman Hidra">
+          <p class="company-name">Teachman Hidra</p>
+        </div>
+
+        <div class="recruiter-logo">
+          <img src="{% static 'company ogo\genpact.webp' %}" alt="Genpact">
+          <p class="company-name">Genpact</p>
+        </div>
+
+        <div class="recruiter-logo">
+          <img src="{% static 'company ogo\genpact.webp' %}" alt="Genpact">
+          <p class="company-name">Genpact</p>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+  </section>
+  
+  <style>
+  .recruiters-section {
+    background: linear-gradient(135deg, #f0f9ff, #e0f7fa);
+    padding: 60px 20px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .recruiter-heading {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #1d4ed8, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: headingFade 1s ease-in-out forwards;
+  }
+  
+  .recruiter-carousel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  .recruiter-track {
+    display: flex;
+    gap: 50px;
+    animation: slideLogos 25s linear infinite;
+    align-items: center;
+  }
+  
+  .recruiter-logo {
+    text-align: center;
+    transition: transform 0.4s ease-in-out;
+    position: relative;
+  }
+  
+  .recruiter-logo img {
+    height: 90px;
+    filter: grayscale(100%) contrast(0.9);
+    opacity: 0.75;
+    border-radius: 16px;
+    transition: all 0.6s ease-in-out;
+    transform: perspective(400px) rotateY(0deg);
+    z-index: 1;
+  }
+  
+  .recruiter-logo:hover img {
+    filter: grayscale(0%) contrast(1.2);
+    opacity: 1;
+    transform: scale(1.2) perspective(600px) rotateY(12deg);
+    animation: glowPulse 1.5s ease-in-out infinite alternate;
+  }
+  
+  .company-name {
+    margin-top: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f172a;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .recruiter-logo:hover .company-name {
+    opacity: 1;
+    transform: translateY(0);
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px #3b82f6, 0 0 20px #22c55e;
+    animation: glowText 1.2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glowPulse {
+    0% {
+      box-shadow: 0 0 12px rgba(236, 72, 153, 0.4), 0 0 25px rgba(59, 130, 246, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 22px rgba(59, 130, 246, 0.6), 0 0 40px rgba(34, 197, 94, 0.5);
+    }
+  }
+  
+  @keyframes glowText {
+    from {
+      text-shadow: 0 0 10px #14b8a6, 0 0 20px #2563eb;
+    }
+    to {
+      text-shadow: 0 0 20px #3b82f6, 0 0 35px #10b981;
+    }
+  }
+  
+  @keyframes slideLogos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  @keyframes headingFade {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .recruiter-heading {
+      font-size: 1.6rem;
+    }
+  
+    .recruiter-track {
+      gap: 30px;
+    }
+  
+    .recruiter-logo img {
+      height: 60px;
+    }
+  
+    .company-name {
+      font-size: 0.85rem;
+    }
+  }
+  </style>
+   
+    
+   <section class="milestones-section">
+    <h2 class="milestone-heading">🎓 Our Glorious Milestones</h2>
+    <div class="milestone-timeline">
+      <div class="milestone-card">
+        <span class="milestone-year">1971</span>
+        <p class="milestone-desc">Established Aggarwal College Ballabgarh</p>
+      </div>
+      <div class="milestone-card">
+        <span class="milestone-year">2019</span>
+        <p class="milestone-desc">NAAC A++ Grade with CGPA 3.57</p>
+      </div>
+      <div class="milestone-card">
+        <span class="milestone-year">2012</span>
+        <p class="milestone-desc">Launched B.Sc. </p>
+      </div>
+      <div class="milestone-card">
+        <span class="milestone-year">2015</span>
+        <p class="milestone-desc">Collaboration with top companies</p>
+      </div>
+      <div class="milestone-card">
+        <span class="milestone-year">2020</span>
+        <p class="milestone-desc">Ranked in Top 50 Govt. NAAC A++ Colleges</p>
+      </div>
+    </div>
+  </section>
+
+    
+  <style>
+    .milestones-section {
+      padding: 60px 20px;
+      background: #fdfdfd;
+      text-align: center;
+    }
+    
+    .milestone-heading {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 40px;
+      background: linear-gradient(to right, #1e3a8a, #14b8a6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInUp 1s ease forwards;
+    }
+    
+    .milestone-timeline {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    
+    .milestone-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 16px;
+      width: 250px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    
+    .milestone-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(59, 130, 246, 0.6);
+    }
+    
+    .milestone-year {
+      display: block;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #2563eb;
+      margin-bottom: 10px;
+      animation: glowYear 1.5s infinite alternate;
+    }
+    
+    .milestone-desc {
+      font-size: 1rem;
+      color: #374151;
+      font-weight: 500;
+    }
+    
+    @keyframes glowYear {
+      0% {
+        text-shadow: 0 0 5px #60a5fa, 0 0 10px #3b82f6;
+      }
+      100% {
+        text-shadow: 0 0 15px #3b82f6, 0 0 30px #1e40af;
+      }
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .milestone-card {
+        width: 90%;
+      }
+    
+      .milestone-heading {
+        font-size: 1.6rem;
+      }
+    }
+    </style>
+  <section class="about-section">
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="{% static 'videos/WhatsApp Video 2025-05-27 at 14.55.01_67fd6f1b.mp4' %}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+    <div class="about-overlay">
+      <h2>About Us</h2>
+      <p>
+        Aggarwal College Ballabgarh (ACB) established in 1971 is a premier Higher Education Institution which runs under the aegis of Aggarwal Vidya Pracharni Sabha (Regd.) Ballabgarh... (your full text continues here)
+      </p>
+    </div>
+  </section>
+  <style>
+    .about-section {
+      position: relative;
+      height: auto;
+      overflow: hidden;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      background-color: transparent;
+    }
+    
+    .bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.6;
+      filter: brightness(0.6) contrast(1.2);
+    }
+    
+    .about-overlay {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      background: rgba(0, 0, 0, 0.55);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      backdrop-filter: blur(12px);
+      animation: fadeIn 1.5s ease-out;
+    }
+    
+    .about-overlay h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      background: linear-gradient(to right, #4ade80, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 5px #fff4, 0 0 10px #00f5;
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    .about-overlay p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #f8fafc;
+      text-align: justify;
+      animation: fadeInUp 1.2s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @media screen and (max-width: 768px) {
+      .about-overlay {
+        padding: 20px;
+      }
+      .about-overlay h2 {
+        font-size: 2rem;
+      }
+      .about-overlay p {
+        font-size: 0.95rem;
+      }
+    }
+    </style>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <img src="{% static 'images\logo12.jpg' %}" alt="College Logo" class="footer-logo">
+          <h3>Our Vision & Mission</h3>
+          <p>
+            To foster academic excellence and empower students with values, skills, and knowledge to meet the global challenges with confidence and commitment.
+          </p>
+        </div>
+    
+        <div class="footer-center">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.google.com/?q=Aggarwal+College+Ballabgarh" target="_blank">Aggarwal College, Ballabgarh - 121004, Distt. Faridabad (Haryana)</a></p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+911292241391">+91-129-2241391, 2308348-50</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:aggpgcollege@gmail.com">aggpgcollege@gmail.com</a></p>
+          <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/911292241391" target="_blank">WhatsApp Us</a></p>
+        </div>
+    
+        <div class="footer-right">
+          <h3>Total Visitors</h3>
+          <p class="visitor-count">You are visitor #<span id="visitorCount">1200000</span></p>
+          <p class="dev-credit attract">Developed by <strong>Piyush Verma</strong></p>
+        </div>
+      </div>
+    </footer>
+    <style>
+      .site-footer {
+        background: linear-gradient(to right, #004e92, #000428);
+        color: #ffffff;
+        padding: 40px 20px;
+        font-family: 'Segoe UI', sans-serif;
+      }
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .footer-left,
+      .footer-center,
+      .footer-right {
+        flex: 1 1 300px;
+      }
+      .footer-logo {
+        max-width: 120px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        border: 3px solid #facc15;
+        box-shadow: 0 0 20px rgba(250, 204, 21, 0.6);
+        transition: transform 0.3s ease;
+      }
+      .footer-logo:hover {
+        transform: scale(1.1);
+      }
+      .footer-container h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color: #fffa;
+      }
+      .footer-container p {
+        margin: 6px 0;
+        font-size: 0.95rem;
+        color: #f1f5f9;
+      }
+      .footer-container a {
+        color: #a5f3fc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .footer-container a:hover {
+        color: #facc15;
+      }
+      .visitor-count {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #22d3ee;
+        text-shadow: 0 0 8px #22d3ee;
+        animation: pulse 2s infinite ease-in-out;
+      }
+      .dev-credit.attract {
+  font-size: 1.1rem;
+  margin-top: 20px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #facc15, #fb923c, #14b8a6);
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animateGradient 4s ease-in-out infinite, glowDev 2s ease-in-out infinite;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(250, 204, 21, 0.3);
+  transition: all 0.3s ease;
+}
+
+.dev-credit.attract:hover {
+  transform: scale(1.08);
+  text-shadow: 0 0 12px rgba(250, 204, 21, 0.9), 0 0 25px rgba(251, 146, 60, 0.8);
+}
+
+/* Gradient slide animation */
+@keyframes animateGradient {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+/* Glow animation */
+@keyframes glowDev {
+  0% {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 12px rgba(250, 204, 21, 0.6), 0 0 18px rgba(20, 184, 166, 0.6);
+  }
+}
+
+      @media screen and (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .footer-logo {
+          margin: 0 auto;
+        }
+      }
+      </style>
+
+<!-- Cookie Banner (copy this whole block into your base template) -->
+<style>
+  :root {
+  --g1: #004e92;
+  --g2: #000428;
+  --accent: #ff416c;
+  --text: #ffffff;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Container reset */
+.cookie-wrap {
+  position: fixed;
+  right: 20px;
+  left: 20px;
+  bottom: 24px;
+  z-index: 99999;
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+@media (min-width: 1000px) {
+  .cookie-wrap {
+    right: 40px;
+    left: auto;
+  }
+}
+
+.cookie-banner {
+  pointer-events: auto;
+  width: 100%;
+  max-width: 940px;
+  position: relative;
+  background: linear-gradient(135deg, var(--g1), var(--g2));
+  border-radius: 14px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 16px;
+  box-shadow: var(--shadow);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  transform: translateY(140%);
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(.2, .9, .3, 1), opacity 0.45s ease;
+  overflow: hidden;
+}
+.cookie-banner.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Shine overlay */
+.cookie-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+}
+
+/* Left icon box */
+.cookie-left {
+  flex: 0 0 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--g1), var(--g2));
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45),
+              inset 0 -4px 18px rgba(0, 0, 0, 0.12);
+  animation: float 4.6s ease-in-out infinite;
+}
+.cookie-left svg {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+}
+
+/* Content */
+.cookie-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cookie-title {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cookie-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.35;
+  opacity: .95;
+}
+
+/* Buttons */
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+.btn {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease, opacity .12s linear;
+  font-size: 14px;
+}
+.btn:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.12);
+  outline-offset: 3px;
+}
+.btn-primary {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  color: white;
+  box-shadow: 0 8px 20px rgba(255, 65, 108, 0.18);
+}
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(255, 65, 108, 0.22);
+}
+.btn-link {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 9px 12px;
+}
+.btn-link:hover {
+  background: rgba(255, 255, 255, 0.03);
+  transform: translateY(-2px);
+}
+.cookie-close {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  padding: 6px;
+  border-radius: 8px;
+}
+.cookie-close:hover {
+  background: rgba(255, 255, 255, 0.03);
+  transform: rotate(20deg) scale(1.02);
+}
+
+/* Footer */
+.cookie-foot {
+  margin-left: auto;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(-6px) }
+}
+
+/* Mobile responsive */
+@media (max-width: 720px) {
+  .cookie-wrap {
+    left: 12px;
+    right: 12px;
+    bottom: 18px;
+  }
+  .cookie-banner {
+    padding: 12px;
+    gap: 12px;
+    border-radius: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cookie-left {
+    width: 56px;
+    height: 56px;
+  }
+  .cookie-title {
+    font-size: 15px;
+  }
+  .cookie-desc {
+    font-size: 13px;
+  }
+  .cookie-actions {
+    margin-top: 8px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+</style>
+<div class="cookie-wrap" aria-live="polite">
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie consent" aria-hidden="true">
+    <div class="cookie-left" aria-hidden="true">
+      <!-- Cookie/Shield icon (inline SVG) -->
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2l6 2v5c0 5-3.5 9-6 11-2.5-2-6-6-6-11V4l6-2z" fill="white" opacity="0.95"/>
+        <path d="M10.5 11.5l1.8 2.2L14.8 9" stroke="#004e92" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+
+    <div class="cookie-content">
+      <div class="cookie-title">
+        <span>We use cookies for a better experience</span>
+      </div>
+      <div class="cookie-desc">
+        By accepting, you allow us to store cookies for analytics and to improve your visit. You can choose "Never" to decline — if you choose "Never" this message will come back every 1 minute until you accept.
+      </div>
+
+      <div class="cookie-actions" role="group" aria-label="Cookie actions">
+        <button id="acceptBtn" class="btn btn-primary" aria-label="Accept all cookies">
+          <!-- accept icon -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6L9 17l-5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Accept All
+        </button>
+
+        <button id="neverBtn" class="btn btn-link" aria-label="Never accept cookies">
+          <!-- never / bell off icon -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 16h-1v-4" stroke="white" stroke-opacity="0.95" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 8a6 6 0 10-12 0v4l-2 2v1h16v-1l-2-2V8z" stroke="white" stroke-opacity="0.95" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Never
+        </button>
+
+        <button id="learnBtn" class="btn cookie-close" aria-label="Learn more about cookies">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 20a8 8 0 100-16 8 8 0 000 16z" stroke="rgba(255,255,255,0.7)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 8v.01M11 12h1v4" stroke="rgba(255,255,255,0.85)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="cookie-foot" aria-hidden="true">
+      <small>Privacy • Terms</small>
+    </div>
+  </div>
+</div>
+
+<script>
+/*
+  Cookie banner behavior:
+  - Accept All -> saves localStorage 'cookies_accepted' = "1" and banner never shows again.
+  - Never -> hides now, but banner will show every 60 seconds (for a short visible duration) until user Accepts.
+  - If neither is chosen, banner shows normally on page load.
+  - This uses localStorage (works like cookies and easy to test).
+*/
+
+(function(){
+  const banner = document.getElementById('cookieBanner');
+  const acceptBtn = document.getElementById('acceptBtn');
+  const neverBtn = document.getElementById('neverBtn');
+  const learnBtn = document.getElementById('learnBtn');
+
+  // Config
+  const NEVER_INTERVAL_MS = 60 * 1000; // 1 minute
+  const SHOW_DURATION_MS = 10 * 1000;   // visible for 10s when shown on interval
+  let neverTimer = null;
+  let reappearInterval = null;
+
+  // Utility helpers
+  function setAccepted(){ localStorage.setItem('cookies_accepted', '1'); localStorage.removeItem('cookies_never'); }
+  function isAccepted(){ return localStorage.getItem('cookies_accepted') === '1'; }
+  function setNever(){ localStorage.setItem('cookies_never', String(Date.now())); }
+  function isNever(){ return localStorage.getItem('cookies_never') !== null; }
+
+  // show / hide helpers
+  function showBanner(){ banner.classList.add('show'); banner.setAttribute('aria-hidden','false'); }
+  function hideBanner(){ banner.classList.remove('show'); banner.setAttribute('aria-hidden','true'); }
+
+  // on Accept -> permanent hide and clear timers
+  acceptBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    setAccepted();
+    hideBanner();
+    stopReappearLoop();
+  });
+
+  // on Never -> hide now but set flag; schedule reappear every 60s
+  neverBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    setNever();
+    hideBanner();
+    startReappearLoop();
+  });
+
+  // learn more -> you can change to open privacy page
+  learnBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    // replace with your privacy page url if any:
+    window.open('/privacy/', '_blank');
+  });
+
+  // Start a loop that will show banner for SHOW_DURATION_MS every NEVER_INTERVAL_MS
+  function startReappearLoop(){
+    stopReappearLoop();
+
+    // Immediately schedule first re-show after interval
+    reappearInterval = setInterval(()=> {
+      // If user accepted meanwhile, stop
+      if (isAccepted()){ stopReappearLoop(); return; }
+      showBanner();
+      // hide after SHOW_DURATION_MS
+      neverTimer = setTimeout(()=> { hideBanner(); }, SHOW_DURATION_MS);
+    }, NEVER_INTERVAL_MS);
+
+    // Also show once after 600ms so user sees it quickly
+    setTimeout(()=> { if (!isAccepted()) showBanner(); }, 600);
+  }
+
+  function stopReappearLoop(){
+    if (reappearInterval){ clearInterval(reappearInterval); reappearInterval = null; }
+    if (neverTimer){ clearTimeout(neverTimer); neverTimer = null; }
+  }
+
+  // On load: decide behavior
+  window.addEventListener('load', function(){
+    // Accessibility: ensure focusable elements
+    acceptBtn.setAttribute('tabindex','0');
+    neverBtn.setAttribute('tabindex','0');
+    learnBtn.setAttribute('tabindex','0');
+
+    if (isAccepted()){
+      hideBanner();
+      stopReappearLoop();
+      return;
+    }
+
+    if (isNever()){
+      // user previously clicked Never -> start loop
+      startReappearLoop();
+    } else {
+      // No choice yet -> show banner
+      showBanner();
+    }
+
+    // If the banner is visible and user presses Escape, hide for now (but if they had clicked Never before it'll return)
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && !isAccepted()){
+        hideBanner();
+      }
+    });
+
+    // Small improvement: If user navigates within site, keep the banner consistent
+    window.addEventListener('beforeunload', ()=>{ /* nothing special needed */ });
+  });
+
+})();
+</script>
+
+      
+    <script>
+      // Visitor Counter Logic (Simulated using localStorage)
+      document.addEventListener("DOMContentLoaded", () => {
+        const countKey = "visitorCountLocal";
+        let currentCount = localStorage.getItem(countKey);
+        if (!currentCount) currentCount = 120000;
+        else currentCount = parseInt(currentCount) + 1;
+        localStorage.setItem(countKey, currentCount);
+        document.getElementById("visitorCount").textContent = currentCount;
+      });
+    </script>
+  <script>
+    const defaultMsg = "Apply for BCA, BBA, BCom, BSc, MSc, MCom, MA Now!";
+    const langMap = {
+      en: "en-IN",
+      hi: "hi-IN",
+      ta: "ta-IN",
+      bn: "bn-IN"
+    };
+    
+    function toggleChatbotPanel() {
+      const panel = document.getElementById('chatbotPanel');
+      panel.classList.toggle('show');
+      panel.style.display = panel.classList.contains('show') ? 'flex' : 'none';
+    }
+    
+    function speakMessage(text = defaultMsg, lang = 'en-IN') {
+      const speech = new SpeechSynthesisUtterance();
+      speech.text = text;
+      speech.lang = lang;
+      speechSynthesis.speak(speech);
+    }
+    
+    function translateAndSpeak() {
+      const langCode = document.getElementById('langSelect').value;
+      let msg = defaultMsg;
+      if (langCode === 'hi') msg = "अब BCA, BBA, BCom, MSc, MCom, MA में प्रवेश लें!";
+      if (langCode === 'ta') msg = "இப்போது BCA, BBA, BCom, MSc, MCom, MA சேர்க்கை!";
+      if (langCode === 'bn') msg = "এখনই ভর্তি নিন: BCA, BBA, BCom, MSc, MCom, MA!";
+      speakMessage(msg, langMap[langCode]);
+    }
+    </script>
+<script>
+  function toggleShare() {
+    const panel = document.getElementById('sharePanel');
+    panel.classList.toggle('show');
+  }
+</script>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.reveal').forEach(card => {
+    observer.observe(card);
+  });
+</script>
+
+
+
+
+
+
+<script>
+  function openVideo() {
+    document.getElementById("videoModal").style.display = "flex";
+  }
+  function closeVideo() {
+    const video = document.getElementById("campusVideo");
+    video.pause();
+    video.currentTime = 0;
+    document.getElementById("videoModal").style.display = "none";
+  }
+  </script>
+  
+<script>
+  // Counter Animation
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = target / 200;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 10);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  });
+
+  // Video Modal Functions
+  function openVideo() {
+    document.getElementById("videoModal").style.display = "flex";
+  }
+
+  function closeVideo() {
+    let video = document.getElementById("campusVideo");
+    video.pause();
+    video.currentTime = 0;
+    document.getElementById("videoModal").style.display = "none";
+  }
+</script>
+
+<script>
+  // Hamburger menu toggle
+  document.getElementById("hamburger").addEventListener("click", function () {
+    document.getElementById("mobile-panel").classList.toggle("show");
+  });
+
+  // Dark mode toggle
+  document.getElementById("theme-toggle").addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+  });
+</script>
+
+
+
+<script>
+
+
+  // Mobile dropdown toggle
+  document.querySelectorAll('.mobile-dropbtn').forEach(button => {
+    button.addEventListener('click', () => {
+      const dropdown = button.parentElement;
+      dropdown.classList.toggle('show');
+    });
+  });
+</script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.getElementById("quickLinksToggle");
+      const dropdownMenu = document.getElementById("quickLinksMenu");
+  
+      toggleBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (dropdownMenu.style.display === "block") {
+          dropdownMenu.style.display = "none";
+        } else {
+          dropdownMenu.style.display = "block";
+        }
+      });
+  
+      // Close dropdown if click outside
+      document.addEventListener("click", function () {
+        dropdownMenu.style.display = "none";
+      });
+  
+      dropdownMenu.addEventListener("click", function (e) {
+        e.stopPropagation(); // keep open if clicking inside
+      });
+    });
+  </script>
+  
+</body>
+</html>

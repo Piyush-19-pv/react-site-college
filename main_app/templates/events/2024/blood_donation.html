@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blood Donation Camp - Aggarwal College</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/875/875610.png" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #fffafa;
+      color: #2c2c2c;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: auto;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      color: #c0392b;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 14px;
+      object-fit: cover;
+      margin: 20px 0;
+      max-height: 430px;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .btn-read {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 24px;
+      margin-top: 30px;
+      background: linear-gradient(90deg, #e74c3c, #c0392b);
+      color: #fff;
+      border-radius: 40px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-read img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+
+    .btn-read:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(192, 57, 43, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Blood Donation Camp</h1>
+
+    <img src="{% static 'images/blood_donation.jpg' %}" alt="Blood Donation Camp">
+
+    <div class="content">
+      <p>
+        Aggarwal College Ballabgarh, in collaboration with the Indian Red Cross Society, organized a noble initiative – a **Blood Donation Camp** on campus. This event was aimed at fostering a sense of social responsibility and humanitarian spirit among students and staff.
+      </p>
+      <p>
+        The event witnessed enthusiastic participation from over 200 students, faculty members, and non-teaching staff. A team of certified doctors and medical professionals conducted the blood donation process, ensuring hygiene and safety protocols throughout. Each donor underwent basic health screening before donation to confirm their eligibility.
+      </p>
+      <p>
+        The camp served as an eye-opener, especially for young students, about the importance of blood donation. One unit of donated blood can potentially save up to three lives, and the college community was proud to contribute to such a life-saving cause. Refreshments and appreciation certificates were provided to every donor as a token of gratitude.
+      </p>
+      <p>
+        The Principal lauded the students and organizers for their support and reminded everyone that such events are a reflection of the institution’s values. By donating blood, not only are lives saved, but the culture of compassion and selflessness is also strengthened.
+      </p>
+    </div>
+
+    <a class="btn-read" href="{% static 'pdfs/blood_donation.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

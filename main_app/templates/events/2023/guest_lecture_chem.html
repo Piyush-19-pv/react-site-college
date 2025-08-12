@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guest Lecture – Chemistry | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-sky-50 text-gray-800 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Static Image -->
+    <img src="{% static 'images/guest_lecture_chem.jpg' %}" 
+         alt="Guest Lecture Chemistry" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-sky-700 mb-2">Guest Lecture – Chemistry Department</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        The Department of Chemistry at Aggarwal College organized an insightful guest lecture aimed at enhancing students' academic exposure and understanding of real-world applications in the field of chemistry. The session witnessed the participation of undergraduate and postgraduate students with great enthusiasm.
+        <br><br>
+        The lecture focused on contemporary topics such as green chemistry, sustainable chemical practices, and innovations in pharmaceutical compounds. The speaker explained how advancements in chemistry are helping in developing eco-friendly alternatives and driving scientific innovation for societal benefit.
+        <br><br>
+        Students were introduced to the importance of inter-disciplinary learning in chemistry, with examples from material science, biology, and environmental studies. The session also covered career opportunities and research scopes for chemistry graduates, inspiring the audience to pursue higher studies and scientific research.
+        <br><br>
+        Interactive Q&A sessions allowed students to clear doubts and discuss real-life challenges in chemical industries. The resource person also shared experiences from research labs, highlighting the importance of lab safety, ethics, and innovative thinking in chemical research.
+        <br><br>
+        Overall, the guest lecture served as a powerful academic enrichment activity that bridged the gap between classroom learning and practical science. The Department expressed gratitude for the enriching session and encouraged students to take part in more such academic forums in the future.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/guest_lecture_chem.pdf' %}" target="_blank"
+         class="inline-block bg-sky-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-sky-700 transition-all duration-300">
+        📘 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

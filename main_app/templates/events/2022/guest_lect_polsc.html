@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guest Lecture – Political Science</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon"/>
+
+  <style>
+    .fade-in {
+      animation: fadeInUp 0.8s ease-out both;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .glow {
+      text-shadow: 0 0 5px rgba(0,102,204,0.5);
+    }
+  </style>
+</head>
+<body class="bg-blue-50 dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen flex items-center justify-center p-6">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full shadow-lg font-semibold z-50">
+    🏠 Home
+  </a>
+
+  <!-- Main Container -->
+  <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 max-w-4xl w-full fade-in">
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-blue-700 glow mb-6">
+      Guest Lecture – Political Science Department
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/guest_lect_polsc.jpg' %}" alt="Guest Lecture Political Science" class="rounded-xl w-full md:w-3/4 shadow-md"/>
+    </div>
+
+    <!-- Description -->
+    <div class="text-base md:text-lg leading-relaxed text-justify">
+      <p class="mb-4">
+        राजनीति विज्ञान विभाग ने एक प्रेरणादायक अतिथि व्याख्यान का आयोजन किया जिसमें <strong>डॉ. अमित वर्मा</strong> (संपर्क प्राध्यापक, कुरुक्षेत्र विश्वविद्यालय) ने “भारतीय लोकतंत्र और युवा सहभागिता” विषय पर व्याख्यान प्रस्तुत किया।
+      </p>
+      <p class="mb-4">
+        डॉ. वर्मा ने लोकतंत्र की संरचना, मौलिक अधिकारों और युवाओं की जागरूकता व उत्तरदायित्व पर चर्चा की। छात्रों को विचार-विमर्श और लोकतांत्रिक मूल्यों के महत्व का ज्ञान हुआ।
+      </p>
+      <p class="mb-4">
+        व्याख्यान अत्यंत संवादात्मक रहा और छात्रों के प्रश्नों का समाधान किया गया, जिससे उनकी समझ और भी सुदृढ़ हुई।
+      </p>
+    </div>
+
+    <!-- Read More PDF Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/guest_lect_polsc.pdf' %}" target="_blank"
+         class="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+  </div>
+</body>
+</html>

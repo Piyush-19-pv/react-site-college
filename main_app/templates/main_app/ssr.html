@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Self Study Report - Aggarwal College Ballabgarh</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f9ff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in;
+    }
+
+    h2 {
+      color: #003366;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p {
+      color: #444;
+      font-size: 16px;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .pdf-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 30px;
+      background-color: #003366;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 8px;
+      transition: 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0, 51, 102, 0.3);
+    }
+
+    .pdf-button:hover {
+      background-color: #0055aa;
+      transform: scale(1.05);
+    }
+
+    .btn-wrapper {
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .pdf-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="/" 
+  style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #e63946;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 999;
+  "
+  onmouseover="this.style.transform='scale(1.1)'"
+  onmouseout="this.style.transform='scale(1)'"
+>🏠 Home</a>
+
+<div class="container">
+  <h2>Self Study Report (SSR)</h2>
+  <p>
+    The Self Study Report (SSR) is an essential component of the accreditation process by NAAC (National Assessment and Accreditation Council). 
+    At Aggarwal College Ballabgarh, we take pride in our commitment to continuous quality improvement and academic excellence. 
+    The SSR is a reflection of our internal assessment and evaluation of various aspects of institutional functioning, including academic programs, teaching-learning processes, governance, infrastructure, research, and community engagement.
+  </p>
+
+  <p>
+    Through this comprehensive report, we present our achievements, strengths, and areas identified for enhancement. 
+    The report highlights the proactive initiatives taken to meet the ever-evolving educational challenges and showcases the efforts made toward the holistic development of our students. 
+    Our SSR demonstrates how the institution aligns itself with the vision of transforming lives through education, innovation, and inclusive growth.
+  </p>
+
+  <p>
+    The preparation of the SSR involves a collaborative effort from all stakeholders, including faculty, administrative staff, students, alumni, and the management. 
+    It emphasizes our dedication to transparency, accountability, and strategic planning for sustained development. 
+    We invite all stakeholders and external evaluators to access and review our Self Study Report, which serves as a roadmap for our future aspirations and academic vision.
+  </p>
+
+  <div class="btn-wrapper">
+    <a href="{% static 'CertificateDiplomaAdvancedDiploma2018-23.pdf' %}" class="pdf-button" target="_blank">
+      <i class="fas fa-file-pdf"></i> Self Study Report (SSR)
+    </a>
+  </div>
+</div>
+
+</body>
+</html>

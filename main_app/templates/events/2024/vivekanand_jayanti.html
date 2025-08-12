@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vivekananda Jayanti | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/744/744922.png" type="image/png">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f5f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background-color: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      color: #d97706;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      color: #374151;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 25px 0;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(to right, #f59e0b, #ef4444);
+      color: white;
+      font-weight: 600;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: 0.3s ease;
+      margin-top: 25px;
+    }
+
+    .read-more img {
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(239, 68, 68, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Vivekananda Jayanti Celebration</h1>
+
+    <img src="{% static 'images/vivekanand_jayanti.jpg' %}" alt="Swami Vivekananda Jayanti">
+
+    <div class="content">
+      <p>
+        Aggarwal College celebrated <strong>Vivekananda Jayanti</strong> with great enthusiasm and devotion to mark the birth anniversary of Swami Vivekananda, a great spiritual leader and philosopher.
+      </p>
+      <p>
+        The program included enlightening speeches on his teachings, a special prayer session, and a motivational talk for students to follow his principles of self-confidence, discipline, and service to the nation.
+      </p>
+      <p>
+        Students presented quotes, poems, and a short play depicting the life of Swami Vivekananda. The session concluded with a pledge to carry forward his ideals in daily life.
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/vivekanand_jayanti.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

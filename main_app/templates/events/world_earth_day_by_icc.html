@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Earth Day – By ICC</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1688/1688940.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #e8f5e9);
+      color: #1e293b;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 17px;
+      color: #607d8b;
+      margin-bottom: 25px;
+    }
+
+    .image-box {
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.05);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #374151;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #2e7d32;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(46, 125, 50, 0.3);
+    }
+
+    .read-more-btn:hover {
+      background-color: #1b5e20;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 15px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">World Earth Day – By ICC</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025\WorldEarthDayByNCC2204251.jpg' %}" alt="Earth Day Event">
+    </div>
+
+    <div class="content">
+      The Internal Complaints Committee (ICC) of Aggarwal College observed **World Earth Day** with a commitment to creating environmental awareness among students and faculty. The celebration aimed to highlight the importance of sustainability, climate action, and collective responsibility toward our planet.
+      <br><br>
+      The event began with a pledge ceremony where students committed to reducing plastic use and promoting eco-friendly habits. A guest lecture was delivered by an environmentalist who discussed the impact of pollution, deforestation, and carbon footprints. His insights offered practical solutions for creating a greener future.
+      <br><br>
+      The program also featured poster-making and slogan-writing competitions where students expressed their ideas visually and creatively. These activities helped in spreading awareness and triggering conversations about climate change, biodiversity, and green living.
+      <br><br>
+      A short documentary on environmental challenges was screened, followed by an interactive session where students shared their ideas to reduce energy consumption on campus. Teachers from the ICC encouraged students to become green ambassadors of the college.
+      <br><br>
+      In the end, saplings were distributed to all attendees with a message: "Plant today, protect tomorrow." The entire initiative became a symbolic gesture of Aggarwal College’s dedication toward nature conservation and gender-sensitive climate action.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/world_earth_day_icc.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

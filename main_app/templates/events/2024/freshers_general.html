@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Freshers General - Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" type="image/png" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e8f5e9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: slideFade 0.8s ease;
+    }
+
+    @keyframes slideFade {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #2e7d32;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 25px 0;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .btn-read {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #388e3c, #66bb6a);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .btn-read img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+
+    .btn-read:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(102, 187, 106, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Freshers Party – General</h1>
+
+    <img src="{% static 'images/freshers_general.jpg' %}" alt="Freshers General Event">
+
+    <div class="content">
+      <p>
+        Aggarwal College, Ballabgarh, organized a vibrant and memorable <strong>Freshers Party</strong> to welcome its new students across various courses. The celebration served as an icebreaker and offered an enjoyable start to the academic year.
+      </p>
+      <p>
+        The event kicked off with a welcome address by senior faculty and cultural coordinators. Newcomers were introduced to the college’s vision, infrastructure, and student life through an engaging presentation.
+      </p>
+      <p>
+        The highlight of the day was a dazzling lineup of performances — including classical dance, modern fusion, live singing, drama, and comedy skits. These acts not only showcased students' talents but also built excitement and camaraderie among the audience.
+      </p>
+      <p>
+        A friendly competition was held to choose Mr. and Miss Fresher. Participants impressed the judges with their talents, confidence, and witty responses. Certificates and trophies were distributed in a joyful prize ceremony.
+      </p>
+      <p>
+        Throughout the venue, stalls with photo booths and activity corners attracted large crowds. The event hall was beautifully decorated with lights, flowers, and banners prepared by students.
+      </p>
+      <p>
+        Principal Dr. Seema Dahiya addressed the gathering and highlighted the importance of participation, leadership, and community building. She motivated the students to make the most of their time at the institution.
+      </p>
+      <p>
+        The event concluded with a DJ session and refreshments. Students danced with energy and enthusiasm, creating lifelong memories. The entire program was coordinated smoothly by the Cultural Committee and senior volunteers.
+      </p>
+    </div>
+
+    <a class="btn-read" href="{% static 'pdfs/freshers_general.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

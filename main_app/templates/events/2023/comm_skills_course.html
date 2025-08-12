@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Communication Skills Course | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .fade-in {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white rounded-xl shadow-xl overflow-hidden fade-in">
+
+    <!-- Banner Image -->
+    <img src="{% static 'images/comm-skills.jpg' %}" alt="Communication Skills Course" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-blue-600 mb-2">Communication Skills Course</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Offered by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        Communication is the backbone of personal and professional success, and to empower students with these essential skills, Aggarwal College has introduced a specialized **Communication Skills Course**.
+        This course aims to improve the speaking, listening, writing, and non-verbal communication abilities of students to make them industry-ready and socially confident.
+        <br><br>
+        The course curriculum is designed in collaboration with communication experts and industry professionals.
+        It includes modules on verbal articulation, group discussions, presentations, resume writing, body language, and cross-cultural communication. Each topic is taught through interactive lectures, activities, role-plays, and live demonstrations.
+        <br><br>
+        Students are encouraged to participate in public speaking events, debates, and mock interviews which simulate real-world communication challenges.
+        The course also incorporates elements of digital communication—email etiquette, professional texting, and social media behavior, which are crucial in today’s virtual workspaces.
+        <br><br>
+        Experienced faculty members conduct weekly assessments and give personalized feedback to students, helping them identify their strengths and areas of improvement.
+        The college has also partnered with language labs and speech coaches for enhanced support.
+        <br><br>
+        A major highlight of the course is the "Presentation Week", where students present ideas on social, business, and academic topics before a panel. This has significantly boosted student confidence and clarity of expression.
+        <br><br>
+        The course has received positive reviews from students across departments. Many have expressed that their fluency, articulation, and public speaking abilities have drastically improved.
+        It has also helped them crack interviews and internships successfully.
+        <br><br>
+        The college plans to make this course a mandatory part of the first-year curriculum to ensure every student gains foundational communication skills early in their academic journey.
+        A certification is awarded upon completion, which can be added to student portfolios and resumes.
+        <br><br>
+        Aggarwal College remains committed to the holistic development of its students. This course is just one of many steps the institution is taking to ensure students graduate not only with knowledge but also with confidence and professionalism.
+        <br><br>
+        Whether you aim to become a teacher, manager, entrepreneur, or civil servant — communication is key. And this course ensures you master it.
+      </p>
+
+      <!-- Read More PDF Button -->
+      <a href="{% static 'pdf/comm-skills-course.pdf' %}" target="_blank"
+         class="inline-block bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-blue-700 transition-all duration-300">
+        📄 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

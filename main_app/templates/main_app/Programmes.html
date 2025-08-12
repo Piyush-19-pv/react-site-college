@@ -1,0 +1,152 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Programs</title>
+  <link rel="stylesheet" href="{% static 'css/programs.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f8fc;
+  color: #333;
+}
+
+.programs-container {
+  padding: 50px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #204080;
+  animation: slideDown 1s ease-in-out;
+}
+
+.programs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.program-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+}
+
+.icon {
+  font-size: 40px;
+  color: #0066cc;
+  margin-bottom: 15px;
+}
+
+.pdf-download {
+  margin-top: 40px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0066cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #004a99;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .programs {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+</style>
+</head>
+<body>
+  <a href="/" 
+     style="
+       position: fixed;
+       top: 20px;
+       right: 20px;
+       background: #e63946;
+       color: white;
+       padding: 10px 18px;
+       border-radius: 30px;
+       font-weight: bold;
+       text-decoration: none;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+       transition: all 0.3s ease;
+       z-index: 999;
+     "
+     onmouseover="this.style.transform='scale(1.1)'"
+     onmouseout="this.style.transform='scale(1)'"
+  >🏠 Home</a>
+  <section class="programs-container">
+    <h1 class="heading">Our Academic Programs</h1>
+
+    <div class="programs">
+      <div class="program-card">
+        <i class="fas fa-graduation-cap icon"></i>
+        <h2>Bachelor of Science (B.Sc)</h2>
+        <p>Comprehensive undergraduate program in sciences with practical labs and project-based learning.</p>
+      </div>
+
+      <div class="program-card">
+        <i class="fas fa-laptop-code icon"></i>
+        <h2>Bachelor of Computer Applications (BCA)</h2>
+        <p>Focused on software development, programming, and IT solutions with real-world exposure.</p>
+      </div>
+
+      <div class="program-card">
+        <i class="fas fa-business-time icon"></i>
+        <h2>Bachelor of Business Administration (BBA)</h2>
+        <p>Blends theoretical knowledge with practical business strategies, entrepreneurship, and marketing.</p>
+      </div>
+    </div>
+
+    <div class="pdf-download">
+      <a href="{% static 'images/Programmes24.pdf' %}" target="_blank" class="btn">📄 View PDF Brochure</a>
+    </div>
+  </section>
+
+</body>
+</html>

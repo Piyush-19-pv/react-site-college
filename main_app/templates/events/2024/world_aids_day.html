@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>World AIDS Day | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2966/2966484.png" type="image/png">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #fff5f5;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 30px;
+      color: #c53030;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .content {
+      font-size: 17px;
+      color: #333;
+      line-height: 1.75;
+    }
+
+    img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin: 25px 0;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #e53e3e, #c53030);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: 0.3s ease;
+    }
+
+    .read-more img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(197, 48, 48, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 24px; }
+      .content { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>World AIDS Day Awareness Program</h1>
+
+    <img src="{% static 'images/world_aids_day.jpg' %}" alt="World AIDS Day Event">
+
+    <div class="content">
+      <p>
+        Aggarwal College organized a special event on <strong>World AIDS Day</strong> to raise awareness about HIV/AIDS and break the stigma associated with the disease. The program emphasized the importance of education, compassion, and early detection.
+      </p>
+      <p>
+        Medical experts delivered informative talks about transmission, prevention methods, and the latest advancements in treatment. Students showcased posters, red ribbon campaigns, and street plays to engage the campus community.
+      </p>
+      <p>
+        The event served as a powerful reminder of the global commitment required to eradicate HIV/AIDS and support those affected.
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/world_aids_day.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

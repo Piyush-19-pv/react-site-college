@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Freshers Party - Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/942/942748.png" type="image/png" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff3e0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: slideIn 0.8s ease;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #ef6c00;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 25px 0;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .btn-read {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #f57c00, #ffb74d);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .btn-read img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+
+    .btn-read:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(255, 183, 77, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Freshers Party</h1>
+
+    <img src="{% static 'images/freshers_party.jpg' %}" alt="Freshers Party Event">
+
+    <div class="content">
+      <p>
+        The <strong>Freshers Party</strong> at Aggarwal College, Ballabgarh, was an unforgettable affair, full of vibrant energy and excitement. Organized by the senior students and faculty, it welcomed the newcomers to the campus in a lively, fun-filled manner.
+      </p>
+      <p>
+        The event began with a warm welcome speech and introductions, followed by cultural performances like solo singing, dance battles, poetry, and skits. The audience cheered as each act brought laughter, joy, and applause.
+      </p>
+      <p>
+        A highlight of the celebration was the Mr. and Miss Fresher contest, where students showcased their talents, confidence, and creativity. Winners were crowned with titles, sashes, and trophies.
+      </p>
+      <p>
+        Faculty members joined the event and addressed the students with motivating words, emphasizing friendship, discipline, and the opportunities available at the college.
+      </p>
+      <p>
+        Colorful decorations, photo booths, music, and refreshments created a festive atmosphere. The event concluded with a DJ dance session where students enjoyed the beat and mingled freely, marking the beginning of new friendships and memories.
+      </p>
+    </div>
+
+    <a class="btn-read" href="{% static 'pdfs/freshers_party.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

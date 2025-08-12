@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTI - Statutory Declaration</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+            color: #003366;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #333;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .btn {
+            display: inline-block;
+            margin: 20px 10px;
+            padding: 15px 30px;
+            background-color: #003366;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s, background-color 0.3s;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        .btn:hover {
+            background-color: #0055a5;
+            transform: scale(1.05);
+        }
+        .rti-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 40px auto;
+            animation: zoomIn 1.5s ease;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .btn {
+                font-size: 0.9rem;
+                padding: 12px 20px;
+                margin: 15px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Statutory Declaration under Section 4(1)(b) of the RTI Act, 2005</h1>
+    <p>
+        Aggarwal College Ballabgarh makes a statutory declaration under Section 4(1)(b) of the RTI Act, 2005. 
+        This declaration is intended to promote transparency and provide easy access to information. 
+        The RTI Cell ensures that citizens can access public information as per the rules and provisions of the Act.
+    </p>
+
+    <!-- First Button -->
+    <a href="{% static 'pdfs/rti_act_2005.pdf' %}" class="btn" target="_blank">
+        RTI ACT 2005
+    </a>
+
+    <!-- Middle Image -->
+    <img src="{% static 'images\PublicInformation88.jpg' %}" alt="RTI Banner" class="rti-image">
+
+    <!-- Bottom Buttons -->
+    <a href="{% static 'pdfs/haryana_rti_rules_2009.pdf' %}" class="btn" target="_blank">
+        Haryana RTI Rules 2009
+    </a>
+    <a href="{% static 'pdfs/public_info_cell.pdf' %}" class="btn" target="_blank">
+        Public Information (RTI) Cell
+    </a>
+</div>
+
+</body>
+</html>

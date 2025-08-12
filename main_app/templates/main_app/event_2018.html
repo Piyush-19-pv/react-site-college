@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Events</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" crossorigin="anonymous">
+  <style>
+    body {
+      background: #f0f4f8;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #333;
+      font-weight: 800;
+      margin-bottom: 2rem;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .event-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 18px;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .event-btn:hover {
+      transform: scale(1.05);
+      background-color: #2563eb;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    .event-btn i {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 640px) {
+      .event-btn {
+        font-size: 0.9rem;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>📅 College Events</h1>
+
+  <div class="grid-container">
+    <a href="{% url 'nss_camp' %}" class="event-btn"><i class="fas fa-hands-helping"></i> NSS Camp</a>
+    <a href="{% url 'national_mathematics_day' %}" class="event-btn"><i class="fas fa-square-root-alt"></i> National Mathematics Day</a>
+    <a href="{% url 'yrc_training_camp' %}" class="event-btn"><i class="fas fa-heartbeat"></i> YRC Training Camp</a>
+    <a href="{% url 'world_aids_day' %}" class="event-btn"><i class="fas fa-ribbon"></i> World AIDS Day</a>
+    <a href="{% url 'constitution_day' %}" class="event-btn"><i class="fas fa-gavel"></i> Constitution Day</a>
+    <a href="{% url 'health_talk' %}" class="event-btn"><i class="fas fa-stethoscope"></i> Health Talk</a>
+    <a href="{% url 'archery_competition' %}" class="event-btn"><i class="fas fa-bullseye"></i> Archery Competition</a>
+    <a href="{% url 'one_day_seminar_on_we' %}" class="event-btn"><i class="fas fa-chalkboard-teacher"></i> Seminar on WE</a>
+    <a href="{% url 'interactive_session_fp' %}" class="event-btn"><i class="fas fa-comments"></i> Session FP</a>
+    <a href="{% url 'national_education_day' %}" class="event-btn"><i class="fas fa-book-open"></i> Education Day</a>
+    <a href="{% url 'program_shabad_kirtan' %}" class="event-btn"><i class="fas fa-pray"></i> Shabad Kirtan</a>
+    <a href="{% url 'blood_donation_camp' %}" class="event-btn"><i class="fas fa-tint"></i> Blood Donation</a>
+    <a href="{% url 'vigilance_awareness_week' %}" class="event-btn"><i class="fas fa-eye"></i> Vigilance Week</a>
+    <a href="{% url 'inter_university_quiz' %}" class="event-btn"><i class="fas fa-question"></i> Inter-University Quiz</a>
+    <a href="{% url 'international_child_day' %}" class="event-btn"><i class="fas fa-child"></i> Child Day</a>
+    <a href="{% url 'declamation_competition' %}" class="event-btn"><i class="fas fa-microphone"></i> Declamation Comp.</a>
+    <a href="{% url 'educational_trip_ba' %}" class="event-btn"><i class="fas fa-bus"></i> Educational Trip</a>
+    <a href="{% url 'motivational_lecture' %}" class="event-btn"><i class="fas fa-lightbulb"></i> Motivational Lecture</a>
+    <a href="{% url 'guest_lecture_hindi_deptt' %}" class="event-btn"><i class="fas fa-language"></i> Hindi Lecture</a>
+    <a href="{% url 'tree_plantation' %}" class="event-btn"><i class="fas fa-tree"></i> Tree Plantation</a>
+    <a href="{% url 'guest_lecture_media' %}" class="event-btn"><i class="fas fa-bullhorn"></i> Media Lecture</a>
+    <a href="{% url 'voters_awareness_rally' %}" class="event-btn"><i class="fas fa-users"></i> Voter Awareness</a>
+    <a href="{% url 'swachhta_campaign' %}" class="event-btn"><i class="fas fa-broom"></i> Swachhta Campaign</a>
+    <a href="{% url 'right_way_to_humanity' %}" class="event-btn"><i class="fas fa-hands"></i> Right Way to Humanity</a>
+    <a href="{% url 'science_quiz_competition' %}" class="event-btn"><i class="fas fa-atom"></i> Science Quiz</a>
+    <a href="{% url 'awareness_to_students' %}" class="event-btn"><i class="fas fa-bell"></i> Student Awareness</a>
+    <a href="{% url 'counseling_session' %}" class="event-btn"><i class="fas fa-user-friends"></i> Counseling Session</a>
+    <a href="{% url 'postermaking_competition' %}" class="event-btn"><i class="fas fa-paint-brush"></i> Poster Making</a>
+    <a href="{% url 'guest_lect_by_history' %}" class="event-btn"><i class="fas fa-landmark"></i> History Lecture</a>
+    <a href="{% url 'nss_day' %}" class="event-btn"><i class="fas fa-calendar-day"></i> NSS Day</a>
+    <a href="{% url 'slogan_writing_comp' %}" class="event-btn"><i class="fas fa-pen-fancy"></i> Slogan Writing</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AQAR - Aggarwal College Ballabgarh</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f8fa;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    h2 {
+      color: #004080;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #444;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .btn-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .pdf-button {
+      padding: 12px 25px;
+      background: #004080;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .pdf-button:hover {
+      background-color: #0066cc;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .pdf-button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="/" 
+     style="
+       position: fixed;
+       top: 20px;
+       right: 20px;
+       background: #e63946;
+       color: white;
+       padding: 10px 18px;
+       border-radius: 30px;
+       font-weight: bold;
+       text-decoration: none;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+       transition: all 0.3s ease;
+       z-index: 999;
+     "
+     onmouseover="this.style.transform='scale(1.1)'"
+     onmouseout="this.style.transform='scale(1)'"
+  >🏠 Home</a>
+<div class="container">
+  <h2>Annual Quality Assurance Report (AQAR)</h2>
+  <p>
+    The Annual Quality Assurance Report (AQAR) is submitted annually by accredited institutions to NAAC. 
+    It reflects the continuous quality improvement practices and achievements of Aggarwal College Ballabgarh across academic, administrative, and extracurricular domains.
+    Below are the AQAR reports submitted in recent years, available for download in PDF format.
+  </p>
+
+  <div class="btn-container">
+    <a href="{% static 'CertificateDiplomaAdvancedDiploma2018-23.pdf' %}" class="pdf-button" target="_blank"><i class="fas fa-file-pdf"></i> AQAR 2018–2019</a>
+    <a href="{% static 'CertificateDiplomaAdvancedDiploma2018-23.pdf' %}" class="pdf-button" target="_blank"><i class="fas fa-file-pdf"></i> AQAR 2019–2020</a>
+    <a href="{% static 'CertificateDiplomaAdvancedDiploma2018-23.pdf' %}" class="pdf-button" target="_blank"><i class="fas fa-file-pdf"></i> AQAR 2020–2021</a>
+    <a href="{% static 'CertificateDiplomaAdvancedDiploma2018-23.pdf' %}" class="pdf-button" target="_blank"><i class="fas fa-file-pdf"></i> AQAR 2021–2022</a>
+    <a href="{% static 'CertificateDiplomaAdvancedDiploma2018-23.pdf' %}" class="pdf-button" target="_blank"><i class="fas fa-file-pdf"></i> AQAR 2022–2023</a>
+  </div>
+</div>
+
+</body>
+</html>

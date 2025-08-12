@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FDP on Holistic Wellness - Aggarwal College</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon"/>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .fade-in {
+      animation: fadeInUp 1s ease-out both;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .glow {
+      text-shadow: 0 0 8px #0f766e;
+    }
+  </style>
+</head>
+<body class="bg-emerald-50 dark:bg-gray-900 text-gray-800 dark:text-white p-6 flex justify-center items-center min-h-screen">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-full shadow-md transition z-50">
+    🏠 Home
+  </a>
+
+  <!-- Content Card -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 fade-in">
+
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-emerald-700 mb-6 glow">
+      FDP on Holistic Wellness
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/fdp_wellness.jpg' %}" alt="FDP on Holistic Wellness" class="rounded-xl w-full md:w-2/3 shadow-lg" />
+    </div>
+
+    <!-- Description -->
+    <div class="text-justify text-base md:text-lg leading-relaxed">
+      <p class="mb-4">
+        Aggarwal College organized a <strong>Faculty Development Program (FDP)</strong> on <em>Holistic Wellness</em> focusing on physical, mental, and emotional well-being of educators. The program covered mindfulness practices, yoga sessions, time management, and stress-relieving techniques.
+      </p>
+      <p class="mb-4">
+        Experts from the health and wellness industry shared scientifically-backed strategies to help faculty maintain balance and build emotional resilience. The event saw active participation from departments across the college.
+      </p>
+      <p class="mb-4">
+        The FDP was a refreshing break from routine, leaving faculty members feeling rejuvenated and equipped with tools to bring wellness into their professional lives.
+      </p>
+    </div>
+
+    <!-- Read More Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/fdp_wellness.pdf' %}" target="_blank"
+         class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>

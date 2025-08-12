@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIDS Day - Aggarwal College</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animation -->
+  <style>
+    .fade-in {
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .glow-text {
+      text-shadow: 0 0 10px #e11d48, 0 0 20px #e11d48;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-white min-h-screen flex flex-col items-center justify-center p-6">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 z-50">
+    🏠 Home
+  </a>
+
+  <!-- Content Container -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 shadow-xl rounded-2xl overflow-hidden p-6 fade-in">
+
+    <!-- Heading -->
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-red-600 glow-text mb-4">
+      World AIDS Day Awareness Program
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-4">
+      <img src="{% static 'events2023/images/aids_day.jpg' %}" alt="AIDS Day" class="rounded-xl w-full md:w-2/3 shadow-md">
+    </div>
+
+    <!-- Event Description -->
+    <div class="text-justify text-base md:text-lg leading-relaxed">
+      <p class="mb-4">
+        On the occasion of <strong>World AIDS Day</strong>, Aggarwal College organized an awareness campaign to educate students and staff about HIV/AIDS. The program emphasized the importance of early detection, regular testing, and the need to eliminate stigma surrounding the disease.
+      </p>
+      <p class="mb-4">
+        Health experts shared vital insights on prevention methods and the latest treatments available. Students also took part in slogan writing and poster making activities to show their solidarity with people living with HIV/AIDS.
+      </p>
+      <p class="mb-4">
+        The principal encouraged youth to become ambassadors of change and promote safe, informed choices in their communities. The event concluded with a pledge to support awareness efforts and stand against discrimination.
+      </p>
+    </div>
+
+    <!-- Read More Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/aids_day.pdf' %}" target="_blank" class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-full transition-transform transform hover:scale-105">
+        📄 Read More
+      </a>
+    </div>
+  </div>
+</body>
+</html>

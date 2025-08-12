@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awareness on Helmets</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/808/808485.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fefce8, #fff7ed);
+      color: #1e293b;
+      padding: 30px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      animation: slideUp 1s ease-in-out;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: 700;
+      text-align: center;
+      color: #f59e0b;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: #374151;
+      margin-bottom: 25px;
+    }
+
+    .image-box {
+      width: 100%;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 14px;
+      transition: transform 0.4s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.05);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.75;
+      color: #374151;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #f59e0b;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+    }
+
+    .read-more-btn:hover {
+      background-color: #d97706;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 15px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Awareness on Helmets</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'images/helmet' %}" alt="Helmet Awareness Image">
+    </div>
+
+    <div class="content">
+      In an effort to promote road safety among youth, Aggarwal College Ballabgarh organized a special awareness program on the importance of wearing helmets. With the rising number of two-wheeler accidents, the session aimed to highlight how a helmet can be the difference between life and death.
+      <br><br>
+      The event began with a demonstration by traffic officials showcasing the impact of collisions without helmets using animated models. Students were stunned to learn how even low-speed crashes could lead to fatal injuries when not wearing proper headgear.
+      <br><br>
+      Posters, banners, and skits by NSS and NCC volunteers emphasized key messages like "Use Helmet, Stay Alive" and "Head Safety is Life Safety". The program included a pledge-taking session, where students promised to never ride without a helmet.
+      <br><br>
+      A video campaign was also screened, featuring real-life stories of survivors and families affected due to negligence. The program concluded with distribution of free reflectors and stickers promoting helmet use.
+      <br><br>
+      Principal Sir congratulated the organizing team and reminded everyone that rules are not restrictions but protections. The event left a strong impression on the students, creating helmet heroes for tomorrow’s roads.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/helmet_awareness_report.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

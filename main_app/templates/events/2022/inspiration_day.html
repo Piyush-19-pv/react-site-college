@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inspiration Day</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon"/>
+
+  <style>
+    .fade-in {
+      animation: fadeInUp 1s ease-out both;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white p-6 min-h-screen flex items-center justify-center">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full font-semibold shadow-lg z-50">
+    🏠 Home
+  </a>
+
+  <!-- Content Card -->
+  <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 max-w-4xl w-full fade-in">
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-purple-700 mb-6">
+      Inspiration Day
+    </h1>
+
+    <!-- Image Section -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/inspiration_day.jpg' %}" alt="Inspiration Day" class="rounded-xl w-full md:w-3/4 shadow-lg"/>
+    </div>
+
+    <!-- Event Description -->
+    <div class="text-base md:text-lg leading-relaxed text-justify">
+      <p class="mb-4">
+        <strong>Inspiration Day</strong> was celebrated with great enthusiasm to ignite motivation, self-confidence, and positivity among students. The day featured stories of success, courage, innovation, and social change shared by special guest speakers and faculty members.
+      </p>
+      <p class="mb-4">
+        Eminent personalities from different fields were invited to deliver speeches that encouraged students to overcome challenges and strive for excellence. Real-life stories of struggle and perseverance created a strong emotional and motivational impact.
+      </p>
+      <p class="mb-4">
+        Cultural programs, student-led presentations, and a “Wall of Inspiration” activity were also part of the event. The session concluded with a pledge to lead a life filled with values, purpose, and ambition.
+      </p>
+    </div>
+
+    <!-- PDF Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/inspiration_day.pdf' %}" target="_blank"
+         class="bg-purple-700 hover:bg-purple-800 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 View Full Report
+      </a>
+    </div>
+  </div>
+</body>
+</html>

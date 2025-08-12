@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Vision - Aggarwal College Ballabgarh</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fefefe;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fffdf4;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #800000;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .certificate {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .certificate img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #aaa;
+      border-radius: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin-top: 20px;
+      font-size: 16px;
+      background-color: #800000;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #a00000;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px;
+        padding: 15px;
+      }
+
+      h1, h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>OUR VISION</h1>
+    <p>
+      We aspire to be a premier institution aiming for <strong>Pratyaksh Jnana</strong>: 
+      Nurturing students’ creativity holistically for addressing the worldwide challenges 
+      and concerns and becoming long-lasting learners and responsible citizens through a 
+      pragmatic paradigm based on <strong>“Conceive, Believe, and Achieve”</strong>.
+    </p>
+
+    <h2>हमारी परिकल्पना</h2>
+    <p>
+      हम प्रत्यक्ष ज्ञान के उद्देश्य से एक प्रमुख संस्थान बनने की आकांक्षा रखते हैं: 
+      “कल्पना, विश्वास और उपलब्धि” के आधार पर एक व्यावहारिक प्रतिमान के माध्यम से दुनिया भर में 
+      चुनौतियों और चिंताओं को दूर करने और लंबे समय तक चलने वाले शिक्षार्थी और जिम्मेदार नागरिक बनने के 
+      लिए छात्रों की रचनात्मकता का समग्र रूप से पोषण करना।
+    </p>
+
+    <div class="certificate">
+      <h2>Institution Certificate</h2>
+      <img src="{% static 'images\vission.png' %}" alt="College Certificate">
+      <br>
+      <a href="{% static 'images\vission.png' %}" target="_blank" class="btn">View Full Certificate</a>
+    </div>
+  </div>
+
+</body>
+</html>

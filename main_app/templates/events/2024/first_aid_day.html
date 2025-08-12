@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>First Aid Day - Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1758/1758932.png" type="image/png" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e3f2fd;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #d32f2f;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 25px 0;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .btn-read {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #ef5350, #e53935);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .btn-read img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+
+    .btn-read:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(229, 57, 53, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>First Aid Day Awareness Program</h1>
+
+    <img src="{% static 'images/first_aid_day.jpg' %}" alt="First Aid Day Activity at College">
+
+    <div class="content">
+      <p>
+        Aggarwal College, Ballabgarh organized a special event to mark <strong>First Aid Day</strong>, aimed at educating students and staff about the importance of first aid knowledge and its application during emergencies. Recognizing that immediate assistance can save lives, the college collaborated with medical professionals and Red Cross trainers to deliver an engaging session.
+      </p>
+      <p>
+        The session began with a presentation covering the basics of first aid, including how to respond to burns, bleeding, fractures, choking, and cardiac arrest. Attendees learned to assess emergencies, perform CPR, and use first-aid kits effectively. Practical demonstrations with mannequins and real-time simulations helped clarify techniques.
+      </p>
+      <p>
+        Students were divided into small groups for hands-on training. They practiced bandaging wounds, using slings, and safely handling unconscious individuals. Emphasis was placed on calling emergency services quickly and remaining calm in critical situations.
+      </p>
+      <p>
+        The trainers also discussed how to identify symptoms of stroke, asthma attacks, epilepsy, and allergic reactions—helping students understand what to do in such cases. A discussion on mental first aid addressed how to support someone going through emotional distress.
+      </p>
+      <p>
+        A special booth was set up with different first aid kits, posters, and infographics. Participants took quizzes to reinforce their learning and were awarded certificates for their successful completion of the training. Feedback indicated high levels of satisfaction and motivation to stay prepared.
+      </p>
+      <p>
+        Principal Dr. Seema Dahiya emphasized that first aid training should be a life skill, not just a one-time lesson. The event concluded with a pledge to act responsibly in emergencies and to spread awareness about first aid within families and communities.
+      </p>
+      <p>
+        Through this First Aid Day program, Aggarwal College reaffirms its dedication to holistic student development, health awareness, and public safety education. The success of the event has encouraged the institution to conduct advanced first aid and health training workshops in future.
+      </p>
+    </div>
+
+    <a class="btn-read" href="{% static 'pdfs/first_aid_day.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

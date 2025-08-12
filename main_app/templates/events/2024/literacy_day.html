@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Literacy Day | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3600/3600711.png" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fefce8;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 34px;
+      text-align: center;
+      color: #1c1917;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+    }
+
+    .content {
+      font-size: 18px;
+      color: #44403c;
+      line-height: 1.7;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 14px;
+      margin: 25px 0;
+      max-height: 420px;
+      object-fit: cover;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #22c55e, #16a34a);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .read-more img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(22, 163, 74, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Literacy Day</h1>
+
+    <img src="{% static 'images/literacy_day.jpg' %}" alt="Literacy Day Event Image">
+
+    <div class="content">
+      <p>
+        Aggarwal College celebrated <strong>International Literacy Day</strong> with a series of interactive and awareness-building activities. The event was organized to promote the importance of literacy in building inclusive, sustainable societies.
+      </p>
+      <p>
+        Volunteers from the college visited nearby schools and communities, distributing educational material and conducting storytelling sessions for underprivileged children.
+      </p>
+      <p>
+        A seminar was held on campus to discuss the role of digital literacy and inclusive education in today’s world. Faculty, students, and guests shared insights and experiences to inspire proactive action.
+      </p>
+      <p>
+        The event concluded with cultural performances by students symbolizing the power of knowledge and education.
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/literacy_day.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

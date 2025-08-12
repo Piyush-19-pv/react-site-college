@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .carousel-fade {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .fade-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+  
+  .fade-slide.active {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .overlay-buttons {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    z-index: 2;
+  }
+  
+  .overlay-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    min-width: 150px;
+    transition: transform 0.3s;
+  }
+  
+  .overlay-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .overlay-card h4 {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  
+  .overlay-card p {
+    font-size: 14px;
+    color: #333;
+  }
+  
+
+
+
+
+  

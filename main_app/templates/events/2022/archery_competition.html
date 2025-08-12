@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archery Competition - Aggarwal College</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Animation -->
+  <style>
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .focus-glow {
+      text-shadow: 0 0 10px #059669, 0 0 20px #059669;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen flex flex-col items-center justify-center p-6">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 z-50">
+    🏠 Home
+  </a>
+
+  <!-- Main Content -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 shadow-xl rounded-2xl overflow-hidden p-6 fade-in">
+
+    <!-- Heading -->
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-green-600 focus-glow mb-4">
+      Archery Competition 2023
+    </h1>
+
+    <!-- Image Section -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/archery.jpg' %}" alt="Archery Competition" class="rounded-xl w-full md:w-2/3 shadow-md" />
+    </div>
+
+    <!-- Description -->
+    <div class="text-justify text-base md:text-lg leading-relaxed">
+      <p class="mb-4">
+        Aggarwal College recently hosted an exhilarating <strong>Archery Competition</strong> on campus grounds as part of its annual sports week. The event witnessed active participation from both male and female students representing various departments.
+      </p>
+      <p class="mb-4">
+        Participants displayed exceptional focus, discipline, and competitive spirit as they aimed for the bullseye. The competition was conducted under the supervision of professional archery coaches, ensuring fairness and adherence to official rules.
+      </p>
+      <p class="mb-4">
+        Winners were awarded medals and certificates by the Principal, who appreciated their commitment and talent. The event inspired many students to explore archery as a skill-building and recreational activity.
+      </p>
+    </div>
+
+    <!-- PDF Download Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/archery_competition.pdf' %}" target="_blank"
+         class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition-transform transform hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+  </div>
+</body>
+</html>

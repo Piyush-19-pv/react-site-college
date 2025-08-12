@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NCC Certificate of Accreditation - Aggarwal College Ballabgarh</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f8ff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 25px;
+    }
+
+    p {
+      color: #444;
+      line-height: 1.8;
+      text-align: justify;
+      font-size: 16px;
+    }
+
+    .button-wrapper {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .pdf-button {
+      background: #003366;
+      color: white;
+      padding: 14px 32px;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .pdf-button:hover {
+      background: #00509e;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (max-width: 600px) {
+      .pdf-button {
+        width: 100%;
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>NCC Certificate of Accreditation</h2>
+
+    <p>
+      At Aggarwal College Ballabgarh, we proudly uphold the values of discipline, leadership, and patriotism through the active participation of our students in the National Cadet Corps (NCC). 
+      The NCC is a prestigious youth organization that instills character, comradeship, and a spirit of selfless service among students, preparing them to serve the nation with pride.
+    </p>
+
+    <p>
+      Our college has been officially recognized and accredited by the National Cadet Corps for its outstanding contribution to nurturing future leaders and responsible citizens. 
+      This accreditation is a testament to our commitment to holistic education and youth empowerment. Through regular drills, training camps, social service, and adventure activities, 
+      our NCC unit has brought numerous laurels to the institution.
+    </p>
+
+    <p>
+      We take immense pride in sharing our NCC Accreditation Certificate with our stakeholders and community. This certificate is not just a document — it is a reflection of our unwavering 
+      dedication to nation-building and leadership development. We remain committed to the ideals of the NCC and will continue to support our cadets in their journey of service and self-improvement.
+    </p>
+
+    <div class="button-wrapper">
+      <a href="{% static 'images\naaccetificate.jpg' %}" target="_blank" class="pdf-button">
+        <i class="fas fa-certificate"></i> View Certificate
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

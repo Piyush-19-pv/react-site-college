@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Culture - Aggarwal College Ballabgarh</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fffdf0;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 80px auto 40px;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .culture-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 25px;
+    }
+
+    .text-section {
+      padding: 0 10px;
+    }
+
+    .heading {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #c0392b;
+      margin-bottom: 20px;
+      font-family: 'Georgia', serif;
+    }
+
+    .english, .hindi {
+      margin-bottom: 30px;
+      text-align: justify;
+      font-size: 17px;
+      line-height: 1.7;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    .home-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      text-decoration: none;
+      background-color: #8B0000;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 30px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      transition: background 0.3s ease;
+      z-index: 10;
+    }
+
+    .home-button i {
+      margin-right: 6px;
+    }
+
+    .home-button:hover {
+      background-color: #a10000;
+    }
+
+    @media (max-width: 600px) {
+      .heading {
+        font-size: 22px;
+      }
+      .english, .hindi {
+        font-size: 15px;
+      }
+      .home-button {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Home Button -->
+    <a href="{% url 'home' %}" class="home-button">
+      <i class="fas fa-home"></i> Home
+    </a>
+
+    <!-- Culture Certificate Image -->
+    <img src="{% static 'images\culture.png' %}" alt="Culture Certificate" class="culture-img"/>
+
+    <!-- Culture Text -->
+    <div class="text-section">
+      <div class="heading">Our Culture</div>
+
+      <div class="english">
+        Aggarwal College Ballabgarh is committed to providing Healthy and Positive work environment that is
+        conducive to the Teaching and Learning along with over-all Personality Development. A shared commitment
+        among all members of the college community to respect each person’s worth and dignity is our Motto.
+        <br><br>
+        We believe in the Value System where everyone is empowered to express themselves and have caring and loving relationships.
+      </div>
+
+      <div class="heading">हमारी संस्कृति</div>
+
+      <div class="hindi">
+        अग्रवाल महाविद्यालय बल्लभगढ़ स्वस्थ और सकारात्मक रूप से कार्य करने का ऐसा वातावरण प्रदान करने के लिए
+        समर्पित है जो कि अध्यापन-अधिगम के साथ-साथ संपूर्ण व्यक्तित्व विकास में सहायक हो। महाविद्यालय समुदाय के सभी
+        सदस्य परस्पर एक-दूसरे की योग्यता और गरिमा का सम्मान करने के लिए प्रतिबद्ध हैं।
+        <br><br>
+        हम ऐसी मूल्य प्रणाली में विश्वास रखते हैं जहाँ सभी अपने को अभिव्यक्त करने में समर्थ हों और सबके संबंध प्रेम पूर्ण
+        तथा सौहार्दपूर्ण हों।
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

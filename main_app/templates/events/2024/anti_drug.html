@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anti Drug Awareness - Aggarwal College</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4832/4832673.png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      padding: 30px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #e63946;
+      margin-bottom: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      margin: 20px auto;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-top: 20px;
+    }
+
+    .btn-read {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(45deg, #2196F3, #21CBF3);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-read:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(33,203,243,0.4);
+    }
+
+    .btn-read img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 28px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Anti Drug Awareness</h1>
+    
+    <img src="{% static 'images/anti_drug.jpg' %}" alt="Anti Drug Awareness">
+
+    <div class="content">
+      <p>
+        Aggarwal College Ballabgarh has always been at the forefront of social awareness and student well-being. In our continued effort to create a healthy and responsible student community, we organized an **Anti-Drug Awareness Program** aimed at sensitizing students about the severe consequences of drug abuse. The program included interactive sessions, expert talks, and peer group discussions to ensure active engagement.
+      </p>
+      <p>
+        Drug addiction remains a pressing issue in modern society, especially among the youth. Our institution is dedicated to not just education, but also to instilling life values that help students make the right choices. The program served as a reminder of how one wrong step can affect health, career, and family life. Our guest speakers included rehabilitation counselors and police officials who shared real-life experiences and methods to resist peer pressure.
+      </p>
+      <p>
+        Students actively participated by presenting skits, posters, and slogans supporting a drug-free lifestyle. The college plans to host more awareness programs throughout the academic year to maintain momentum. This initiative highlights the commitment of Aggarwal College towards nurturing responsible citizens of tomorrow.
+      </p>
+    </div>
+
+    <a class="btn-read" href="{% static 'pdfs/anti_drug.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

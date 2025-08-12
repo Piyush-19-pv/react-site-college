@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guest Lecture – Mathematics Dept.</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon" />
+
+  <style>
+    .fade-in {
+      animation: fadeInUp 0.8s ease-out both;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .glow-text {
+      text-shadow: 0 0 5px rgba(37,99,235,0.5);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen flex items-center justify-center p-6">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full font-semibold shadow-lg transition z-50">
+    🏠 Home
+  </a>
+
+  <!-- Content Box -->
+  <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 max-w-4xl w-full fade-in">
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-indigo-600 glow-text mb-6">
+      Guest Lecture – Mathematics Department
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/guest_lect_maths.jpg' %}" alt="Maths Lecture" class="rounded-xl w-full md:w-2/3 shadow-lg">
+    </div>
+
+    <!-- Description -->
+    <div class="text-base md:text-lg leading-relaxed text-justify">
+      <p class="mb-4">
+        गणित विभाग द्वारा आयोजित गेस्ट लेक्चर में <strong>डॉ. प्रीति नांदल</strong> (आईआईटी दिल्ली) ने “Linear Algebra in Real World Applications” विषय पर विस्तारपूर्वक व्याख्यान दिया।
+      </p>
+      <p class="mb-4">
+        उन्होंने विद्यार्थियों को यह बताया कि कैसे गणित के सैद्धांतिक सिद्धांत डेटा साइंस, मशीन लर्निंग और फिजिक्स जैसी वास्तविक समस्याओं को हल करने में सहायता करते हैं।
+      </p>
+      <p class="mb-4">
+        प्रश्नोत्तर सत्र में छात्रों ने गहरी रुचि दिखाई और व्याख्यान को अत्यधिक लाभकारी बताया।
+      </p>
+    </div>
+
+    <!-- Read More Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/guest_lect_maths.pdf' %}" target="_blank"
+         class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+  </div>
+</body>
+</html>

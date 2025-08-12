@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhagat Singh Jayanti - Aggarwal College</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Animation -->
+  <style>
+    .fade-in {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .heading-glow {
+      text-shadow: 0 0 10px #dc2626, 0 0 20px #dc2626;
+    }
+  </style>
+</head>
+<body class="bg-yellow-50 dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen flex flex-col items-center justify-center p-6">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 z-50">
+    🏠 Home
+  </a>
+
+  <!-- Main Content -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 shadow-xl rounded-2xl overflow-hidden p-6 fade-in">
+
+    <!-- Heading -->
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-red-600 heading-glow mb-4">
+      Shaheed Bhagat Singh Jayanti
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/bhagat_singh.jpg' %}" alt="Bhagat Singh Jayanti" class="rounded-xl w-full md:w-2/3 shadow-md" />
+    </div>
+
+    <!-- Description -->
+    <div class="text-justify text-base md:text-lg leading-relaxed">
+      <p class="mb-4">
+        On the occasion of <strong>Shaheed Bhagat Singh Jayanti</strong>, Aggarwal College paid heartfelt tribute to one of India's most fearless freedom fighters. The program was conducted with great enthusiasm to remember his legacy, patriotism, and revolutionary spirit.
+      </p>
+      <p class="mb-4">
+        Students from various departments presented speeches, patriotic poems, and skits that highlighted the life and ideology of Bhagat Singh. The event created an atmosphere of national pride and inspired the youth to serve the country with dedication.
+      </p>
+      <p class="mb-4">
+        Principal Sir addressed the gathering and emphasized the relevance of Bhagat Singh's values in today’s generation. Everyone observed a moment of silence to honor the martyrs.
+      </p>
+    </div>
+
+    <!-- PDF Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'pdf\4.pdf' %}" target="_blank"
+         class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-full transition-transform transform hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+  </div>
+</body>
+</html>

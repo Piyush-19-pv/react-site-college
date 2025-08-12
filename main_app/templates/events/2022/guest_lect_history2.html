@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guest Lecture - History Dept. 2</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon"/>
+
+  <style>
+    .fade-in {
+      animation: fadeInUp 0.8s ease-out both;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .shine {
+      text-shadow: 0 0 6px rgba(37,99,235,0.6);
+    }
+  </style>
+</head>
+<body class="bg-blue-50 dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen p-6 flex items-center justify-center">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full font-semibold shadow-md transition z-50">
+    🏠 Home
+  </a>
+
+  <!-- Content Card -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 fade-in">
+
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-blue-600 shine mb-6">
+      Guest Lecture – History Department (Session II)
+    </h1>
+
+    <!-- Image Section -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/guest_lect_history2.jpg' %}" alt="Guest Lecture History 2" class="rounded-xl w-full md:w-3/4 shadow-xl"/>
+    </div>
+
+    <!-- Event Description -->
+    <div class="text-base md:text-lg leading-relaxed text-justify">
+      <p class="mb-4">
+        इतिहास विभाग ने अपने द्वितीय सत्र के अंतर्गत <strong>डॉ. वीरेश्वर सिंह</strong> (पूर्व प्रोफेसर, पंजाब विश्वविद्यालय) को आमंत्रित किया। उन्होंने "इतिहास लेखन की बदलती प्रवृत्तियाँ" विषय पर व्याख्यान दिया।
+      </p>
+      <p class="mb-4">
+        इस सत्र में आधुनिक इतिहास लेखन की पद्धतियों, स्त्रोतों और नवाचारों पर चर्चा हुई। छात्रों को अकादमिक लेखन और अनुसंधान पद्धति की गहरी समझ प्राप्त हुई।
+      </p>
+      <p class="mb-4">
+        सत्र संवादात्मक रहा और छात्रों के विविध प्रश्नों का संतोषजनक उत्तर दिया गया, जिससे उनका शोध के प्रति उत्साह और बढ़ा।
+      </p>
+    </div>
+
+    <!-- Read More PDF Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/guest_lect_history2.pdf' %}" target="_blank"
+         class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>

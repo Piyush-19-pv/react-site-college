@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Counselling - Aggarwal College</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .fade-in {
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .glow {
+      text-shadow: 0 0 8px #4ade80, 0 0 14px #4ade80;
+    }
+  </style>
+</head>
+<body class="bg-green-50 dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen p-6 flex items-center justify-center">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 z-50">
+    🏠 Home
+  </a>
+
+  <!-- Content Card -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-6 fade-in">
+
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-green-600 glow mb-6">
+      Career Counselling Session
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/career_counselling.jpg' %}" alt="Career Counselling Event" class="rounded-xl w-full md:w-2/3 shadow-lg" />
+    </div>
+
+    <!-- Text Content -->
+    <div class="text-justify text-base md:text-lg leading-relaxed">
+      <p class="mb-4">
+        Aggarwal College organized a detailed <strong>Career Counselling Session</strong> aimed at helping students explore diverse career paths and understand modern job market trends. The event featured experienced counselors, psychologists, and education consultants who addressed both academic and emotional aspects of career planning.
+      </p>
+      <p class="mb-4">
+        The experts guided students on stream selection, skill assessment, goal setting, and how to choose a career aligned with their personality and interests. One-on-one counselling booths were also arranged for personalized advice.
+      </p>
+      <p class="mb-4">
+        The session proved to be a major success, enhancing the awareness and confidence levels among students. Participation certificates were provided at the end of the session.
+      </p>
+    </div>
+
+    <!-- Read More PDF Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/career_counselling.pdf' %}" target="_blank"
+         class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transform transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+  </div>
+</body>
+</html>

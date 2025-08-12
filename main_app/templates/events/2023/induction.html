@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Induction Programme | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-sky-50 text-gray-900 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Image -->
+    <img src="{% static 'images/induction_programme.jpg' %}" 
+         alt="Induction Programme" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-sky-700 mb-2">Induction Programme</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        The Induction Programme at Aggarwal College is designed to welcome new students and introduce them to the culture, values, and academic environment of the institution. This programme marks the beginning of a new academic journey and helps students transition smoothly into college life.
+        <br><br>
+        The session began with a warm welcome followed by an overview of the college’s vision, mission, and legacy. Students were given insights into various departments, facilities, academic rules, examination structure, and the mentoring system that ensures individual growth.
+        <br><br>
+        Key highlights of the induction included orientation on discipline, anti-ragging policies, NSS, NCC, YRC, and extracurricular opportunities. Students were encouraged to take part in clubs, cultural societies, and skill development programmes.
+        <br><br>
+        Inspirational talks, ice-breaking activities, and an introduction to faculty members helped create a sense of belonging. The programme also focused on mental health awareness and support systems available for student wellbeing.
+        <br><br>
+        Overall, the induction programme proved to be a valuable initiative to make students feel comfortable, confident, and well-informed as they embark on their academic journey at Aggarwal College.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/induction_programme.pdf' %}" target="_blank"
+         class="inline-block bg-sky-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-sky-700 transition-all duration-300">
+        📘 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

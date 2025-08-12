@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IMT Industries Expo</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon"/>
+
+  <style>
+    .fade-in {
+      animation: fadeInUp 0.9s ease-out both;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-slate-100 dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen p-6 flex items-center justify-center">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full font-semibold shadow-md z-50">
+    🏠 Home
+  </a>
+
+  <!-- Main Container -->
+  <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 max-w-4xl w-full fade-in">
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-blue-700 mb-6">
+      IMT Industries Expo Visit
+    </h1>
+
+    <!-- Image Section -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/imt_industries_expo.jpg' %}" alt="IMT Expo" class="rounded-xl shadow-lg w-full md:w-3/4"/>
+    </div>
+
+    <!-- Description -->
+    <div class="text-base md:text-lg leading-relaxed text-justify">
+      <p class="mb-4">
+        A group of students from our college visited the <strong>IMT Industries Expo</strong> to gain real-world exposure to industrial innovations, machinery, and manufacturing trends. The expo was held at the Industrial Model Township (IMT), bringing together national and international industrial participants.
+      </p>
+      <p class="mb-4">
+        Students interacted with experts from sectors like <em>automation, robotics, packaging, electrical components, mechanical tools, and green energy solutions</em>. This event served as a bridge between academic learning and practical industrial applications.
+      </p>
+      <p class="mb-4">
+        Faculty mentors guided the students, encouraging them to explore career opportunities and startup ideas within the industrial domain.
+      </p>
+    </div>
+
+    <!-- Read More Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/imt_industries_expo.pdf' %}" target="_blank"
+         class="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 View Full Report
+      </a>
+    </div>
+  </div>
+</body>
+</html>

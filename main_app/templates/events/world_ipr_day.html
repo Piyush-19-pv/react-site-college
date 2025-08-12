@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World IPR Day</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/9282/9282934.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #e8f5e9);
+      color: #1f2937;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #00695c;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 17px;
+      color: #616161;
+      margin-bottom: 25px;
+    }
+
+    .image-box {
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.05);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #374151;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #00897b;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(0, 137, 123, 0.3);
+    }
+
+    .read-more-btn:hover {
+      background-color: #00695c;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 15px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">World IPR Day</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/WorldIntellectualPropertyRightsDay260425 (1).jpg' %}" alt="World IPR Day">
+    </div>
+
+    <div class="content">
+      **World Intellectual Property Rights (IPR) Day** was commemorated at Aggarwal College Ballabgarh to highlight the crucial role of intellectual property in encouraging innovation and creativity. The event was aimed at sensitizing students about patents, copyrights, trademarks, and industrial designs, all of which are pivotal in today’s knowledge-based economy.
+      <br><br>
+      The seminar kicked off with a keynote address by a patent attorney who outlined the importance of protecting one's creative and inventive efforts. Students learned how ideas could be transformed into intellectual assets and how IPRs safeguard inventors and creators from infringement.
+      <br><br>
+      A technical session was conducted in collaboration with the Ministry of Commerce's IPR Cell, where experts explained the patent-filing procedure, copyright law, and challenges faced by startups in protecting innovations. Real-life case studies of IPR disputes were shared to give a practical understanding of the importance of registering intellectual property.
+      <br><br>
+      Students actively participated in a poster-making competition on the theme “Ideas to Assets,” showcasing their understanding of IPR through visually appealing artworks. An interactive quiz was also held to engage the audience and promote awareness.
+      <br><br>
+      One of the highlights of the event was a panel discussion featuring faculty from law, science, and commerce departments. They shared their multidisciplinary perspectives on the relevance of IPR in research, business, and academia. Students were encouraged to take advantage of IPR-related support from government schemes like Startup India and IPR facilitation centers.
+      <br><br>
+      As a part of the celebration, an IPR helpdesk was set up to address queries about innovation protection and commercialization of ideas. The event concluded with a vote of thanks and distribution of certificates.
+      <br><br>
+      The Principal emphasized the growing importance of intellectual property in a digital and globalized world and urged students to innovate responsibly and protect their creative output.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/world_ipr_day.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

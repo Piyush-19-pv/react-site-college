@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Talent Hunt | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2936/2936884.png" type="image/png">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      background: #fff;
+      margin: auto;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      animation: slideFade 0.7s ease;
+    }
+
+    @keyframes slideFade {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #0f172a;
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      font-size: 18px;
+      color: #334155;
+      line-height: 1.8;
+    }
+
+    img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 25px 0;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #06b6d4, #3b82f6);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .read-more img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Talent Hunt Program</h1>
+
+    <img src="{% static 'images/talent_hunt.jpg' %}" alt="Talent Hunt Event">
+
+    <div class="content">
+      <p>
+        The Talent Hunt program at Aggarwal College was organized to discover and showcase the diverse creative abilities of our students. The event saw enthusiastic participation in singing, dancing, mimicry, poetry, art, and drama.
+      </p>
+      <p>
+        It was a vibrant celebration of young talent, encouraging students to step forward and express their unique gifts on stage. Judges from various departments rated performances, and winners were honored with certificates and prizes.
+      </p>
+      <p>
+        The event not only fostered a spirit of healthy competition but also helped build self-confidence, collaboration, and cultural enrichment among participants.
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/talent_hunt.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admission Documents</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+      margin: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .description {
+      margin-bottom: 10px;
+      font-weight: 500;
+      color: #444;
+    }
+    .btn {
+      display: inline-block;
+      width: 100%;
+      background-color: #fff;
+      color: #007bff;
+      padding: 14px;
+      text-align: left;
+      border: 2px solid #007bff;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background-color: #007bff;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    }
+    @media (max-width: 600px) {
+      .btn {
+        font-size: 14px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Admission Resources</h2>
+
+    <div class="section">
+      <div class="description">Complete guide and details about courses offered, eligibility, and how to apply.</div>
+      <a href="{% static 'admission/admission_brochure.pdf' %}" class="btn" target="_blank">Admission Brochure</a>
+    </div>
+
+    <div class="section">
+      <div class="description">Overview of the admission process and key points to remember while applying.</div>
+      <a href="{% static 'admission/about_admissions.pdf' %}" class="btn" target="_blank">About Admissions</a>
+    </div>
+
+    <div class="section">
+      <div class="description">Detailed breakdown of the course-wise fee structure for the current academic session.</div>
+      <a href="{% static 'admission/fee_structure.pdf' %}" class="btn" target="_blank">Fee Structure</a>
+    </div>
+
+    <div class="section">
+      <div class="description">Number of seats available for each program/course for the current session.</div>
+      <a href="{% static 'admission/programme_intake.pdf' %}" class="btn" target="_blank">Programme Intake</a>
+    </div>
+
+    <div class="section">
+      <div class="description">MDU admission cancellation rules for first-year students, reference from Brochure 2021-22 (Page 15).</div>
+      <a href="{% static 'admission/cancellation_policy_mdu_2021.pdf' %}" class="btn" target="_blank">Admission Cancellation Policy</a>
+    </div>
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guest Lecture – Mathematics Department</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f0f9ff, #e0f2fe);
+      color: #1e293b;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: slideUp 0.7s ease-out;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #0f172a;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: #64748b;
+      margin-bottom: 28px;
+    }
+
+    .image-box {
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.04);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #334155;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #2563eb;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.3);
+    }
+
+    .read-more-btn:hover {
+      background-color: #1d4ed8;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 15px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Guest Lecture – Mathematics Department</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/GuestLectureBy MathsDept160420251.jpg' %}" alt="Guest Lecture Math">
+    </div>
+
+    <div class="content">
+      The Department of Mathematics at Aggarwal College Ballabgarh recently hosted an enlightening Guest Lecture on the theme “Mathematics in the Real World.” The lecture was conducted by Dr. Anil Mehta, a prominent professor and researcher in applied mathematics, who shared insights into the practical applications of math in industry, science, and technology.
+      <br><br>
+      The lecture aimed at breaking the myth that mathematics is only abstract. It showcased how concepts like probability, statistics, linear algebra, and calculus are used in areas like cryptography, data analysis, logistics, computer graphics, and artificial intelligence. Real-world examples included algorithmic trading in finance, optimization in supply chains, and predictive models in weather forecasting.
+      <br><br>
+      The lecture was interactive and well-received, especially when the speaker presented visual demonstrations using graphs, formulas, and simulations. Students asked thought-provoking questions about the scope of mathematical modeling in solving global problems like climate change and health forecasting.
+      <br><br>
+      Dr. Mehta also emphasized career options in actuarial science, data science, and operations research, motivating students to view mathematics not just as a subject but as a tool of innovation. The session ended with a vote of thanks by the Head of Department, and certificates of participation were distributed.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/guest_lecture_math.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poster Making Competition – ICC</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/876/876784.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f0fdf4, #dcfce7);
+      color: #1e293b;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      animation: fadeSlide 0.8s ease-in-out;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #166534;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 17px;
+      color: #4b5563;
+      margin-bottom: 30px;
+    }
+
+    .image-box {
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.04);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #334155;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #16a34a;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(22, 163, 74, 0.3);
+    }
+
+    .read-more-btn:hover {
+      background-color: #15803d;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 15px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Poster Making Competition – ICC</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/PosterMakingCompetitionbyICC12-04-20251.jpg' %}" alt="Poster Making ICC">
+    </div>
+
+    <div class="content">
+      To raise awareness on issues related to **gender sensitivity and women's empowerment**, the Internal Complaints Committee (ICC) of Aggarwal College Ballabgarh organized a **Poster Making Competition** for students across various departments.
+      <br><br>
+      The event provided a platform for students to showcase their creativity while conveying powerful messages about equality, safety, and respect. Over 50 students participated, and their posters were evaluated on artistic creativity, message clarity, and impact.
+      <br><br>
+      The initiative successfully encouraged students to express their thoughts on critical topics like harassment prevention, inclusivity, and mental health. The selected posters were displayed on campus to further spread the messages among peers.
+      <br><br>
+      The college faculty and ICC members appreciated the enthusiasm and talent displayed by participants, reinforcing the message that **awareness starts with expression**.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/poster_making_icc.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

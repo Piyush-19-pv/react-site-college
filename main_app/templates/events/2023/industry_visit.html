@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industry Visit | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Image -->
+    <img src="{% static 'images/industry_visit.jpg' %}" 
+         alt="Industry Visit" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-gray-800 mb-2">Industry Visit</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        Aggarwal College recently organized an Industry Visit for students to gain hands-on exposure to real-world corporate and industrial operations. The initiative was aimed at providing experiential learning and practical insight into how industries function on a daily basis.
+        <br><br>
+        The students visited a reputed manufacturing facility where they observed production lines, automation systems, logistics coordination, and waste management processes. The industry experts shared insights into current market trends, operational challenges, and the role of technology in streamlining business workflows.
+        <br><br>
+        The visit also included a detailed session on corporate ethics, safety protocols, human resource planning, and customer relationship management. Students were able to relate their classroom learnings with actual industry practices, bridging the gap between theory and application.
+        <br><br>
+        The interaction with department heads and professionals encouraged students to ask questions, take notes, and understand how departments collaborate in achieving organizational goals. Many students showed great interest in understanding the supply chain, finance management, and digital marketing aspects.
+        <br><br>
+        The event concluded with a feedback session where students shared their learning experience and expressed interest in more such educational visits. The college reiterated its commitment to providing holistic education through real-world exposure and industry interaction.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/industry_visit.pdf' %}" target="_blank"
+         class="inline-block bg-gray-800 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-gray-900 transition-all duration-300">
+        🏭 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

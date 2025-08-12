@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Freshers BA & MA - Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" type="image/png" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3e5f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #6a1b9a;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 25px 0;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .btn-read {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #8e24aa, #ab47bc);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .btn-read img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+
+    .btn-read:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(171, 71, 188, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Freshers Party – BA & MA</h1>
+
+    <img src="{% static 'images/freshers_ba_ma.jpg' %}" alt="Freshers Event BA MA">
+
+    <div class="content">
+      <p>
+        Aggarwal College Ballabgarh extended a grand welcome to the new batches of BA and MA students through an energetic and colorful <strong>Freshers Party</strong>. The event aimed to help newcomers ease into college life and get acquainted with seniors, faculty, and campus culture.
+      </p>
+      <p>
+        The celebration was filled with music, dance, laughter, and lively interactions. The college auditorium was decorated with vibrant themes and a stage was set for performances that showcased the diverse talents of the students.
+      </p>
+      <p>
+        Highlights of the event included solo and group dances, songs, poetry, and a fashion walk. The energy was infectious as students from both UG and PG courses enthusiastically participated and cheered each other on.
+      </p>
+      <p>
+        Titles such as Mr. and Miss Fresher, Best Smile, and Star Performer were awarded after rounds of talent, Q&A, and ramp walk. The winners were honored with sashes and trophies, adding sparkle to their first day at college.
+      </p>
+      <p>
+        Faculty members shared encouraging messages, highlighting the importance of academics, discipline, and co-curricular activities. Principal Dr. Seema Dahiya welcomed all newcomers and expressed hope for a fruitful academic journey ahead.
+      </p>
+      <p>
+        The event concluded with group photographs and refreshments, leaving everyone with a smile and memorable experiences. The event successfully fostered a sense of belonging and excitement among the new students.
+      </p>
+    </div>
+
+    <a class="btn-read" href="{% static 'pdfs/freshers_ba_ma.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

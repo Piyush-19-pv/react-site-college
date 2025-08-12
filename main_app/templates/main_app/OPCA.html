@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OPAC – Aggarwal College</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/337/337946.png" type="image/png" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #f0f2f5, #dbeafe);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .glass-card h1 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #1e3a8a;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .glass-card h2 {
+      font-size: 18px;
+      text-align: center;
+      color: #4b5563;
+      margin-bottom: 24px;
+    }
+    .glass-card p {
+      font-size: 16px;
+      color: #374151;
+      line-height: 1.7;
+      text-align: justify;
+      margin-bottom: 30px;
+    }
+    .btn-container {
+      display: flex;
+      justify-content: center;
+    }
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #1d4ed8;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(29, 78, 216, 0.3);
+    }
+    .download-btn img {
+      width: 22px;
+      height: 22px;
+    }
+    .download-btn:hover {
+      background-color: #2563eb;
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(29, 78, 216, 0.5);
+    }
+
+    @media (max-width: 600px) {
+      .glass-card h1 {
+        font-size: 22px;
+      }
+      .glass-card p {
+        font-size: 15px;
+      }
+      .download-btn {
+        font-size: 14px;
+        padding: 10px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glass-card">
+    <h1>Aggarwal College Ballabgarh, Faridabad</h1>
+    <h2>Online Public Access Catalogue (OPAC)</h2>
+    <p>
+      The Online Public Access Catalogue (OPAC) is a web-based tool provided by Aggarwal College that enables students, faculty, and researchers to explore the college's vast library resources. Users can conveniently search books, journals, e-resources, and media content from anywhere with internet access. OPAC enhances transparency and efficiency in accessing academic materials, and helps users track availability, new arrivals, authors, publication details, and more—all in real time.
+    </p>
+
+    <div class="btn-container">
+      <a href="{% static 'pdf\OPAC1.pdf' %}" target="_blank" class="download-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Download OPAC Certificate
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

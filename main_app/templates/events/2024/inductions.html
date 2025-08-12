@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Induction Program | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafb;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background-color: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #1f2937;
+      font-size: 34px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 14px;
+      margin: 25px 0;
+      max-height: 420px;
+      object-fit: cover;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #6366f1, #3b82f6);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .read-more:hover {
+      transform: scale(1.06);
+      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+    }
+
+    .read-more img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Induction Program</h1>
+
+    <img src="{% static 'images/induction.jpg' %}" alt="Induction Program Image">
+
+    <div class="content">
+      <p>
+        The <strong>Induction Program</strong> at Aggarwal College is organized annually to warmly welcome new students to the institution. It serves as a bridge between school life and college life, giving students a platform to adjust comfortably and become familiar with the college environment.
+      </p>
+      <p>
+        The event includes interaction sessions with faculty, administrative heads, alumni, and student representatives. Students are introduced to academic regulations, examination policies, clubs, NSS, NCC, placement cell, and cultural activities of the college.
+      </p>
+      <p>
+        Motivational talks, performances, campus tours, and interactive Q&A sessions are conducted to make students feel confident and engaged. The program instills a sense of belongingness and pride among new students.
+      </p>
+      <p>
+        The induction was concluded with distribution of welcome kits and refreshments.
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/induction.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

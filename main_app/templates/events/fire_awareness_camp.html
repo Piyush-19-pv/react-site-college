@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fire Awareness Camp</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2791/2791392.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fff7ed, #ffe4e6);
+      color: #1e293b;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      animation: slideIn 0.8s ease;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 34px;
+      font-weight: bold;
+      color: #b91c1c;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: #475569;
+      margin-bottom: 25px;
+    }
+
+    .image-box {
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.5s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.05);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #374151;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #b91c1c;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(185, 28, 28, 0.3);
+    }
+
+    .read-more-btn:hover {
+      background-color: #7f1d1d;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 16px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Fire Awareness Camp</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/FIREAWARENESSTRAININGCAMP160420251.jpg' %}" alt="Fire Awareness Camp">
+    </div>
+
+    <div class="content">
+      Aggarwal College Ballabgarh successfully organized a “Fire Awareness Camp” aimed at educating students and staff about fire safety, prevention techniques, and emergency response protocols. This initiative was held in collaboration with the local Fire Department to ensure real-time demonstrations and expert guidance.
+      <br><br>
+      The camp began with an informative seminar where officers discussed the science behind fire, common causes of fire in educational institutions, and precautionary measures. Special emphasis was placed on the types of fire extinguishers, fire drills, and how to evacuate during emergencies.
+      <br><br>
+      A live demonstration was conducted in the college grounds, showcasing how to extinguish various classes of fire using different extinguishers. Students were invited to participate in hands-on training, making it both engaging and practical.
+      <br><br>
+      In addition, safety posters, brochures, and emergency contact guides were distributed among the attendees. The session concluded with a Q&A round where the students asked about scenarios like gas leaks, short circuits, and emergency exits.
+      <br><br>
+      This Fire Awareness Camp proved to be an important and timely initiative to instill safety consciousness and emergency preparedness in young minds. The college pledged to conduct more such sessions in the future.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/fire_awareness_report.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

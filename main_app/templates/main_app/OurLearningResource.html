@@ -1,0 +1,184 @@
+={% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Library Hub</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #eef2f5;
+      font-family: 'Inter', sans-serif;
+      color: #333;
+    }
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      max-width: 1100px;
+      margin: auto;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s forwards;
+    }
+    .card:nth-child(1) { animation-delay: 0s; }
+    .card:nth-child(2) { animation-delay: 0.1s; }
+    .card:nth-child(3) { animation-delay: 0.2s; }
+    .card:nth-child(4) { animation-delay: 0.3s; }
+    .card:nth-child(5) { animation-delay: 0.4s; }
+    .card:nth-child(6) { animation-delay: 0.5s; }
+    .card:nth-child(7) { animation-delay: 0.6s; }
+    .card:nth-child(8) { animation-delay: 0.7s; }
+    .card:nth-child(9) { animation-delay: 0.8s; }
+
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 14px;
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .card-header h3 {
+      font-size: 18px;
+      margin: 0;
+      color: #1e2761;
+    }
+    .card p {
+      font-size: 14px;
+      margin-bottom: 16px;
+      line-height: 1.4;
+      color: #555;
+    }
+    .card a {
+      display: inline-block;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      background: #2979ff;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .card a:hover {
+      background: #0b48c1;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center; margin-bottom:30px; color:#1e2761;">Library Hub</h1>
+  <div class="grid">
+
+    <!-- 1. Library -->
+    <div class="card">
+      <div class="card-header">
+        <img class="card-icon" src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="Library Icon">
+        <h3>Library</h3>
+      </div>
+      <p>Visit the main portal for all library information.</p>
+      <a href="{% static 'lpdf\AUTOMATIONANDSERVICES.pdf' %}" target="_blank">Open PDF</a>
+    </div>
+
+    <!-- 2. Rules & Reg. -->
+    <div class="card">
+      <div class="card-header">
+        <img class="card-icon" src="https://cdn-icons-png.flaticon.com/512/3398/3398468.png" alt="Rules Icon">
+        <h3>Rules & Regulations</h3>
+      </div>
+      <p>Know the policies to use library facilities effectively.</p>
+      <a href="{% static 'lpdf/LEARNINGMANAGEMENTSYSTEM1.pdf' %}" target="_blank">Open PDF</a>
+    </div>
+
+    <!-- 3. Automation -->
+    <div class="card">
+      <div class="card-header">
+        <img class="card-icon" src="https://cdn-icons-png.flaticon.com/512/3126/3126504.png" alt="Automation Icon">
+        <h3>Automation & Services</h3>
+      </div>
+      <p>Explore our digital services and automated systems.</p>
+      <a href="{% static 'lpdf/LIBRARYRESOURCES2.pdf' %}" target="_blank">Open PDF</a>
+    </div>
+
+    <!-- 4. Resources -->
+    <div class="card">
+      <div class="card-header">
+        <img class="card-icon" src="https://cdn-icons-png.flaticon.com/512/4090/4090645.png" alt="Resources Icon">
+        <h3>Library Resources</h3>
+      </div>
+      <p>Browse books, journals, e-resources, and more.</p>
+      <a href="{% static 'lpdf\LIBRARYNETWORKRESOURCECENTRE2.pdf' %}" target="_blank">Open PDF</a>
+    </div>
+
+    <!-- 5. Database -->
+    <div class="card">
+      <div class="card-header">
+        <img class="card-icon" src="https://cdn-icons-png.flaticon.com/512/2630/2630130.png" alt="Database Icon">
+        <h3>Database / Subscriptions</h3>
+      </div>
+      <p>Access our subscription-based databases and e-journals.</p>
+      <a href="{% static 'lpdf\LIBRARYRESOURCES1.pdf' %}" target="_blank">Open PDF</a>
+    </div>
+
+    <!-- 6. Online Resources -->
+    <div class="card">
+      <div class="card-header">
+        <img class="card-icon" src="https://cdn-icons-png.flaticon.com/512/1087/1087928.png" alt="Online Icon">
+        <h3>Online Resources</h3>
+      </div>
+      <p>Get access to e-books, articles & online archives.</p>
+      <a href="{% static 'lpdf/LIBRARYRESOURCES2 (1).pdf' %}" target="_blank">Open PDF</a>
+    </div>
+
+    <!-- 7. LMS -->
+    <div class="card">
+      <div class="card-header">
+        <img class="card-icon" src="https://cdn-icons-png.flaticon.com/512/1160/1160408.png" alt="LMS Icon">
+        <h3>Learning Management System</h3>
+      </div>
+      <p>Log into our LMS for digital classroom support.</p>
+      <a href="{% static 'lpdf/LEARNINGMANAGEMENTSYSTEM1.pdf' %}" target="_blank">Open PDF</a>
+    </div>
+
+    <!-- 8. Library Staff -->
+    <div class="card">
+      <div class="card-header">
+        <img class="card-icon" src="https://cdn-icons-png.flaticon.com/512/186/186821.png" alt="Staff Icon">
+        <h3>Library Staff</h3>
+      </div>
+      <p>Meet our dedicated library team and their designations.</p>
+      <a href="{% static 'lpdf/LIBRARYSTAFF1.pdf' %}" target="_blank">Open PDF</a>
+    </div>
+
+    <!-- 9. Network Resource -->
+    <div class="card">
+      <div class="card-header">
+        <img class="card-icon" src="https://cdn-icons-png.flaticon.com/512/1250/1250790.png" alt="Network Icon">
+        <h3>Library Network Centre</h3>
+      </div>
+      <p>Information on network resources and connectivity.</p>
+      <a href="{% static 'lpdf/ONLINERESOURCES1.pdf' %}" target="_blank">Open PDF</a>
+    </div>
+
+  </div>
+</body>
+</html>

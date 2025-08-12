@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Environment Protection Campaign | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in { animation: fadeIn 1.2s ease-in-out; }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-lime-50 text-gray-800 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Online Image -->
+    <img src="https://images.unsplash.com/photo-1526403224-3b1e0f141225?auto=format&fit=crop&w=1350&q=80"
+         alt="Environment Protection" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-lime-700 mb-2">Environment Protection Campaign</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        Aggarwal College successfully organized an Environment Protection Campaign to raise awareness among students and the community about preserving natural resources. The aim of this campaign was to educate youth on the importance of protecting the environment through daily actions.
+        <br><br>
+        The campaign started with a cleanliness drive in the nearby public areas. NSS volunteers and students actively participated by collecting plastic waste, cleaning streets, and encouraging citizens to avoid littering. Posters were put up around the campus and neighborhood with strong environmental messages.
+        <br><br>
+        Students created banners and eco-friendly slogans such as "Reduce, Reuse, Recycle" and "Protect Nature, Protect Future". These were displayed throughout the college premises to spread the message visually.
+        <br><br>
+        Awareness sessions were held to discuss topics like climate change, water conservation, and the harmful effects of single-use plastics. The discussions helped students understand how everyday choices impact the planet.
+        <br><br>
+        One of the highlights was a “Green Oath” taken by all participants to use eco-friendly alternatives in daily life, reduce plastic usage, save electricity, and plant more trees. The participants also planted several saplings as part of the ongoing green initiative.
+        <br><br>
+        The event ended with a group photo and a walkathon inside the campus with handmade placards encouraging eco-conscious living. Through this campaign, students were reminded that even small steps can lead to big environmental changes.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/env_protection_campaign.pdf' %}" target="_blank"
+         class="inline-block bg-lime-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-lime-700 transition-all duration-300">
+        🌍 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

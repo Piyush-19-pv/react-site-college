@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Entrepreneur Course | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-gray-900 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Image -->
+    <img src="{% static 'images/social_entrepreneur.jpg' %}" 
+         alt="Social Entrepreneur Course" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-indigo-700 mb-2">Social Entrepreneur Course</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        Aggarwal College proudly introduced a **Social Entrepreneur Course** aimed at nurturing the entrepreneurial spirit in students while also instilling a strong sense of social responsibility. The course was designed to equip learners with the knowledge and skills necessary to launch sustainable, socially driven ventures.
+        <br><br>
+        This course was structured into multiple modules covering essential topics such as the fundamentals of entrepreneurship, understanding social challenges, financial planning for non-profits, social impact measurement, and business ethics. Eminent experts from the industry and NGOs were invited to share their real-world experiences and guide students through interactive workshops and case studies.
+        <br><br>
+        One of the core highlights of the program was its hands-on approach. Students were divided into teams and tasked with identifying a social problem within their community. Each team had to ideate, research, and pitch a solution using entrepreneurial models. The final projects included proposals on waste management, rural education access, women’s skill training, and eco-friendly packaging solutions.
+        <br><br>
+        Students were not only assessed based on theory but also on their innovation, teamwork, community outreach, and sustainability plans. Mentors from both the academic and industry background regularly interacted with teams to refine their ideas.
+        <br><br>
+        The course concluded with a presentation day where each team showcased their projects in front of a panel of judges. Several ideas were selected for incubation and mentorship through collaborations with NGOs and CSR-funded initiatives.
+        <br><br>
+        Through this course, Aggarwal College reinforced its commitment to holistic education and the empowerment of youth as future leaders and changemakers. The initiative was appreciated across educational circles and plans are underway to include it as a regular offering in the curriculum.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/social_entrepreneur.pdf' %}" target="_blank"
+         class="inline-block bg-indigo-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-indigo-700 transition-all duration-300">
+        📘 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

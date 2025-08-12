@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visit to Chemistry Dept | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2784/2784489.png" type="image/png">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3f4f6;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      animation: fadeSlide 0.6s ease-out;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 30px;
+      text-align: center;
+      color: #1e3a8a;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      font-size: 17px;
+      color: #374151;
+      line-height: 1.7;
+    }
+
+    img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin: 25px 0;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 22px;
+      background: linear-gradient(to right, #6366f1, #3b82f6);
+      color: #fff;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 25px;
+    }
+
+    .read-more img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 24px; }
+      .content { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Visit to Chemistry Department</h1>
+
+    <img src="{% static 'images/visit_chem.jpg' %}" alt="Visit to Chemistry Lab">
+
+    <div class="content">
+      <p>
+        Students from Aggarwal College participated in a guided visit to the Chemistry Department, exploring various experiments, instruments, and real-world chemical applications. The session offered insights into chemical safety protocols and modern laboratory practices.
+      </p>
+      <p>
+        Experts explained key processes and students were encouraged to interact and ask questions, fostering scientific curiosity and critical thinking. The visit also included demonstrations of organic reactions and spectroscopy equipment.
+      </p>
+      <p>
+        The experience helped bridge theoretical knowledge with practical applications, and inspired many students to consider careers in the chemical sciences.
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/visit_chem.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

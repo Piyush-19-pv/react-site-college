@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best Out of Waste - Aggarwal College</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1685/1685453.png" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f5fff9;
+      color: #222;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      padding: 35px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 34px;
+      color: #14746f;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin: 20px 0;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .btn-read {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 24px;
+      margin-top: 30px;
+      background: linear-gradient(90deg, #14746f, #0f9b8e);
+      color: #fff;
+      border: none;
+      border-radius: 35px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .btn-read:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(15, 155, 142, 0.3);
+    }
+
+    .btn-read img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Best Out of Waste</h1>
+
+    <img src="{% static 'images/best_out_waste.jpg' %}" alt="Best Out of Waste Event">
+
+    <div class="content">
+      <p>
+        Aggarwal College Ballabgarh organized a creative and impactful event titled <strong>“Best Out of Waste”</strong> to promote sustainable living, environmental awareness, and the importance of recycling in everyday life. The initiative aimed to instill innovation and creativity among students by encouraging them to craft beautiful and functional items using materials generally considered waste.
+      </p>
+      <p>
+        The event saw participation from students across all streams, each bringing forward innovative ideas that turned plastic bottles, newspapers, cans, broken CDs, old clothes, and cardboard into utility items like lamps, pen stands, baskets, showpieces, planters, and more. This creative competition was judged on the basis of originality, utility, aesthetics, and use of waste material.
+      </p>
+      <p>
+        Faculty members appreciated the students' efforts in creatively contributing to sustainability. The Principal addressed the participants and emphasized how such events not only promote environmental consciousness but also develop problem-solving skills and hands-on learning abilities. The college aims to cultivate such awareness among youth to build a greener tomorrow.
+      </p>
+      <p>
+        Prizes were awarded to the most innovative entries, and certificates were distributed to all participants. The “Best Out of Waste” competition reminded students that with a little imagination and concern for the planet, waste could truly be turned into wonder.
+      </p>
+    </div>
+
+    <a class="btn-read" href="{% static 'pdfs/best_out_waste.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

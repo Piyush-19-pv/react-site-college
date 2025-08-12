@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Thalassemia Day</title>
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2966/2966484.png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fef2f2, #eff6ff);
+      color: #1f2937;
+      padding: 30px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      animation: slideIn 1s ease;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: #dc2626;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px #fecaca;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 20px;
+      color: #334155;
+      margin-bottom: 25px;
+    }
+
+    .image-box {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.5s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.04);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #374151;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #dc2626;
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+    }
+
+    .read-more-btn:hover {
+      background-color: #991b1b;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 16px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">World Thalassemia Day</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/Screenshot_23-6-2025_112854_www.aggarwalcollege.ac.in.jpeg' %}" alt="World Thalassemia Awareness">
+    </div>
+
+    <div class="content">
+      World Thalassemia Day, observed every year on May 8th, aims to raise awareness about this inherited blood disorder and promote measures for its prevention and management. At Aggarwal College Ballabgarh, the day was marked with a powerful campaign to inform students and the community about the causes, symptoms, and challenges of thalassemia.
+      <br><br>
+      A guest lecture was conducted by leading hematologists and social workers, explaining how thalassemia affects the body's ability to produce hemoglobin. Students participated in poster-making competitions and created slogans emphasizing early detection and the importance of blood donation.
+      <br><br>
+      One of the key highlights was the blood donation camp organized in collaboration with a local hospital. Many volunteers stepped forward to contribute, highlighting the college’s strong sense of social responsibility.
+      <br><br>
+      The ceremony included a pledge-taking event, where students promised to support awareness initiatives and to promote regular health checkups. Information booths provided leaflets on genetic counseling and carrier testing.
+      <br><br>
+      Through these initiatives, Aggarwal College reaffirmed its commitment to health education and community service. World Thalassemia Day is not just a calendar date—it’s a powerful reminder of collective efforts needed to fight this preventable genetic condition.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/thalassemia_day_report.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

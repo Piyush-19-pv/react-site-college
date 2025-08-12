@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zonal Youth Festival | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3048/3048404.png" type="image/png">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f9ff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #0066cc;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 25px 0;
+    }
+
+    .content {
+      font-size: 17px;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(to right, #0066cc, #004a99);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .read-more img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0, 102, 204, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 24px; }
+      .content { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Zonal Youth Festival</h1>
+
+    <img src="{% static 'images/zonal_youth.jpg' %}" alt="Zonal Youth Image">
+
+    <div class="content">
+      <p>
+        Aggarwal College students showcased their talent at the Zonal Youth Festival, a vibrant celebration of music, dance, drama, and art. This inter-college event brought together students from various institutions to participate in a diverse range of cultural activities.
+      </p>
+      <p>
+        Our students participated enthusiastically in events such as solo singing, group dance, debate, skit, and fine arts competitions — bringing home accolades and making the college proud.
+      </p>
+      <p>
+        The event served as a platform to promote creativity, confidence, and cultural exchange among the youth.
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/zonal_youth.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

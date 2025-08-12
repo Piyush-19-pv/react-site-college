@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Environment Awareness - Aggarwal College</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon"/>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .highlight {
+      text-shadow: 0 0 6px #22c55e, 0 0 12px #16a34a;
+    }
+  </style>
+</head>
+<body class="bg-green-50 dark:bg-gray-900 text-gray-800 dark:text-white p-6 flex justify-center items-center min-h-screen">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full shadow-lg transition z-50">
+    🏠 Home
+  </a>
+
+  <!-- Main Card -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 fade-in-up">
+
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-green-700 mb-6 highlight">
+      Environment Awareness Campaign
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/env_awareness.jpg' %}" alt="Environment Awareness" class="rounded-xl w-full md:w-2/3 shadow-md"/>
+    </div>
+
+    <!-- Description -->
+    <div class="text-justify text-base md:text-lg leading-relaxed">
+      <p class="mb-4">
+        To promote the significance of sustainable living and ecological responsibility, Aggarwal College organized a vibrant <strong>Environment Awareness Campaign</strong>. The event aimed to sensitize students about pressing environmental issues and encouraged them to adopt eco-friendly habits.
+      </p>
+      <p class="mb-4">
+        The activities included a green pledge, sapling distribution, slogan writing, and an awareness rally conducted by NSS and YRC volunteers. Keynote speakers from the Department of Environmental Studies highlighted practical steps for reducing carbon footprints and protecting biodiversity.
+      </p>
+      <p class="mb-4">
+        This initiative motivated youth to take ownership in building a greener and cleaner future for coming generations.
+      </p>
+    </div>
+
+    <!-- Read More Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/env_awareness.pdf' %}" target="_blank"
+         class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NIRF - Aggarwal College Ballabgarh</title>
+  <link rel="stylesheet" href="{% static 'css/nirf.css' %}">
+<style>
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 40px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  animation: fadeIn 1s ease-in;
+}
+
+h1 {
+  color: #2e6da4;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.intro {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 25px;
+  margin: 10px;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+</style>
+</head>
+<body>
+  <a href="/" 
+  style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #e63946;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 999;
+  "
+  onmouseover="this.style.transform='scale(1.1)'"
+  onmouseout="this.style.transform='scale(1)'"
+>🏠 Home</a>
+  <div class="container">
+    <h1>National Institutional Ranking Framework (NIRF)</h1>
+    <p class="intro">
+      The National Institutional Ranking Framework (NIRF) is a methodology adopted by the Ministry of Education, Government of India, to rank higher educational institutions across the country. At Aggarwal College Ballabgarh, we believe in transparency, academic excellence, and continuous growth. We actively participate in the NIRF process to benchmark our academic and research performance against national standards.
+    </p>
+    <p class="intro">
+      Our college has consistently strived for excellence in teaching, innovation, outreach, and holistic development. By being a part of NIRF, we commit ourselves to providing world-class education and facilities. Our rankings and reports reflect the hard work of our staff, students, and stakeholders.
+    </p>
+
+    <div class="buttons">
+      <a href="{% static 'metting\NIRFCollege2025.pdf' %}" target="_blank" class="btn">NIRF 2025 College</a>
+      <a href="{% static 'metting\NIRFOVERALL2025.pdf' %}" target="_blank" class="btn">NIRF 2025 Overall</a>
+    </div>
+  </div>
+</body>
+</html>

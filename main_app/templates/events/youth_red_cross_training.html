@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Youth Red Cross Training</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4249/4249865.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fce4ec, #e3f2fd);
+      color: #1f2937;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #c2185b;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 17px;
+      color: #616161;
+      margin-bottom: 25px;
+    }
+
+    .image-box {
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.05);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #374151;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #c2185b;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(194, 24, 91, 0.3);
+    }
+
+    .read-more-btn:hover {
+      background-color: #880e4f;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 15px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Youth Red Cross Training</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/YOUTHREDCROSSUNITS2025.jpg' %}" alt="Youth Red Cross Training">
+    </div>
+
+    <div class="content">
+      The Youth Red Cross (YRC) Training Program conducted at Aggarwal College Ballabgarh aimed to empower young individuals with life-saving skills, humanitarian values, and a strong sense of civic responsibility. The training spanned over several days and included a blend of theoretical sessions and practical demonstrations.
+      <br><br>
+      The event commenced with a ceremonial inauguration by Red Cross representatives and faculty members, emphasizing the importance of volunteerism and first aid knowledge in daily life. Students were introduced to the mission and principles of the Red Cross movement, fostering a spirit of compassion and unity.
+      <br><br>
+      Practical sessions covered crucial areas like basic first aid, CPR techniques, disaster preparedness, blood donation awareness, and personal hygiene. Certified trainers conducted live demonstrations and encouraged students to participate actively. Participants were trained on how to respond during road accidents, natural calamities, and health emergencies.
+      <br><br>
+      A unique segment of the training focused on **mental health and emotional first aid**, helping students understand stress management and empathy building. Group discussions and roleplays made the learning interactive and relatable.
+      <br><br>
+      Towards the end, participants were assessed on their skills and awarded certificates for their contribution. Faculty praised the enthusiasm shown by students and reiterated the importance of youth participation in humanitarian causes.
+      <br><br>
+      Overall, the training equipped students with knowledge, confidence, and leadership qualities needed to serve society. It reinforced the college's commitment to nurturing socially responsible citizens.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/yrc_training.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

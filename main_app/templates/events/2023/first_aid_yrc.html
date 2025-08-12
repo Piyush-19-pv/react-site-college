@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First Aid Training - YRC | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in { animation: fadeIn 1.2s ease-in-out; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-rose-50 text-gray-800 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Static Image -->
+    <img src="{% static 'images/first_aid_yrc.jpg' %}" 
+         alt="First Aid YRC Training" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-rose-700 mb-2">First Aid Training - YRC</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        Aggarwal College's Youth Red Cross (YRC) unit conducted an impactful First Aid Training program aimed at empowering students with essential life-saving techniques. The main objective was to enable young individuals to respond effectively in emergencies until professional medical help is available.
+        <br><br>
+        The session covered a wide range of first aid skills including CPR (Cardiopulmonary Resuscitation), treatment of burns and cuts, stopping bleeding, and dealing with unconscious individuals. Students also learned how to manage fractures, fainting episodes, and other minor injuries that may occur during daily activities or events.
+        <br><br>
+        Demonstrations were held with medical kits and dummies. Students were guided through every step — from assessing a victim's condition to calling for help, ensuring safety, and administering correct first aid measures. The training emphasized calm thinking and confidence while taking action in pressure situations.
+        <br><br>
+        In addition to practical skills, participants were educated about assembling a proper first aid box and the importance of keeping emergency numbers accessible. The YRC unit also encouraged students to become first responders in their homes, communities, and during college events.
+        <br><br>
+        Students were deeply engaged and showed high enthusiasm. The session ended with an awareness pledge to spread basic first aid knowledge and be ready to assist anyone in need. This program empowered students not just physically, but also mentally to act with responsibility during emergencies.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/first_aid_yrc.pdf' %}" target="_blank"
+         class="inline-block bg-rose-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-rose-700 transition-all duration-300">
+        🚑 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

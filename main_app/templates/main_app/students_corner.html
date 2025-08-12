@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Corner</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 30px 20px;
+      background-color: #f4f7fa;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .header {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      color: #2c3e50;
+    }
+
+    .header p {
+      font-size: 16px;
+      color: #666;
+      margin-top: 8px;
+    }
+
+    .student-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .student-button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #fff;
+      padding: 12px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #1d3557;
+      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, background-color 0.3s ease;
+      min-width: 250px;
+      flex: 1 1 calc(30% - 30px);
+    }
+
+    .student-button:hover {
+      background-color: #e3f2fd;
+      transform: translateY(-2px);
+    }
+
+    .student-button i {
+      font-size: 18px;
+      color: #0077cc;
+    }
+
+    @media (max-width: 768px) {
+      .student-button {
+        flex: 1 1 100%;
+      }
+
+      .header h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>🎓 Student Corner</h1>
+    <p>All important student documents and resources available at your fingertips.</p>
+  </div>
+
+  <div class="student-buttons">
+
+    <a href="{% static 'student_corner/code-of-conduct.pdf' %}" class="student-button" target="_blank">
+      <i class="fas fa-file-alt"></i>
+      Code of Conduct
+    </a>
+
+    <a href="{% static 'student_corner/ban-on-ragging.pdf' %}" class="student-button" target="_blank">
+      <i class="fas fa-ban"></i>
+      Ban on Ragging
+    </a>
+
+    <a href="{% static 'student_corner/anti-ragging-brochure.pdf' %}" class="student-button" target="_blank">
+      <i class="fas fa-book-open"></i>
+      Anti-Ragging Brochure
+    </a>
+
+    <a href="{% static 'student_corner/haryana-road-safety-eng.pdf' %}" class="student-button" target="_blank">
+      <i class="fas fa-road"></i>
+      Road Safety English
+    </a>
+
+    <a href="{% static 'student_corner/haryana-road-safety-hindi.pdf' %}" class="student-button" target="_blank">
+      <i class="fas fa-road"></i>
+      Road Safety Hindi
+    </a>
+
+    <a href="{% static 'student_corner/student-welfare.pdf' %}" class="student-button" target="_blank">
+      <i class="fas fa-hands-helping"></i>
+      Welfare Schemes
+    </a>
+
+    <a href="{% static 'student_corner/support-services.pdf' %}" class="student-button" target="_blank">
+      <i class="fas fa-user-friends"></i>
+      Support Services
+    </a>
+
+    <a href="{% static 'student_corner/mms-form.pdf' %}" class="student-button" target="_blank">
+      <i class="fas fa-file-signature"></i>
+      MMS Form
+    </a>
+
+    <a href="{% static 'student_corner/pm-tweet-anmol.pdf' %}" class="student-button" target="_blank">
+      <i class="fas fa-star"></i>
+      PM Tweet
+    </a>
+
+    <a href="{% static 'student_corner/stress-management.pdf' %}" class="student-button" target="_blank">
+      <i class="fas fa-heartbeat"></i>
+      Stress Tips
+    </a>
+
+    <a href="{% static 'student_corner/ayurveda.pdf' %}" class="student-button" target="_blank">
+      <i class="fas fa-leaf"></i>
+      Ayurveda & Health
+    </a>
+
+    <a href="{% static 'student_corner/ceep-coaching.pdf' %}" class="student-button" target="_blank">
+      <i class="fas fa-chalkboard-teacher"></i>
+      CEEP Coaching
+    </a>
+
+  </div>
+</div>
+
+</body>
+</html>

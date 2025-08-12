@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Annual Reports</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{% static 'icons/favicon.png' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-y3bEN9V8j1IBKNRzO1j3iNm1n8csAVkltRCI1iZ0B3VnA/j9aCUZTYXNRbdlX0+5A0XeF+z+nqfFEbLglkYwKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f9f9f9;
+            padding: 40px 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .title {
+            font-size: 28px;
+            color: #2c3e50;
+        }
+
+        .home-button {
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: #2980b9;
+        }
+
+        .report-list {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .report-item {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            padding: 14px 20px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s ease;
+        }
+
+        .report-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .report-icon {
+            font-size: 22px;
+            color: #3498db;
+            margin-right: 14px;
+            min-width: 28px;
+            text-align: center;
+        }
+
+        .report-link {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .report-link:hover {
+            color: #007bff;
+        }
+
+        .bottom-buttons {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .bottom-buttons a {
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .bottom-buttons a:hover {
+            background-color: #1a242f;
+        }
+
+        @media (max-width: 500px) {
+            .title {
+                font-size: 22px;
+            }
+
+            .report-link {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1 class="title"><i class="fas fa-file-alt"></i> Annual Reports</h1>
+    <a href="/" class="home-button"><i class="fas fa-home"></i> Home</a>
+</div>
+
+<div class="report-list">
+    <div class="report-item">
+        <div class="report-icon"><i class="fas fa-calendar-alt"></i></div>
+        <a href="{% static 'anualrepot/ANNUALREPORT2022-23.pdf' %}" target="_blank" class="report-link">Annual Report 2022-23</a>
+    </div>
+    <div class="report-item">
+        <div class="report-icon"><i class="fas fa-chart-bar"></i></div>
+        <a href="{% static 'anualrepot/ANNUALREPORT2021-2211.pdf' %}" target="_blank" class="report-link">Annual Report 2021-22</a>
+    </div>
+    <div class="report-item">
+        <div class="report-icon"><i class="fas fa-chart-pie"></i></div>
+        <a href="{% static 'anualrepot/ANNUALREPORT2020-21.pdf' %}" target="_blank" class="report-link">Annual Report 2020-21</a>
+    </div>
+    <div class="report-item">
+        <div class="report-icon"><i class="fas fa-book-open"></i></div>
+        <a href="{% static 'anualrepot/ANNUALREPORT2019-20.pdf' %}" target="_blank" class="report-link">Annual Report 2019-20</a>
+    </div>
+    <div class="report-item">
+        <div class="report-icon"><i class="fas fa-file-pdf"></i></div>
+        <a href="{% static 'anualrepot/ANNUALREPORT2018-19.pdf' %}" target="_blank" class="report-link">Annual Report 2018-19</a>
+    </div>
+</div>
+
+<div class="bottom-buttons">
+    <a href="javascript:history.back()"><i class="fas fa-arrow-left"></i> Back</a>
+    <a href="#" id="downloadAll"><i class="fas fa-download"></i> Download All</a>
+</div>
+
+<script>
+    document.querySelector("#downloadAll").addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const files = [
+            "{% static 'anualrepot/ANNUALREPORT2022-23.pdf' %}",
+            "{% static 'anualrepot/ANNUALREPORT2021-2211.pdf' %}",
+            "{% static 'anualrepot/ANNUALREPORT2020-21.pdf' %}",
+            "{% static 'anualrepot/ANNUALREPORT2019-20.pdf' %}",
+            "{% static 'anualrepot/ANNUALREPORT2018-19.pdf' %}"
+        ];
+
+        files.forEach((file, index) => {
+            setTimeout(() => {
+                const link = document.createElement("a");
+                link.href = file;
+                link.download = file.split('/').pop();
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }, index * 600);
+        });
+    });
+</script>
+
+</body>
+</html>

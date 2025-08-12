@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Day | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-yellow-50 text-gray-900 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Image -->
+    <img src="{% static 'images/library_day.jpg' %}" 
+         alt="Library Day" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-yellow-700 mb-2">Library Day Celebration</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        Aggarwal College celebrated Library Day with great enthusiasm and academic spirit, highlighting the importance of books, reading, and knowledge in a student's life. The event aimed to rekindle the habit of reading among students and create awareness about the college's rich library resources.
+        <br><br>
+        The day began with an address by the librarian, who emphasized the role of libraries in shaping intellectual growth and instilling discipline in learners. A guided library tour was organized for students, especially first-year entrants, to familiarize them with different sections, e-resources, and borrowing policies.
+        <br><br>
+        Various activities such as book reviews, storytelling sessions, poetry recitations, and quiz competitions were conducted to encourage active student participation. Posters displaying famous quotes on reading and knowledge were also exhibited in the library corridor.
+        <br><br>
+        A short video presentation was screened showcasing the journey of the college library over the years and its evolution with digital technology. Students were also shown how to access digital journals and e-books via the online library portal.
+        <br><br>
+        The celebration concluded with a prize distribution ceremony for the best review, best reader of the year, and quiz winners. Overall, the Library Day reminded everyone of the timeless power of books and the endless world of learning they unlock.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/library_day.pdf' %}" target="_blank"
+         class="inline-block bg-yellow-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-yellow-700 transition-all duration-300">
+        📚 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poster Competition | Computer Science Dept.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3463/3463635.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e0f2fe;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeInUp 0.6s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 34px;
+      text-align: center;
+      color: #0c4a6e;
+      margin-bottom: 25px;
+    }
+
+    .content {
+      font-size: 18px;
+      color: #1f2937;
+      line-height: 1.7;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 25px 0;
+      max-height: 420px;
+      object-fit: cover;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #0284c7, #0369a1);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .read-more img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(3, 105, 161, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Poster Making Competition<br>Computer Science Dept.</h1>
+
+    <img src="{% static 'images/poster_comp_sc.jpg' %}" alt="Poster Making Computer Science Event">
+
+    <div class="content">
+      <p>
+        The Computer Science Department of Aggarwal College organized a vibrant <strong>Poster Making Competition</strong> focused on technology, AI, and digital transformation.
+        The event encouraged students to creatively express their understanding of modern computing trends and cyber awareness through visuals.
+      </p>
+      <p>
+        Over 50 students from various semesters participated and showcased their innovative ideas on topics like cyber security, cloud computing, data privacy, and smart cities. 
+        Judges from the CS faculty evaluated entries based on creativity, clarity, and relevance to the theme.
+      </p>
+      <p>
+        Winners were awarded certificates and digital gift cards. The event successfully promoted digital literacy and artistic skills among tech-savvy students.
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/poster_comp_sc.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

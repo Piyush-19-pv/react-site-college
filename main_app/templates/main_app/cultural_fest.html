@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>College Events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom right, #e0ecff, #f6faff);
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #003366;
+      margin-bottom: 15px;
+      animation: slideFadeDown 1s ease;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 40px;
+      animation: fadeIn 2s ease;
+    }
+
+    .year-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .year-buttons a {
+      background: #0055a5;
+      color: #fff;
+      padding: 14px 26px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.6s ease;
+    }
+
+    .year-buttons a:hover {
+      background: #003f80;
+      transform: translateY(-3px) scale(1.03);
+    }
+
+    @keyframes slideFadeDown {
+      0% { transform: translateY(-30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      0% { transform: translateY(20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      .year-buttons a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Inline Stylish Home Button (Right Corner) -->
+  <a href="/" 
+     style="
+       position: fixed;
+       top: 20px;
+       right: 20px;
+       background: #e63946;
+       color: white;
+       padding: 10px 18px;
+       border-radius: 30px;
+       font-weight: bold;
+       text-decoration: none;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+       transition: all 0.3s ease;
+       z-index: 999;
+     "
+     onmouseover="this.style.transform='scale(1.1)'"
+     onmouseout="this.style.transform='scale(1)'"
+  >🏠 Home</a>
+
+  <div class="container">
+    <h1>College Event Highlights</h1>
+    <p>Explore the vibrant cultural, academic, and sports events conducted year-wise at Aggarwal College Ballabgarh.</p>
+
+    <div class="year-buttons">
+      <a href="{% url 'event_2025' %}" target="_blank">College Events 2025</a>
+      <a href="{% url 'event_2024' %}" target="_blank">College Events 2024</a>
+      <a href="{% url 'event_2023' %}" target="_blank">College Events 2023</a>
+      <a href="{% url 'event_2022' %}" target="_blank">College Events 2022</a>
+      <a href="{% url 'event_2021' %}" target="_blank">College Events 2021</a>
+      <a href="{% url 'event_2020' %}" target="_blank">College Events 2020</a>
+      <a href="{% url 'event_2019' %}" target="_blank">College Events 2019</a>
+      <a href="{% url 'event_2018' %}" target="_blank">College Events 2018</a>
+      
+    </div>
+  </div>
+
+</body>
+</html>

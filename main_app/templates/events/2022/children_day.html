@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Children's Day - Aggarwal College</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .slide-in {
+      animation: slideIn 1s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .highlight {
+      text-shadow: 0 0 8px #facc15, 0 0 14px #fbbf24;
+    }
+  </style>
+</head>
+<body class="bg-yellow-50 dark:bg-gray-900 text-gray-800 dark:text-white min-h-screen p-6 flex items-center justify-center">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-full shadow-md z-50 transition">
+    🏠 Home
+  </a>
+
+  <!-- Main Container -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 shadow-2xl rounded-2xl p-6 slide-in">
+
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-yellow-600 highlight mb-6">
+      Children's Day Celebration
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/childrens_day.jpg' %}" alt="Children's Day" class="rounded-xl w-full md:w-2/3 shadow-lg" />
+    </div>
+
+    <!-- Text Content -->
+    <div class="text-justify text-base md:text-lg leading-relaxed">
+      <p class="mb-4">
+        Aggarwal College celebrated <strong>Children's Day</strong> with great enthusiasm and joy, commemorating the birth anniversary of Pandit Jawaharlal Nehru, who loved children dearly. The event aimed to foster joy, creativity, and togetherness among the students.
+      </p>
+      <p class="mb-4">
+        A variety of activities were organized, including singing, dancing, storytelling, drawing competitions, and interactive games. Teachers also put on cultural performances to entertain and encourage the students.
+      </p>
+      <p class="mb-4">
+        The day concluded with refreshments and small gifts distributed to the participants. The celebration served as a beautiful reminder of the importance of childhood and the responsibility to protect and nurture young minds.
+      </p>
+    </div>
+
+    <!-- Read More Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/childrens_day.pdf' %}" target="_blank"
+         class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded-full transform transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

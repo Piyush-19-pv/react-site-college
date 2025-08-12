@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guest Lecture - Computer Science Dept.</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon"/>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .fade-in {
+      animation: fadeInUp 0.8s ease-out both;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .cs-glow {
+      text-shadow: 0 0 6px #38bdf8;
+    }
+  </style>
+</head>
+<body class="bg-blue-50 dark:bg-gray-900 text-gray-900 dark:text-white p-6 min-h-screen flex items-center justify-center">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-full font-semibold shadow-lg transition z-50">
+    🏠 Home
+  </a>
+
+  <!-- Main Card -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 fade-in">
+
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-blue-700 cs-glow mb-6">
+      Guest Lecture by Computer Science Department
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/guest_lect_computer.jpg' %}" alt="Guest Lecture Computer" class="rounded-xl w-full md:w-3/4 shadow-xl"/>
+    </div>
+
+    <!-- Description -->
+    <div class="text-base md:text-lg leading-relaxed text-justify">
+      <p class="mb-4">
+        The Department of Computer Science at Aggarwal College hosted a <strong>Guest Lecture</strong> on <em>“Emerging Trends in Artificial Intelligence and Cloud Computing”</em>. The speaker, <strong>Prof. Ankit Mehta</strong> from NIT Kurukshetra, shared in-depth knowledge about the future scope of AI and the growing relevance of cloud technologies.
+      </p>
+      <p class="mb-4">
+        The lecture covered topics like AI ethics, cloud infrastructure, machine learning models, and their real-world applications. Students interacted actively during the session, gaining practical insights and industry-level trends.
+      </p>
+      <p class="mb-4">
+        This event provided a much-needed academic boost and encouraged students to explore innovative technologies in the domain of Computer Science.
+      </p>
+    </div>
+
+    <!-- PDF Download -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/guest_lect_computer.pdf' %}" target="_blank"
+         class="inline-block bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>

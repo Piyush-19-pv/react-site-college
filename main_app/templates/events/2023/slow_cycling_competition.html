@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slow Cycling Competition | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-lime-50 text-gray-900 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Image -->
+    <img src="{% static 'images/slow_cycling.jpg' %}" 
+         alt="Slow Cycling Competition" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-lime-700 mb-2">Slow Cycling Competition</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        Aggarwal College recently hosted an exhilarating **Slow Cycling Competition** as part of its fitness and fun initiative for students. Unlike traditional cycling races, where speed is the goal, the essence of this unique event was to move as slowly as possible — without touching the ground or losing balance.
+        <br><br>
+        The event took place on the college grounds with a specially marked lane for the competition. Participants were required to ride their bicycles across a fixed distance while maintaining extreme control and balance. The one who took the longest time to cross the finish line, without putting a foot down, was declared the winner.
+        <br><br>
+        This fun and challenging event drew students from all streams. Before the start, safety instructions and rules were clearly explained by the organizing committee. All participants wore helmets and safety gear to ensure complete protection during the event.
+        <br><br>
+        The competition was not just about cycling — it was about patience, focus, and fine motor control. The audience thoroughly enjoyed the slow-motion drama and cheered loudly for their classmates. Some cyclists managed to barely move while staying perfectly upright, while others lost balance and were eliminated with smiles and laughter.
+        <br><br>
+        The event concluded with a prize distribution ceremony where winners received certificates and cycling accessories. Faculty and management appreciated the creativity of the event and encouraged students to continue participating in physical activities that promote health in fun and engaging ways.
+        <br><br>
+        Through such initiatives, Aggarwal College strives to provide students not only academic excellence but also experiences that develop confidence, teamwork, and a sense of enjoyment in physical fitness.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/slow_cycling.pdf' %}" target="_blank"
+         class="inline-block bg-lime-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-lime-700 transition-all duration-300">
+        🚴‍♂️ Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

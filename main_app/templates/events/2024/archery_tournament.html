@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archery Tournament - Aggarwal College</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/809/809952.png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f9ff;
+      color: #222;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      padding: 35px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 38px;
+      color: #005792;
+      margin-bottom: 25px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-top: 20px;
+    }
+
+    .btn-read {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(90deg, #005792, #00bbf0);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 35px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-read:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0, 187, 240, 0.4);
+    }
+
+    .btn-read img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 28px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Archery Tournament</h1>
+    
+    <img src="{% static 'images/archery_tournament.jpg' %}" alt="Archery Tournament">
+
+    <div class="content">
+      <p>
+        Aggarwal College Ballabgarh recently organized a thrilling **Archery Tournament** to promote physical fitness, concentration, and traditional sports among students. The event witnessed enthusiastic participation from different departments, showcasing not just athletic skill but also discipline and precision.
+      </p>
+      <p>
+        The tournament was inaugurated by the Principal, who emphasized the importance of traditional sports like archery in modern times. It not only builds physical endurance but also sharpens mental focus and coordination. The college ground was transformed into a professionally managed archery range under the supervision of certified coaches and referees.
+      </p>
+      <p>
+        Students competed in multiple categories including individual and team formats. The atmosphere was electric, with cheers from fellow students and encouragement from faculty. Participants followed all safety protocols, and the entire tournament reflected professionalism and sportsmanship.
+      </p>
+      <p>
+        Winners were awarded medals and certificates, and the event concluded with a motivational speech by a national-level archer invited as chief guest. The Archery Tournament served as a platform for students to not only compete but also develop leadership, patience, and strategic thinking — qualities that align with the values upheld by Aggarwal College.
+      </p>
+    </div>
+
+    <a class="btn-read" href="{% static 'pdfs/archery_tournament.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

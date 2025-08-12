@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Forms</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    p {
+      text-align: center;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      color: #333;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      text-decoration: none;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s, background 0.3s;
+    }
+    .btn:hover {
+      background: #dfefff;
+      transform: scale(1.05);
+    }
+    .icon {
+      font-size: 18px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📄 College Forms Download</h1>
+  <p>Click on any form below to view or download it.</p>
+
+  <div class="container">
+
+    <a class="btn" href="{% static 'pdfs/admission_form.pdf' %}" target="_blank"><span class="icon">📄</span> Admission form for Certificate/Diploma</a>
+    <a class="btn" href="{% static 'pdfs/duty_leave_form.pdf' %}" target="_blank"><span class="icon">📄</span> Duty Leave / Registration Fee Form</a>
+    <a class="btn" href="{% static 'pdfs/new_voter_eng.pdf' %}" target="_blank"><span class="icon">📄</span> Application for New Voters (English)</a>
+    <a class="btn" href="{% static 'pdfs/new_voter_hindi.pdf' %}" target="_blank"><span class="icon">📄</span> Application for New Voters (Hindi)</a>
+    <a class="btn" href="{% static 'pdfs/merit_scholarship_form.pdf' %}" target="_blank"><span class="icon">📄</span> Means-cum-Merit Scholarship Form</a>
+    <a class="btn" href="{% static 'pdfs/external_examiner.pdf' %}" target="_blank"><span class="icon">📄</span> Appointment of External Examiner Form</a>
+    <a class="btn" href="{% static 'pdfs/challan_form.pdf' %}" target="_blank"><span class="icon">📄</span> Challan Form</a>
+    <a class="btn" href="{% static 'pdfs/annexure_r.pdf' %}" target="_blank"><span class="icon">📄</span> Annexure-R (Event/Activity Format)</a>
+    <a class="btn" href="{% static 'pdfs/student_antiragging.pdf' %}" target="_blank"><span class="icon">📄</span> Undertaking by Student AntiRagging</a>
+    <a class="btn" href="{% static 'pdfs/parent_antiragging.pdf' %}" target="_blank"><span class="icon">📄</span> Undertaking by Parent AntiRagging</a>
+    <a class="btn" href="{% static 'pdfs/activity_attendance.pdf' %}" target="_blank"><span class="icon">📄</span> Activity Attendance Sheet</a>
+    <a class="btn" href="{% static 'pdfs/leave_application.pdf' %}" target="_blank"><span class="icon">📄</span> Leave Application Form</a>
+    <a class="btn" href="{% static 'pdfs/purchase_order.pdf' %}" target="_blank"><span class="icon">📄</span> Purchase Order</a>
+    <a class="btn" href="{% static 'pdfs/purchase_requisition.pdf' %}" target="_blank"><span class="icon">📄</span> Purchase Requisition</a>
+    <a class="btn" href="{% static 'pdfs/ta_da_form.pdf' %}" target="_blank"><span class="icon">📄</span> TA / DA Form</a>
+    <a class="btn" href="{% static 'pdfs/oyster_registration.pdf' %}" target="_blank"><span class="icon">📄</span> OYSTER Registration Form</a>
+    <a class="btn" href="{% static 'pdfs/acr_proforma.pdf' %}" target="_blank"><span class="icon">📄</span> ACR Proforma</a>
+    <a class="btn" href="{% static 'pdfs/auditorium_permission.pdf' %}" target="_blank"><span class="icon">📄</span> Permission to Use Auditorium</a>
+    <a class="btn" href="{% static 'pdfs/mms_form.pdf' %}" target="_blank"><span class="icon">📄</span> MMS Form by Sh. Kailash Chand</a>
+    <a class="btn" href="{% static 'pdfs/undertaking_form.pdf' %}" target="_blank"><span class="icon">📄</span> General Undertaking Form</a>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bronze Medal in Asian Games | Aggarwal College</title>
+  <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out both;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .hover-effect:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-2xl rounded-lg overflow-hidden fade-in">
+    
+    <!-- Image -->
+    <img src="{% static 'images/bronze-medal.jpg' %}" alt="Bronze Medal Winner" class="w-full h-64 object-cover hover-effect">
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-orange-600 mb-2">Bronze Medal Victory – Asian Games</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Aggarwal College Celebrates Proud Achievement</h2>
+
+      <p class="text-justify mb-6">
+        In an extraordinary achievement that has filled the entire Aggarwal College community with pride, one of our own students has secured the **Bronze Medal at the prestigious Asian Games**.
+        This momentous accomplishment is not just a medal — it’s a symbol of perseverance, passion, and performance at the international level.
+        <br><br>
+        The athlete, a final-year student of the Physical Education Department, represented India in the track and field category.
+        Her rigorous training schedule, dedication to fitness, and unwavering focus brought her to the podium where the national flag was proudly hoisted in her honor.
+        <br><br>
+        The journey was far from easy. Months of intense training, early morning sessions, strict diets, and physical exhaustion were part of the daily routine.
+        Yet, her spirit never wavered. Supported by coaches, family, friends, and the Aggarwal College faculty, she persisted with courage and conviction.
+        <br><br>
+        The event took place in Hangzhou, China, where she competed against the best athletes from across Asia.
+        Her remarkable performance not only earned her the Bronze Medal but also the admiration of millions.
+        <br><br>
+        The Principal of Aggarwal College felicitated her on her return and addressed the students by saying, “This victory proves that excellence has no limits when backed by determination.
+        Our student has not only made the college proud but has also inspired thousands of young minds to pursue their dreams fearlessly.”
+        <br><br>
+        The college plans to create a dedicated sports scholarship in her name and expand its training infrastructure for future champions.
+        Celebratory events, media coverage, and a victory parade were organized on campus to honor her and motivate other athletes.
+        <br><br>
+        Her story continues to inspire aspiring sports persons across India and demonstrates the vital role of educational institutions in nurturing national talent.
+        Aggarwal College is committed to providing a supportive platform where passion and hard work are always rewarded.
+        <br><br>
+        From practice fields to the podium, her story reminds us that every dream is possible when backed with discipline and dedication.
+        She stands today not just as a medalist, but as a beacon of hope for young athletes across the country.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/bronze-medal-asian-games.pdf' %}" target="_blank"
+        class="inline-block bg-orange-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-orange-700 transition-all duration-300">
+        🥉 Read Full Report
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

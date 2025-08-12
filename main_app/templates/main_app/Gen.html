@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>General Secretary's Message - Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/gs_message.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.message-container {
+  padding: 60px 20px;
+  animation: fadeIn 1.3s ease-in-out;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.image-box {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.image-box img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeSlide 1s ease;
+}
+
+.text-box {
+  flex: 2;
+  min-width: 300px;
+  text-align: justify;
+}
+
+.text-box h1 {
+  font-size: 2.4rem;
+  color: #0a3d62;
+  margin-bottom: 20px;
+}
+
+.text-box p {
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.text-box blockquote {
+  font-style: italic;
+  color: #555;
+  margin: 20px 0;
+  padding-left: 20px;
+  border-left: 4px solid #0a3d62;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-box {
+    text-align: left;
+  }
+}
+
+</style>
+</head>
+<body>
+  <a href="/" 
+     style="
+       position: fixed;
+       top: 20px;
+       right: 20px;
+       background: #e63946;
+       color: white;
+       padding: 10px 18px;
+       border-radius: 30px;
+       font-weight: bold;
+       text-decoration: none;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+       transition: all 0.3s ease;
+       z-index: 999;
+     "
+     onmouseover="this.style.transform='scale(1.1)'"
+     onmouseout="this.style.transform='scale(1)'"
+  >🏠 Home</a>
+  <section class="message-container">
+    <div class="content">
+      <div class="image-box">
+        <img src="{% static 'images/dinesh_gupta.jpg' %}" alt="Dinesh Gupta - General Secretary">
+      </div>
+      <div class="text-box">
+        <h1>Message from the General Secretary</h1>
+        <p>
+          Dear Parents and Students,<br><br>
+          Dear College Community Members,<br><br>
+          It is with great honour and a profound sense of responsibility that I address you as the General Secretary of our esteemed institution, Aggarwal College Ballabgarh. Taking on this role is indeed a challenging task, one that I approach with enthusiasm and gratitude.
+        </p>
+        <p>
+          Our commitment is dedicated to nurturing the minds of our young students and paving the way for a brighter and more prosperous tomorrow. We attribute our achievements to God's blessings, the support of our college administration, parents, management, and the enthusiastic efforts of our students and teachers.
+        </p>
+        <p>
+          Over the past five decades, Aggarwal College has built a legacy in education, research, sports, extra-curricular activities, and outreach. We reaffirm our commitment to values like honesty, integrity, passion for learning, respect for all, and a relentless pursuit of quality.
+        </p>
+        <p>
+          Education is a lifelong journey. Let us embrace curiosity and the joy of learning. I urge all to cultivate this passion and set a strong example.
+        </p>
+        <p>
+          Our strength lies in diversity. Let us foster an inclusive environment where every member feels heard and valued. Let excellence guide our work—in teaching, research, and community service.
+        </p>
+        <p>
+          As we embark on this academic year, I look forward to a future filled with growth, collaboration, and success. In the words of Robert Frost:
+        </p>
+        <blockquote>
+          “The woods are lovely, dark, and deep,<br>
+          but I have promises to keep,<br>
+          and miles to go before I sleep,<br>
+          and miles to go before I sleep.”
+        </blockquote>
+        <p><strong>Warm regards and best wishes,<br>Dinesh Gupta<br>General Secretary</strong></p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

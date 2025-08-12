@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>International Elderly Day - Aggarwal College</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon"/>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .fade-slide {
+      animation: fadeSlideIn 1s ease-out;
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .shine {
+      text-shadow: 0 0 8px #9333ea, 0 0 14px #7e22ce;
+    }
+  </style>
+</head>
+<body class="bg-purple-50 dark:bg-gray-900 text-gray-900 dark:text-white p-6 flex justify-center items-center min-h-screen">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full shadow-lg transition z-50">
+    🏠 Home
+  </a>
+
+  <!-- Main Card -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-6 fade-slide">
+
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-purple-700 mb-6 shine">
+      International Elderly Day Celebration
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/elderly_day.jpg' %}" alt="Elderly Day" class="rounded-xl w-full md:w-2/3 shadow-lg"/>
+    </div>
+
+    <!-- Event Details -->
+    <div class="text-justify text-base md:text-lg leading-relaxed">
+      <p class="mb-4">
+        On the occasion of <strong>International Day of Older Persons</strong>, Aggarwal College paid heartfelt tribute to the elderly community, acknowledging their wisdom, contributions, and sacrifices.
+      </p>
+      <p class="mb-4">
+        The event was organized by NSS volunteers and featured interactive sessions with senior citizens, cultural performances by students, and a special health awareness talk by medical experts focusing on geriatric care and wellness.
+      </p>
+      <p class="mb-4">
+        It was an emotional and enlightening program that reminded students to show gratitude and respect towards the older generation.
+      </p>
+    </div>
+
+    <!-- Read More Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/elderly_day.pdf' %}" target="_blank"
+         class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>

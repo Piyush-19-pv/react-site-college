@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fire Safety - Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2209/2209826.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff3e0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 34px;
+      text-align: center;
+      color: #e53935;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 25px 0;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .btn-read {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #f44336, #ff5722);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-read img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+
+    .btn-read:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(255, 87, 34, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Fire Safety Awareness Program</h1>
+
+    <img src="{% static 'images/fire_safety.jpg' %}" alt="Fire Safety Session at Aggarwal College">
+
+    <div class="content">
+      <p>
+        Fire safety is a critical aspect of institutional safety and awareness. Aggarwal College, Ballabgarh organized an insightful <strong>Fire Safety Awareness Program</strong> for students, faculty, and support staff. The initiative aimed to educate the college community about fire hazards, prevention techniques, and emergency responses.
+      </p>
+      <p>
+        The session was conducted by certified fire safety officers from the Haryana Fire Department. It began with a presentation on different types of fire hazards that could arise in academic and residential environments. Real-life examples, visuals, and case studies were used to engage the audience.
+      </p>
+      <p>
+        Practical demonstrations included the proper usage of fire extinguishers, identifying escape routes, understanding fire alarm systems, and executing safe evacuation procedures. Staff members actively participated in hands-on drills, learning how to handle emergencies with calm and clarity.
+      </p>
+      <p>
+        The session emphasized the importance of regularly checking electrical equipment, storing flammable materials responsibly, and maintaining clear exits in case of fire. A Q&A segment helped resolve doubts, making it an interactive and impactful experience.
+      </p>
+      <p>
+        The Fire Safety Awareness Program underlined Aggarwal College’s proactive stance on ensuring safety. It reinforced the belief that preparedness saves lives. The college plans to organize more safety-related events as part of its ongoing commitment to a secure and informed environment.
+      </p>
+    </div>
+
+    <a class="btn-read" href="{% static 'pdfs/fire_safety.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

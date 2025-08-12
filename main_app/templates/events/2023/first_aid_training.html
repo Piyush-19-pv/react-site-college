@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First Aid Training | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in { animation: fadeIn 1.2s ease-in-out; }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-rose-50 text-gray-800 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Static Image -->
+    <img src="{% static 'images/first_aid_training.jpg' %}" 
+         alt="First Aid Training" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-rose-700 mb-2">First Aid Training Program</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        Aggarwal College conducted a First Aid Training Program to equip students with essential life-saving skills. The goal of the training was to make students confident and capable of providing immediate help during medical emergencies before professional help arrives.
+        <br><br>
+        The training session focused on teaching basic techniques such as CPR (Cardiopulmonary Resuscitation), treating minor cuts and burns, handling fractures, managing choking, and dealing with unconscious patients. Students were also taught how to assess emergency situations and call for help appropriately.
+        <br><br>
+        A practical demonstration allowed students to participate actively. Using mannequins and dummy first-aid kits, students practiced bandaging, placing a person in the recovery position, and simulating emergency scenarios. They learned how to stay calm and act quickly in stressful conditions.
+        <br><br>
+        The importance of having a well-stocked first aid box at home and in vehicles was also discussed. Students were given a list of essential first-aid items to keep with them.
+        <br><br>
+        At the end of the session, each participant took a pledge to help others during emergencies and spread awareness about first-aid knowledge. The event helped build awareness, responsibility, and confidence among the youth.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/first_aid_training.pdf' %}" target="_blank"
+         class="inline-block bg-rose-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-rose-700 transition-all duration-300">
+        🚑 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

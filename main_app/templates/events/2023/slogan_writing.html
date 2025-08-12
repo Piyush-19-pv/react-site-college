@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slogan Writing | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-yellow-50 text-gray-900 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Image -->
+    <img src="{% static 'images/slogan_writing.jpg' %}" 
+         alt="Slogan Writing Competition" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-yellow-700 mb-2">Slogan Writing Competition</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        Aggarwal College recently organized an engaging Slogan Writing Competition to ignite creativity, awareness, and expression among students. This event was aimed at encouraging participants to use the power of words to voice their opinions and bring attention to important social, environmental, and national issues.
+        <br><br>
+        The competition witnessed enthusiastic participation from students across various departments. Each participant was given a theme such as Clean India, Road Safety, Women Empowerment, Save Environment, and National Unity. They were asked to craft impactful slogans within a limited time.
+        <br><br>
+        The atmosphere was filled with excitement and energy as students penned down thought-provoking and catchy slogans using both English and Hindi. Slogans were evaluated based on creativity, relevance, originality, and emotional appeal.
+        <br><br>
+        Judges appreciated the students for their concise yet powerful messages that reflected social responsibility and awareness. The best slogans were displayed across the campus and on social media platforms to inspire others.
+        <br><br>
+        Such events help in developing critical thinking and linguistic skills while also instilling awareness of social causes. The Slogan Writing Competition was more than just a contest — it became a platform for the youth to speak out and inspire action through words.
+        <br><br>
+        The winners were honored with certificates of appreciation, and the event concluded with a motivational note on how even a few words can spark a revolution. The college continues to conduct such events to enhance student participation in creative and socially relevant activities.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/slogan_writing.pdf' %}" target="_blank"
+         class="inline-block bg-yellow-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-yellow-700 transition-all duration-300">
+        ✍️ Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

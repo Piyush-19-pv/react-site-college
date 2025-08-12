@@ -1,0 +1,136 @@
+<!-- HTML Buttons with Django URL tags -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Container styling */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+/* Button styling */
+.animated-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background: linear-gradient(to right, #1e90ff, #00bfff);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+.animated-button:hover {
+  background: linear-gradient(to right, #00bfff, #1e90ff);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional animation effect on load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation on buttons */
+.animated-button {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+    </style>
+</head>
+<body>
+   <a href="/" 
+     style="
+       position: fixed;
+       top: 20px;
+       right: 20px;
+       background: #e63946;
+       color: white;
+       padding: 10px 18px;
+       border-radius: 30px;
+       font-weight: bold;
+       text-decoration: none;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+       transition: all 0.3s ease;
+       z-index: 999;
+     "
+     onmouseover="this.style.transform='scale(1.1)'"
+     onmouseout="this.style.transform='scale(1)'"
+  >🏠 Home</a>
+    <div class="button-container">
+        <a href="{% url 'iqac_meeting' %}" class="animated-button">IQAC MEETING</a>
+        <a href="{% url 'health_talk_yrc' %}" class="animated-button">HEALTH TALK BY YRC</a>
+        <a href="{% url 'uni_outreach_programme' %}" class="animated-button">UNI OUTREACH PROGRAMME</a>
+        <a href="{% url 'guest_lect_history' %}" class="animated-button">GUEST LECT HISTORY DEPT.</a>
+        <a href="{% url 'imt_industries_expo' %}" class="animated-button">IMT INDUSTRIES EXPO</a>
+        <a href="{% url 'talk_design_destiny' %}" class="animated-button">TALK DESIGN YOUR DESTINY</a>
+        <a href="{% url 'archery_competition' %}" class="animated-button">ARCHERY COMPETITION</a>
+        <a href="{% url 'navy_day' %}" class="animated-button">NAVY DAY</a>
+        <a href="{% url 'aids_day' %}" class="animated-button">AIDS DAY</a>
+        <a href="{% url 'mba_expo' %}" class="animated-button">ONE DAY MBA EXPO</a>
+        <a href="{% url 'fdp_wellness' %}" class="animated-button">FDP ON HOLISTIC WELLNESS</a>
+        <a href="{% url 'guest_lect_hindi' %}" class="animated-button">GUEST LECT.HINDI DEPT.</a>
+        <a href="{% url 'env_protection' %}" class="animated-button">ENVIRONMENT PROTECTION</a>
+        <a href="{% url 'world_hindu_council' %}" class="animated-button">WORLD HINDU COUNCIL</a>
+        <a href="{% url 'constitution_day' %}" class="animated-button">CONSTITUTION DAY POL.SC.</a>
+        <a href="{% url 'guest_lect_computer' %}" class="animated-button">GUEST LECT.COMPUTERDEPT.</a>
+        <a href="{% url 'career_awareness' %}" class="animated-button">CAREER AWARENESS PROG.</a>
+        <a href="{% url 'poetry_reading' %}" class="animated-button">POETRY READING COMP.</a>
+        <a href="{% url 'intl_youth_day' %}" class="animated-button">INTERNATIONAL YOUTH DAY</a>
+        <a href="{% url 'motivational_speech' %}" class="animated-button">MOTIVATIONAL SPEECH</a>
+        <a href="{% url 'children_day' %}" class="animated-button">CHILDREN DAY</a>
+        <a href="{% url 'natak_commerce' %}" class="animated-button">NATAK COMMERCESTUDENTS</a>
+        <a href="{% url 'blockchain_seminar' %}" class="animated-button">BLOCKCHAIN SEM. COMP SC.</a>
+        <a href="{% url 'legal_services' %}" class="animated-button">NAT. LEGAL SERVICES DAY</a>
+        <a href="{% url 'shooting_championship' %}" class="animated-button">SHOOTING CHAMPIONSHIP</a>
+        <a href="{% url 'voter_awareness' %}" class="animated-button">VOTER AWARENESS RALLY</a>
+        <a href="{% url 'eye_checkup' %}" class="animated-button">EYE CHECKUP CAMP</a>
+        <a href="{% url 'guest_lect_english' %}" class="animated-button">GUEST LECT. ENGLISH DEPT.</a>
+        <a href="{% url 'guest_lect_chem' %}" class="animated-button">GUEST LECT. CHEM. DEPT.</a>
+        <a href="{% url 'induction' %}" class="animated-button">INDUCTION</a>
+        <a href="{% url 'env_awareness' %}" class="animated-button">ENVIRONMENT AWARENESS</a>
+        <a href="{% url 'inspiration_day' %}" class="animated-button">INSPIRATION DAY</a>
+        <a href="{% url 'guest_lect_maths' %}" class="animated-button">GUEST LECT MATHS DEPT</a>
+        <a href="{% url 'painting_competition' %}" class="animated-button">PAINTING COMPETITION</a>
+        <a href="{% url 'guest_lect_history2' %}" class="animated-button">GUEST LECT. HISTORY DEPT.</a>
+        <a href="{% url 'career_workshop' %}" class="animated-button">A WORKSHOP ON CAREER</a>
+        <a href="{% url 'seminar_crimes' %}" class="animated-button">A SEMINAR ON CRIMES</a>
+        <a href="{% url 'elderly_day' %}" class="animated-button">INTERNAT. ELDERLY DAY</a>
+        <a href="{% url 'shri_ratan_singh' %}" class="animated-button">SHRI RATAN SINGH GUPTA JI</a>
+        <a href="{% url 'career_counselling' %}" class="animated-button">CAREER COUNSELLING</a>
+        <a href="{% url 'gandhi_jayanti' %}" class="animated-button">GANDHI JAYANTI</a>
+        <a href="{% url 'physics_lab_tour' %}" class="animated-button">NAT.LAB TOUR PHYSICS DEPT.</a>
+        <a href="{% url 'parlour_certificate' %}" class="animated-button">PARLOUR CERTIFICATE</a>
+        <a href="{% url 'guest_lect_polsc' %}" class="animated-button">GUEST LECT. POL.SC. DEPT</a>
+        <a href="{% url 'bhagat_singh_jayanti' %}" class="animated-button">BHAGHAT SINGH JAYANTI</a>
+        <a href="{% url 'nss_activities' %}" class="animated-button">ACTIVITIES BY NSS</a>
+        <a href="{% url 'pushpanjali_nss' %}" class="animated-button">PUSHPANJALI BY NSS</a>
+        <a href="{% url 'rangoli_competition' %}" class="animated-button">RANGOLI COMP POL.SC.DEPT.</a>
+        <a href="{% url 'poster_making' %}" class="animated-button">POSTER MAKING COMP.</a>
+        <a href="{% url 'hindi_divas' %}" class="animated-button">HINDI DIVAS</a>
+        <a href="{% url 'nss_nutrition' %}" class="animated-button">NSS IMP. OF NUTRITION</a>
+      </div>
+</body>
+</html>

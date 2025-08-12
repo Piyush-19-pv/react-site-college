@@ -1,0 +1,147 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diploma & Certificate Courses</title>
+  <link rel="stylesheet" href="{% static 'css/diploma_courses.css' %}">
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #eef4fc;
+  color: #222;
+}
+
+.diploma-container {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.heading {
+  font-size: 2.7rem;
+  margin-bottom: 40px;
+  color: #1d3557;
+  animation: slideDown 0.7s ease-in-out;
+}
+
+.diploma-courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.course-box {
+  background-color: #fff;
+  padding: 25px;
+  width: 280px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  animation: fadeInUp 1s ease;
+}
+
+.course-box:hover {
+  transform: translateY(-10px);
+}
+
+.icon {
+  font-size: 38px;
+  color: #2a9d8f;
+  margin-bottom: 15px;
+}
+
+.pdf-download {
+  margin-top: 50px;
+}
+
+.btn {
+  padding: 12px 28px;
+  background-color: #2a9d8f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #1f776c;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .diploma-courses {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <section class="diploma-container">
+    <h1 class="heading">Certificate & Diploma Programs</h1>
+
+    <div class="diploma-courses">
+      <div class="course-box">
+        <i class="fas fa-user-cog icon"></i>
+        <h2>Personal Computing</h2>
+        <p>Foundational training in using computers, software tools, and operating systems efficiently.</p>
+      </div>
+
+      <div class="course-box">
+        <i class="fas fa-mobile-alt icon"></i>
+        <h2>Digital Lifestyle Management</h2>
+        <p>Manage your digital presence, use online services safely, and enhance everyday digital productivity.</p>
+      </div>
+
+      <div class="course-box">
+        <i class="fas fa-calculator icon"></i>
+        <h2>Management Accounting</h2>
+        <p>Principles of budgeting, cost control, and financial analysis for better decision-making.</p>
+      </div>
+
+      <div class="course-box">
+        <i class="fas fa-brain icon"></i>
+        <h2>Vedic Mathematics</h2>
+        <p>Ancient Indian calculation techniques for faster, more efficient mathematical problem solving.</p>
+      </div>
+
+      <div class="course-box">
+        <i class="fas fa-laptop icon"></i>
+        <h2>Computer Awareness</h2>
+        <p>Basic understanding of computer systems, hardware, software, internet, and IT safety tips.</p>
+      </div>
+    </div>
+
+    <div class="pdf-download">
+      <a href="{% static 'CertificateDiplomaAdvancedDiploma2018-23.pdf' %}" target="_blank" class="btn">📄 View PDF Brochure</a>
+    </div>
+  </section>
+
+</body>
+</html>

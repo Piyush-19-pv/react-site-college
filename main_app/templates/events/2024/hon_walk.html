@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Honour Walk | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/171/171322.png" type="image/png" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+      animation: slideIn 0.7s ease;
+    }
+
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #374151;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin: 25px 0;
+    }
+
+    .content {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .btn-read {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #4b5563, #9ca3af);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .btn-read img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+
+    .btn-read:hover {
+      transform: scale(1.06);
+      box-shadow: 0 6px 15px rgba(100, 116, 139, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Honour Walk</h1>
+
+    <img src="{% static 'images/honour_walk.jpg' %}" alt="Honour Walk Event">
+
+    <div class="content">
+      <p>
+        Aggarwal College organized a special <strong>Honour Walk</strong> to celebrate the remarkable achievements of its students, faculty, and alumni who have brought pride to the institution.
+      </p>
+      <p>
+        The walk was a ceremonial procession across the campus featuring flag bearers, applause lines, and speeches. Honorees were awarded certificates and commemorative mementos. It served as a strong motivation for peers and juniors.
+      </p>
+      <p>
+        The event emphasized the values of excellence, commitment, and discipline. Parents and dignitaries from various academic and civil sectors were invited to witness this proud moment.
+      </p>
+      <p>
+        It concluded with a group photo and refreshments for the honorees and guests.
+      </p>
+    </div>
+
+    <a class="btn-read" href="{% static 'pdfs/honour_walk.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

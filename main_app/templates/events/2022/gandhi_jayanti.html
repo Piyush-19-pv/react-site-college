@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gandhi Jayanti - Aggarwal College</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'images/xtwitter.ico' %}" type="image/x-icon"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .fade-in {
+      animation: fadeInUp 0.9s ease-in-out both;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .glow-text {
+      text-shadow: 0 0 6px #facc15;
+    }
+  </style>
+</head>
+<body class="bg-yellow-50 dark:bg-gray-900 text-gray-900 dark:text-white p-6 min-h-screen flex items-center justify-center">
+
+  <!-- Home Button -->
+  <a href="/" class="fixed top-4 right-4 bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-full font-semibold shadow-lg transition z-50">
+    🏠 Home
+  </a>
+
+  <!-- Main Card -->
+  <div class="max-w-4xl w-full bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 fade-in">
+
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-yellow-700 glow-text mb-6">
+      Gandhi Jayanti Celebration
+    </h1>
+
+    <!-- Image -->
+    <div class="flex justify-center mb-6">
+      <img src="{% static 'events2023/images/gandhi_jayanti.jpg' %}" alt="Gandhi Jayanti" class="rounded-xl w-full md:w-3/4 shadow-xl"/>
+    </div>
+
+    <!-- Description -->
+    <div class="text-base md:text-lg leading-relaxed text-justify">
+      <p class="mb-4">
+        Aggarwal College paid heartfelt tribute to the Father of the Nation, <strong>Mahatma Gandhi</strong>, on the occasion of <strong>Gandhi Jayanti</strong>. The event celebrated Gandhiji’s timeless principles of <em>truth</em>, <em>non-violence</em>, and <em>simplicity</em>.
+      </p>
+      <p class="mb-4">
+        The program included speeches, devotional songs, a cleanliness drive, and skits performed by students highlighting Gandhiji’s contribution to India’s freedom struggle. Faculty also encouraged students to adopt Gandhian values in their daily lives.
+      </p>
+      <p class="mb-4">
+        The celebration inspired all attendees to walk on the path of peace and service. A special exhibition on Gandhiji’s life and teachings was also displayed on campus.
+      </p>
+    </div>
+
+    <!-- PDF Button -->
+    <div class="text-center mt-6">
+      <a href="{% static 'events2023/pdfs/gandhi_jayanti.pdf' %}" target="_blank"
+         class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-full transition hover:scale-105">
+        📄 Read Full Report
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>

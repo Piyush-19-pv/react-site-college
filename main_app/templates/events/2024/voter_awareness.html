@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Voter Awareness | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1670/1670422.png" type="image/png">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9fafb;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      animation: fadeInSlide 0.6s ease;
+    }
+
+    @keyframes fadeInSlide {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 30px;
+      color: #1d4ed8;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .content {
+      font-size: 17px;
+      color: #374151;
+      line-height: 1.75;
+    }
+
+    img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin: 25px 0;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 22px;
+      background: linear-gradient(to right, #2563eb, #1d4ed8);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .read-more img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 24px; }
+      .content { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Voter Awareness Campaign</h1>
+
+    <img src="{% static 'images/voter_awareness.jpg' %}" alt="Voter Awareness Program">
+
+    <div class="content">
+      <p>
+        Aggarwal College organized a <strong>Voter Awareness Campaign</strong> to promote active and informed participation in the democratic process. The campaign aimed to educate students and the community about the significance of voting in shaping the nation.
+      </p>
+      <p>
+        Through speeches, skits, posters, and interactive sessions, students learned about their voting rights, eligibility criteria, and the procedure to register as voters. The event highlighted the role of youth in making democracy stronger.
+      </p>
+      <p>
+        The campaign concluded with an oath-taking ceremony where students pledged to vote responsibly and encourage others to do the same.
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/voter_awareness.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

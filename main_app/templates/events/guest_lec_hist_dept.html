@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guest Lecture – History Department</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/206/206592.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to right, #fef9f3, #fff1e6);
+      color: #1f2937;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.7s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #7c2d12;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: #6b7280;
+      margin-bottom: 25px;
+    }
+
+    .image-box {
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.03);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #374151;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #9a3412;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 16px rgba(154, 52, 18, 0.3);
+    }
+
+    .read-more-btn:hover {
+      background-color: #7c2d12;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 15px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Guest Lecture – History Department</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/GuestLectureByHistoryDept2703252.jpg' %}" alt="Guest Lecture History">
+    </div>
+
+    <div class="content">
+      The Department of History at Aggarwal College Ballabgarh organized an engaging Guest Lecture aimed at exploring the evolving narratives in Indian historiography. Delivered by a renowned historian and researcher, the lecture provided students with a deep dive into the socio-political and cultural transformations that shaped ancient, medieval, and modern India.
+      <br><br>
+      The event highlighted the importance of objective historical interpretation and addressed the impact of colonial perspectives on India’s recorded history. With visual aids, ancient manuscripts, and digital archives, students got to witness a more immersive view of the past.
+      <br><br>
+      Topics discussed included the Indus Valley Civilization, rise and fall of empires, freedom movement, and post-independence challenges. The lecture encouraged analytical thinking and discussion around source criticism, historical bias, and the role of oral traditions.
+      <br><br>
+      The students actively participated in the Q&A session and showed great interest in career opportunities in archaeology, research, and heritage conservation. The department plans to organize such sessions frequently to foster academic excellence and a deeper understanding of history.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/guest_lecture_history.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

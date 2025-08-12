@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mega Job Fair</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3105/3105776.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ecfdf5, #d1fae5);
+      color: #1e293b;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #064e3b;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 17px;
+      color: #475569;
+      margin-bottom: 30px;
+    }
+
+    .image-box {
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.04);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #334155;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #059669;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(5, 150, 105, 0.3);
+    }
+
+    .read-more-btn:hover {
+      background-color: #047857;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 15px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Mega Job Fair</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/MEGAJOBFAIR280425.jpg' %}" alt="Mega Job Fair">
+    </div>
+
+    <div class="content">
+      Aggarwal College Ballabgarh successfully hosted a **Mega Job Fair** bringing together top national and regional companies under one roof. The event aimed to bridge the gap between academia and industry by offering students real-time placement opportunities.
+      <br><br>
+      More than 35 companies including Infosys, Wipro, TCS, Genpact, and startups participated, offering roles in IT, HR, Sales, Finance, and Operations. Over 800 students from multiple institutions attended, and over 200 candidates were shortlisted on the spot.
+      <br><br>
+      The college management ensured smooth coordination, tech-enabled interview zones, resume help desks, and even personality grooming sessions during the event. The fair not only enhanced students’ confidence but also helped many secure their first professional role.
+      <br><br>
+      Special thanks were extended to corporate partners, volunteers, and placement officers. The event concluded with certificate distribution and group photos to mark the success of this collaborative initiative.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/mega_job_fair.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

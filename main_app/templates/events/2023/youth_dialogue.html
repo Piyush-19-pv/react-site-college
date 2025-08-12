@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Youth Dialogue | Aggarwal College</title>
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-emerald-50 text-gray-900 font-sans">
+
+  <div class="max-w-5xl mx-auto mt-10 bg-white shadow-lg rounded-xl overflow-hidden fade-in">
+
+    <!-- Image -->
+    <img src="{% static 'images/youth_dialogue.jpg' %}" 
+         alt="Youth Dialogue" class="w-full h-64 object-cover hover-scale" />
+
+    <!-- Content -->
+    <div class="p-8">
+      <h1 class="text-4xl font-bold text-emerald-700 mb-2">Youth Dialogue</h1>
+      <h2 class="text-xl text-gray-600 mb-6">Organized by Aggarwal College</h2>
+
+      <p class="text-justify mb-6">
+        **Youth Dialogue**, hosted at Aggarwal College, was a vibrant platform that empowered young minds to express their ideas, challenge societal issues, and envision a better future. The event focused on engaging students in meaningful discussions, encouraging leadership, and promoting civic participation.
+        <br><br>
+        The program started with a welcome address highlighting the theme "Youth Voice for Nation Building". It emphasized how youth participation is crucial for addressing contemporary issues like education, environment, gender equality, and innovation. A motivational video set the tone for the sessions ahead.
+        <br><br>
+        The dialogue included a series of moderated panel discussions where students expressed their thoughts on diverse topics including the role of youth in policy-making, digital ethics, and sustainable development. Each panel was followed by open-floor interaction, giving every participant a chance to be heard.
+        <br><br>
+        Special guest speakers from academic and social sectors shared their journeys and emphasized the role of active listening, empathy, and constructive debate. They encouraged students to voice opinions responsibly and remain informed citizens in a democratic society.
+        <br><br>
+        A group activity titled “Speak for Change” allowed teams to propose practical solutions to local problems. The best teams were awarded certificates for their innovation and clarity of vision. The event also featured street theatre and poetry that reflected the power of youth in social transformation.
+        <br><br>
+        In the closing ceremony, the college principal appreciated the organizing team and said such platforms build confidence, improve articulation, and instill a sense of purpose in the youth. All participants were encouraged to take the Youth Responsibility Pledge for creating a progressive and inclusive society.
+      </p>
+
+      <!-- Read More Button -->
+      <a href="{% static 'pdf/youth_dialogue.pdf' %}" target="_blank"
+         class="inline-block bg-emerald-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:bg-emerald-700 transition-all duration-300">
+        📘 Read More
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

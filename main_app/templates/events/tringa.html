@@ -1,0 +1,94 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trianga Yatra - Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{% static 'images/favicon.png' %}" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafb;
+      color: #1f2937;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 1.5rem;
+    }
+    .title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #dc2626;
+      margin-bottom: 1rem;
+    }
+    .image-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.75rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .content {
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      text-align: justify;
+    }
+    .btn-read {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      background: #dc2626;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    }
+    .btn-read:hover {
+      background: #b91c1c;
+      transform: scale(1.05);
+    }
+
+    @media screen and (max-width: 768px) {
+      .title {
+        font-size: 2rem;
+      }
+      .content {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Trianga Yatra</h1>
+    
+    <div class="image-section">
+      <img src="{% static 'images/trianga_yatra.jpg' %}" alt="Trianga Yatra Event">
+    </div>
+
+    <div class="content">
+      <p>
+        Aggarwal College ne ek garv bhara aur rashtriya bhavnaon se yukt **Trianga Yatra** ka aayojan kiya jisme kai students, teachers aur staff ne apni bhagidari di. 
+        Is yatra ka mukhya uddeshya deshbhakti ke bhavna ko majboot karna aur samaj mein ekta ka sandesh dena tha. Yatra college campus se shuru hokar poore shaher mein nikalti hai jisme rashtriya geet, patriotic slogans aur tirange ke saath shaan se log hissa lete hain.
+      </p>
+      <p>
+        Yatra ke dauraan kai pramukh sthano par ruk kar desh bhakti geet aur cultural performances bhi ki gayi. Is prakar ke ayojan na keval rashtriya asmita ko badhate hain balki students mein social responsibility aur unity ka bhaav bhi jagate hain.
+      </p>
+
+      <a href="{% static 'pdf/trianga_yatra_report.pdf' %}" target="_blank" class="btn-read">
+        <i class="fas fa-file-pdf"></i> Read More
+      </a>
+    </div>
+  </div>
+</body>
+</html>

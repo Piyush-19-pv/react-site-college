@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nukkad Natak</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1711/1711660.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fefce8, #fef9c3);
+      color: #1e293b;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      animation: zoomIn 0.8s ease-in-out;
+    }
+
+    @keyframes zoomIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #92400e;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 17px;
+      color: #4b5563;
+      margin-bottom: 30px;
+    }
+
+    .image-box {
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.04);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #334155;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #ea580c;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(234, 88, 12, 0.3);
+    }
+
+    .read-more-btn:hover {
+      background-color: #c2410c;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 15px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Nukkad Natak</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/NukkadNatakonthethemeofDrugAbuseAwareness030420251.jpg' %}" alt="Nukkad Natak Event">
+    </div>
+
+    <div class="content">
+      The NSS Unit of Aggarwal College Ballabgarh organized a thought-provoking **Nukkad Natak** (street play) to raise awareness on social issues like gender equality, drug abuse, and cleanliness. The event was held in the college premises and at nearby marketplaces to reach a wider audience.
+      <br><br>
+      With powerful performances, student volunteers used drama and dialogue to deliver impactful messages that encouraged civic responsibility and social change. Their captivating expressions, traditional props, and live dialogues engaged passersby and received great appreciation.
+      <br><br>
+      The Nukkad Natak served as an excellent medium for spreading awareness in a relatable and memorable way. It showcased the talent of the youth while also emphasizing key societal concerns that demand attention and action.
+      <br><br>
+      The college principal and staff appreciated the creative efforts of the students and encouraged more such awareness initiatives in the future.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/nukkad_natak.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

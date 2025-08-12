@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slogan Writing Competition | Aggarwal College</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1055/1055646.png" type="image/png" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f1f5f9;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      background: #ffffff;
+      margin: auto;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #1d4ed8;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      font-size: 18px;
+      color: #334155;
+      line-height: 1.7;
+    }
+
+    img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 25px 0;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #3b82f6, #2563eb);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .read-more img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Slogan Writing Competition</h1>
+
+    <img src="{% static 'images/slogan_writing.jpg' %}" alt="Slogan Writing Competition">
+
+    <div class="content">
+      <p>
+        The Slogan Writing Competition organized by Aggarwal College aimed to encourage creativity and awareness on contemporary social issues. Participants expressed powerful messages through impactful and original slogans.
+      </p>
+      <p>
+        The competition witnessed active participation from students across different departments. Topics included themes like Environmental Conservation, Women Empowerment, Drug Awareness, and National Unity.
+      </p>
+      <p>
+        Winning entries were selected based on originality, relevance, and creativity. This event provided students with a platform to reflect their thoughts and social concerns through crisp and catchy lines.
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/slogan_writing.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

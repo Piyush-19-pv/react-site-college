@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IPR Workshop | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/847/847969.png" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3f4f6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 34px;
+      text-align: center;
+      color: #0f172a;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+    }
+
+    .content {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 14px;
+      margin: 25px 0;
+      max-height: 420px;
+      object-fit: cover;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #0284c7, #0ea5e9);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .read-more img {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(14, 165, 233, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>IPR Workshop</h1>
+
+    <img src="{% static 'images/ipr_workshop.jpg' %}" alt="IPR Workshop Image">
+
+    <div class="content">
+      <p>
+        The <strong>Intellectual Property Rights (IPR) Workshop</strong> at Aggarwal College aimed to create awareness among students and faculty about the importance and legal aspects of protecting intellectual property.
+      </p>
+      <p>
+        Experts from legal and academic backgrounds discussed topics such as copyrights, patents, trademarks, and industrial designs. The workshop was highly interactive, encouraging participants to ask questions and engage in real-world case studies.
+      </p>
+      <p>
+        Participants gained valuable insights into how intellectual property can be used to safeguard innovation and creative work. The event also highlighted how IPR plays a crucial role in academic research and entrepreneurship.
+      </p>
+      <p>
+        The workshop concluded with a certificate distribution ceremony and group discussions on hypothetical IPR challenges.
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/ipr_workshop.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

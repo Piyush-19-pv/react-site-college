@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Heritage Day</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/616/616711.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f3e5f5, #ede7f6);
+      color: #1f2937;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #6a1b9a;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 17px;
+      color: #616161;
+      margin-bottom: 25px;
+    }
+
+    .image-box {
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.05);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #374151;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #6a1b9a;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(106, 27, 154, 0.3);
+    }
+
+    .read-more-btn:hover {
+      background-color: #4a148c;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 15px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">World Heritage Day</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/WorldHeritageDay1804251.jpg' %}" alt="World Heritage Day Event">
+    </div>
+
+    <div class="content">
+      On the occasion of **World Heritage Day**, Aggarwal College Ballabgarh organized an insightful program to raise awareness among students about the importance of preserving and appreciating cultural and historical heritage.
+      <br><br>
+      The event began with a visual presentation showcasing UNESCO World Heritage Sites in India, including Taj Mahal, Qutub Minar, Ajanta-Ellora Caves, and more. This was followed by an interactive lecture by a heritage conservationist who explained the value of these sites and the threat posed by urbanization, pollution, and neglect.
+      <br><br>
+      A poster-making and quiz competition was held among students to foster engagement and research-based learning. Winners were awarded certificates and eco-friendly gifts. Faculty members also shared insights about local heritage in Haryana and Faridabad region, encouraging students to explore their own roots.
+      <br><br>
+      The highlight of the event was a pledge-taking ceremony where students committed to respecting and protecting national and international heritage. The college principal appreciated the efforts of the organizing team and emphasized the role of youth in heritage conservation.
+      <br><br>
+      The celebration concluded with a group performance symbolizing unity in diversity and the essence of Indian heritage. The event not only educated but also inspired students to become responsible cultural ambassadors.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/world_heritage_day.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

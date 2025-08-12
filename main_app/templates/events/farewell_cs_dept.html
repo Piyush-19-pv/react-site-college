@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farewell – Computer Science Department</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3645/3645858.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f8fafc, #e0f2fe);
+      color: #1e293b;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffffee;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.9s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 34px;
+      font-weight: 700;
+      color: #0f766e;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 18px;
+      color: #475569;
+      margin-bottom: 25px;
+    }
+
+    .image-box {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.5s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.05);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #374151;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #0f766e;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(15, 118, 110, 0.3);
+    }
+
+    .read-more-btn:hover {
+      background-color: #0e4f4c;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 16px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Farewell – Computer Science Department</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/FarewellCeremonyCSDept260425.jpg' %}" alt="Farewell CS Department">
+    </div>
+
+    <div class="content">
+      The Computer Science Department at Aggarwal College Ballabgarh bid an emotional and unforgettable farewell to its final-year students. Organized with great enthusiasm and creativity, the event brought together students, faculty, and alumni in a beautiful blend of nostalgia and celebration.
+      <br><br>
+      The farewell included technical skits, coding jokes, interactive games, and heartfelt speeches from juniors. A highlight was the “Memory Bytes” video — a compilation of classroom memories, lab moments, hackathon snippets, and fun events.
+      <br><br>
+      The faculty praised students for their dedication to innovation and encouraged them to take bold steps in their careers, whether in startups, tech giants, or research fields. Awards were given for achievements in programming contests, hackathons, academic excellence, and peer support.
+      <br><br>
+      A formal dinner and DJ session wrapped up the event, marking a bittersweet but hopeful ending to their college life. The department extended warm wishes to every graduate for a successful journey ahead in the ever-evolving world of technology.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/farewell_cs_report.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

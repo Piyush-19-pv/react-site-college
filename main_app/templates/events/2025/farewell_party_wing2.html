@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farewell Party – Wing 2</title>
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3159/3159066.png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #fefce8, #ecfccb);
+      color: #1e293b;
+      padding: 30px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      color: #7c3aed;
+      text-shadow: 1px 1px 2px #ddd6fe;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      text-align: center;
+      color: #334155;
+      margin-bottom: 25px;
+    }
+
+    .image-box {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      transition: transform 0.5s ease;
+      border-radius: 16px;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.05);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      text-align: justify;
+      color: #374151;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background-color: #9333ea;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(147, 51, 234, 0.4);
+    }
+
+    .read-more-btn:hover {
+      background-color: #6b21a8;
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(107, 33, 168, 0.6);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 16px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Farewell Party – Wing 2</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/FarewellCeremonyB.A280425.jpg' %}" alt="Farewell Party Wing 2">
+    </div>
+
+    <div class="content">
+      The Farewell Party organized by Wing 2 of Aggarwal College Ballabgarh was a heartfelt celebration, brimming with joy, nostalgia, and emotional moments. Designed to honor the graduating students, the event captured the essence of student life, friendships, and academic journeys.
+      <br><br>
+      The auditorium was beautifully decorated with flowers, lights, and customized banners reflecting memorable moments. A welcome dance set the stage on fire, followed by musical performances and skits highlighting college memories. Teachers also shared their fond wishes and blessings, and many students expressed their gratitude to mentors and peers.
+      <br><br>
+      The highlight of the event was the crowning of Mr. and Ms. Farewell, decided through games and Q&A rounds. Senior students walked down the memory lane, recalling classroom laughter, sports events, fest moments, and their transformation during the journey.
+      <br><br>
+      Emotional speeches left the crowd teary-eyed yet proud. A photo booth with props was set up for memories, and students captured their last group selfies. The evening ended with a DJ party and delicious food arrangements.
+      <br><br>
+      The Wing 2 farewell was not just an event—it was a tribute to learning, growing, and the lifelong bond shared by Aggarwal College students. It reminded everyone that while college ends, memories and friendships last forever.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/farewell_wing2_certificate.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

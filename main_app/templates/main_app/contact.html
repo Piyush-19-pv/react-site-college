@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Modern Responsive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #ffffff;
+      --bg-dark: #1a1a1a;
+      --text-light: #333;
+      --text-dark: #f1f1f1;
+      --accent: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #acb6e5);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      transition: background 0.5s ease;
+    }
+
+    body.dark {
+      background: #121212;
+      color: var(--text-dark);
+    }
+
+    .container {
+      background: var(--bg-light);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 1200px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    body.dark .container {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .left-side, .right-side {
+      flex: 1;
+      min-width: 300px;
+      padding: 30px;
+    }
+
+    .left-side {
+      background: #f7f7f7;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      animation: slideInLeft 1s ease forwards;
+    }
+
+    .right-side {
+      background: #fff;
+      animation: slideInRight 1s ease forwards;
+    }
+
+    body.dark .left-side {
+      background: #2a2a2a;
+    }
+    body.dark .right-side {
+      background: #1e1e1e;
+    }
+
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    iframe {
+      width: 100%;
+      height: 250px;
+      border-radius: 15px;
+      border: none;
+    }
+
+    .contact-info p, .contact-info a {
+      font-size: 16px;
+      color: #555;
+      margin-top: 10px;
+      text-decoration: none;
+    }
+
+    body.dark .contact-info p, body.dark .contact-info a {
+      color: #ddd;
+    }
+
+    .contact-info a:hover {
+      color: #6a11cb;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    body.dark h2 {
+      color: #eee;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    body.dark input,
+    body.dark textarea {
+      background: #333;
+      border: 1px solid #444;
+      color: #fff;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #6a11cb;
+      box-shadow: 0px 0px 10px rgba(106, 17, 203, 0.2);
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      background: var(--accent);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0px 8px 20px rgba(106, 17, 203, 0.5);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      left: 20px;
+      bottom: 20px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.3s ease;
+      z-index: 999;
+    }
+
+    .theme-toggle:hover {
+      background: #6a11cb;
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      iframe {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="/" style="position: fixed; top: 20px; right: 20px; background: #e63946; color: white; padding: 10px 18px; border-radius: 30px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); z-index: 999;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">🏠</a>
+  <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
+  <div class="container">
+    <div class="left-side">
+      <h2>Our Location</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.839847707028!2d77.32228169999999!3d28.339157800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdb99c016c215%3A0x98368e1d353eb5af!2sAggarwal%20College%20Ballabgarh!5e1!3m2!1sen!2sus!4v1727096931750!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="contact-info">
+        <p><strong>Phone:</strong> <a href="tel:+919212086363">9212086363</a>, <a href="tel:+919911700978">9911700978</a></p>
+        <p><strong>Address:</strong> Aggarwal College, Near Ambedkar Chowk, Tigoan Road, Ballabgarh, Faridabad-121004</p>
+        <p><strong>Email:</strong> <a href="mailto:aggpgcollege@gmail.com">aggpgcollege@gmail.com</a></p>
+      </div>
+    </div>
+
+    <div class="right-side">
+      <h2>Contact Us</h2>
+      {% if success %}
+        <div class="success-message">
+          <h3>Thank you!</h3>
+          <p>Your message has been submitted successfully.</p>
+        </div>
+      {% else %}
+      <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Send Message</button>
+      </form>
+      {% endif %}
+    </div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>

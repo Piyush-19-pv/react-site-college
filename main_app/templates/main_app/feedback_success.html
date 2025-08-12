@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .thankyou-container {
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .thankyou-container h1 {
+      font-size: 3em;
+      color: #333;
+      animation: bounce 1.5s infinite alternate;
+    }
+
+    .thankyou-container p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    .thankyou-container iframe {
+      width: 300px;
+      height: 300px;
+      border: none;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    .back-button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+    <a href="/" 
+  style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #e63946;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 999;
+  "
+  onmouseover="this.style.transform='scale(1.1)'"
+  onmouseout="this.style.transform='scale(1)'"
+>🏠 Home</a>
+  <div class="thankyou-container">
+    <h1>Thank You!</h1>
+    <p>We’ve received your feedback 🙏</p>
+
+    <!-- Lottie Animation of boy saying thank you -->
+  <iframe src="https://lottie.host/?file=26a927be-8e03-4d64-a3b6-55b888b62627/NqayG7RfP9.json" 
+        style="width: 300px; height: 300px;" 
+        frameborder="0">
+</iframe>
+
+
+  </div>
+
+
+  <lottie-player 
+    src="https://lottie.host/26a927be-8e03-4d64-a3b6-55b888b62627/NqayG7RfP9.json"
+    background="transparent"  
+    speed="1"  
+    style="width: 300px; height: 300px;"  
+    loop  
+    autoplay>
+</lottie-player>
+
+  <!-- Add this to <head> -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+</body>
+</html>

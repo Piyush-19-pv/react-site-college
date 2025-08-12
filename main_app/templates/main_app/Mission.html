@@ -1,0 +1,109 @@
+
+      {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Vision - Aggarwal College Ballabgarh</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fefefe;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fffdf4;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #800000;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .certificate {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .certificate img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #aaa;
+      border-radius: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin-top: 20px;
+      font-size: 16px;
+      background-color: #800000;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #a00000;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px;
+        padding: 15px;
+      }
+
+      h1, h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>OUR VISION</h1>
+    
+      <p>
+        To develop a value-laden Agile Centre of Teaching and collaborative learning with ample freedom of choice
+        for inculcating competence of critical thinking, reasoning and skills required for creativity, research and innovation
+        through experiential practices and industry-academia integration by providing excellent academic ambience and
+        infrastructure including ICT and e-resources.
+
+
+        </p>
+
+    <p>
+        उत्कृष्ट शैक्षणिक माहौल और बुनियादी ढांचा प्रदान करके अनुभवात्मक प्रथाओं और उद्योग-अकादमिक एकीकरण के माध्यम से
+        रचनात्मकता, अनुसंधान और नवाचार के लिए आवश्यक महत्वपूर्ण सोच, तर्क और कौशल की क्षमता को विकसित करने के लिए पसंद की
+        पर्याप्त स्वतंत्रता के साथ शिक्षण और सहयोगी शिक्षा का एक मूल्य-संचालित चुस्त केंद्र विकसित करना। आईसीटी और ई-संसाधनों सहित।
+        </p>
+
+    <div class="certificate">
+      <h2>Institution Certificate</h2>
+      <img src="{% static 'images\mission.png' %}" alt="College Certificate">
+      <br>
+      <a href="{% static 'images\mission.png' %}" target="_blank" class="btn">View Full Certificate</a>
+    </div>
+  </div>
+
+</body>
+</html>

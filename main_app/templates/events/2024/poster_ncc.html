@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poster Making (NCC) | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3159/3159310.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0fdf4;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: slideFade 0.6s ease;
+    }
+
+    @keyframes slideFade {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 34px;
+      text-align: center;
+      color: #065f46;
+      margin-bottom: 25px;
+    }
+
+    .content {
+      font-size: 18px;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 25px 0;
+      max-height: 420px;
+      object-fit: cover;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #10b981, #047857);
+      color: white;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .read-more img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .read-more:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(16, 185, 129, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 26px; }
+      .content { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>पोस्टर प्रतियोगिता (NCC यूनिट)</h1>
+
+    <img src="{% static 'images/poster_ncc.jpg' %}" alt="Poster Making Competition by NCC">
+
+    <div class="content">
+      <p>
+        ए.सी.सी. की यूनिट द्वारा आयोजित पोस्टर मेकिंग प्रतियोगिता में विद्यार्थियों ने देशभक्ति, अनुशासन, आत्मनिर्भरता और सेवा भावना जैसे विषयों पर अद्भुत चित्रण किया। कार्यक्रम का उद्देश्य युवाओं में राष्ट्रप्रेम और NCC की विचारधारा को बढ़ावा देना था।
+      </p>
+      <p>
+        प्रतियोगिता में लगभग 35 से अधिक छात्रों ने भाग लिया। सभी पोस्टर सृजनात्मकता, सन्देश की स्पष्टता और प्रेजेंटेशन स्किल्स के आधार पर जज किए गए। कार्यक्रम में प्रथम, द्वितीय और तृतीय स्थान प्राप्त करने वाले विद्यार्थियों को पुरस्कार प्रदान किए गए।
+      </p>
+      <p>
+        यह प्रतियोगिता छात्रों के मनोबल को बढ़ाने तथा रचनात्मक अभिव्यक्ति के माध्यम से सामाजिक मूल्यों को प्रस्तुत करने का एक प्रभावी माध्यम बनी।
+      </p>
+    </div>
+
+    <a class="read-more" href="{% static 'pdfs/poster_ncc.pdf' %}" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+      Read More
+    </a>
+  </div>
+
+</body>
+</html>

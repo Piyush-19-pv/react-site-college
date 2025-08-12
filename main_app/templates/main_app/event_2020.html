@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Events 2020</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: "Segoe UI", sans-serif;
+      background: #f4f6f8;
+    }
+
+    h1 {
+      text-align: center;
+      color: #003366;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      color: #003366;
+      padding: 14px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn:hover {
+      background-color: #e6f0ff;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn i {
+      margin-right: 10px;
+      font-size: 1.1rem;
+      color: #0073e6;
+    }
+
+    /* Optional animation */
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.2);
+      transform: skewX(-20deg);
+      transition: left 0.4s;
+    }
+
+    .btn:hover::after {
+      left: 100%;
+    }
+
+    @media screen and (max-width: 500px) {
+      .btn {
+        font-size: 14px;
+        padding: 12px;
+      }
+    }
+  </style>
+
+  <!-- ICONS via Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <h1>College Events 2020</h1>
+   <a href="/" 
+     style="
+       position: fixed;
+       top: 20px;
+       right: 20px;
+       background: #e63946;
+       color: white;
+       padding: 10px 18px;
+       border-radius: 30px;
+       font-weight: bold;
+       text-decoration: none;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+       transition: all 0.3s ease;
+       z-index: 999;
+     "
+     onmouseover="this.style.transform='scale(1.1)'"
+     onmouseout="this.style.transform='scale(1)'"
+  >🏠 Home</a>
+
+  <div class="grid">
+    <a href="{% url 'national_science_day' %}" class="btn"><i class="fas fa-flask"></i>National Science Day</a>
+    <a href="{% url 'guest_lect_pol_sc' %}" class="btn"><i class="fas fa-chalkboard-teacher"></i>Guest Lect. Pol. Sc.</a>
+    <a href="{% url 'quiz_competition' %}" class="btn"><i class="fas fa-question-circle"></i>Quiz Competition</a>
+    <a href="{% url 'yrc_camp' %}" class="btn"><i class="fas fa-users"></i>YRC Camp</a>
+    <a href="{% url 'unnat_bharat_abhiyan' %}" class="btn"><i class="fas fa-flag"></i>Unnat Bharat Abhiyan</a>
+    <a href="{% url 'seminar_entrepreneurship' %}" class="btn"><i class="fas fa-lightbulb"></i>Seminar Entrepreneurship</a>
+    <a href="{% url 'guest_lect_history_dept' %}" class="btn"><i class="fas fa-landmark"></i>Guest Lect. History Dept</a>
+    <a href="{% url 'guest_lect_m_o_v' %}" class="btn"><i class="fas fa-quote-right"></i>Guest Lect "M O V"</a>
+    <a href="{% url 'constitution_day' %}" class="btn"><i class="fas fa-balance-scale"></i>Constitution Day</a>
+    <a href="{% url 'annual_nursing_camp' %}" class="btn"><i class="fas fa-briefcase-medical"></i>Annual Nursing Camp</a>
+    <a href="{% url 'session_health_happiness' %}" class="btn"><i class="fas fa-heartbeat"></i>Session Health, Happiness</a>
+    <a href="{% url 'industrial_visit' %}" class="btn"><i class="fas fa-industry"></i>Industrial Visit</a>
+    <a href="{% url 'health_talk_checkup_camp' %}" class="btn"><i class="fas fa-stethoscope"></i>Health Talk, Checkup Camp</a>
+    <a href="{% url 'story_writing_competition' %}" class="btn"><i class="fas fa-pen-nib"></i>Story Writing Competition</a>
+    <a href="{% url 'environment_protection' %}" class="btn"><i class="fas fa-leaf"></i>Environment Protection</a>
+    <a href="{% url 'prog_company_secretary' %}" class="btn"><i class="fas fa-user-tie"></i>Prog Company Secretary</a>
+    <a href="{% url 'programme_ewaste_mgmt' %}" class="btn"><i class="fas fa-recycle"></i>Programme E-Waste Mgmt</a>
+    <a href="{% url 'seminar_road_safety' %}" class="btn"><i class="fas fa-car-crash"></i>Seminar Road Safety</a>
+    <a href="{% url 'jagriti_hariyanvi_culture' %}" class="btn"><i class="fas fa-drum"></i>Jagriti Hariyanvi Culture</a>
+    <a href="{% url 'prog_swami_vivekanand' %}" class="btn"><i class="fas fa-book-reader"></i>Prog. Swami Vivekanand</a>
+    <a href="{% url 'republic_day' %}" class="btn"><i class="fas fa-flag-usa"></i>Republic Day</a>
+    <a href="{% url 'a_talk_on_health' %}" class="btn"><i class="fas fa-notes-medical"></i>A Talk on Health</a>
+    <a href="{% url 'national_voters_day' %}" class="btn"><i class="fas fa-vote-yea"></i>National Voters Day</a>
+    <a href="{% url 'debate_competition' %}" class="btn"><i class="fas fa-comments"></i>Debate Competition</a>
+    <a href="{% url 'health_awareness_talk' %}" class="btn"><i class="fas fa-head-side-virus"></i>Health Awareness Talk</a>
+    <a href="{% url 'rally_and_competitions' %}" class="btn"><i class="fas fa-bullhorn"></i>Rally and Competitions</a>
+    <a href="{% url 'lecture_on_development' %}" class="btn"><i class="fas fa-graduation-cap"></i>Lecture on Development</a>
+    <a href="{% url 'a_survey_in_chandawali' %}" class="btn"><i class="fas fa-poll"></i>A Survey in Chandawali</a>
+    <a href="{% url 'national_youth_day' %}" class="btn"><i class="fas fa-user-graduate"></i>National Youth Day</a>
+    <a href="{% url 'seminar_on_women' %}" class="btn"><i class="fas fa-venus"></i>Seminar on Women</a>
+  </div>
+
+</body>
+</html>

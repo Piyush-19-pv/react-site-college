@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Events | Aggarwal College</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1820/1820733.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-uM5WwV9J0RkQfTeyKZ6ur4N2nG3z5G0+Y8YzjZxkDGMxspNHz2sb+e1d6Dj2+5x+8k1IYxCUklzpP5E69qV6jA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-uM5WwV9J0RkQfTeyKZ6ur4N2nG3z5G0+Y8YzjZxkDGMxspNHz2sb+e1d6Dj2+5x+8k1IYxCUklzpP5E69qV6jA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" crossorigin="anonymous">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #e0f7fa, #f1f8ff);
+      min-height: 100vh;
+      padding: 40px 20px;
+      overflow-x: hidden;
+      animation: fadeInBody 0.8s ease-out;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      color: #003566;
+      position: relative;
+    }
+
+    h1::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 4px;
+      background: #0077b6;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .event-button {
+      padding: 12px 24px;
+      background: linear-gradient(to right, #0077b6, #00b4d8);
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
+      display: flex;
+      align-items: center;
+    }
+
+    .event-button i {
+      margin-right: 8px;
+      font-size: 18px;
+    }
+
+    .event-button:hover {
+      background: #005f8a;
+      transform: scale(1.05);
+      box-shadow: 0 8px 18px rgba(0, 119, 182, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .event-button {
+        width: 90%;
+        text-align: center;
+        font-size: 15px;
+      }
+    }
+
+    .home-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #d62828;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .home-btn:hover {
+      transform: scale(1.1);
+      background: #a4161a;
+    }
+  </style>
+</head>
+<body>
+  <a href="/" class="home-btn">🏠 Home</a>
+  <h1>Upcoming College Events</h1>
+  <div class="button-container">
+    <a href="{% url 'lohri_function' %}" class="event-button"><i class="fas fa-fire"></i> Lohri Function</a>
+    <a href="{% url 'vivekanand_jayanti' %}" class="event-button"><i class="fas fa-user-graduate"></i> Vivekanand Jayanti</a>
+    <a href="{% url 'iqac_meeting' %}" class="event-button"><i class="fas fa-users"></i> IQAC Meeting</a>
+    <a href="{% url 'national_math_day' %}" class="event-button"><i class="fas fa-square-root-alt"></i> National Math Day</a>
+    <a href="{% url 'navy_day' %}" class="event-button"><i class="fas fa-anchor"></i> Navy Day</a>
+    <a href="{% url 'world_aids_day' %}" class="event-button"><i class="fas fa-ribbon"></i> World AIDS Day</a>
+    <a href="{% url 'env_control_day' %}" class="event-button"><i class="fas fa-leaf"></i> Env. Control Day</a>
+    <a href="{% url 'poster_hindi' %}" class="event-button"><i class="fas fa-language"></i> Poster Hindi Dept</a>
+    <a href="{% url 'felicitations' %}" class="event-button"><i class="fas fa-award"></i> Felicitations</a>
+    <a href="{% url 'interzonal_fest' %}" class="event-button"><i class="fas fa-music"></i> Interzonal Youth Fest</a>
+    <a href="{% url 'zonal_youth' %}" class="event-button"><i class="fas fa-users-line"></i> Zonal Youth Festival</a>
+    <a href="{% url 'archery_tournament' %}" class="event-button"><i class="fas fa-bullseye"></i> Archery Tournament</a>
+    <a href="{% url 'poster_comp_sc' %}" class="event-button"><i class="fas fa-desktop"></i> Poster Comp Sc</a>
+    <a href="{% url 'digital_rangoli' %}" class="event-button"><i class="fas fa-palette"></i> Digital Rangoli</a>
+    <a href="{% url 'visit_chem' %}" class="event-button"><i class="fas fa-flask"></i> Visit Chem Dept</a>
+    <a href="{% url 'inductions' %}" class="event-button"><i class="fas fa-chalkboard-teacher"></i> Induction Prog</a>
+    <a href="{% url 'ipr_workshop' %}" class="event-button"><i class="fas fa-lightbulb"></i> IPR Workshop</a>
+    <a href="{% url 'best_out_waste' %}" class="event-button"><i class="fas fa-recycle"></i> Best Out of Waste</a>
+    <a href="{% url 'fire_safety' %}" class="event-button"><i class="fas fa-fire-extinguisher"></i> Fire Safety</a>
+    <a href="{% url 'freshers_ba_ma' %}" class="event-button"><i class="fas fa-people-group"></i> Freshers Party BA MA</a>
+    <a href="{% url 'blood_donation' %}" class="event-button"><i class="fas fa-tint"></i> Blood Donation</a>
+    <a href="{% url 'freshers_party' %}" class="event-button"><i class="fas fa-user-friends"></i> Freshers Party</a>
+    <a href="{% url 'youth_develop' %}" class="event-button"><i class="fas fa-user-cog"></i> Youth Develop Prog</a>
+    <a href="{% url 'hemoglobin_test' %}" class="event-button"><i class="fas fa-vial"></i> Hemoglobin Camp</a>
+    <a href="{% url 'nss_day' %}" class="event-button"><i class="fas fa-hands-helping"></i> NSS Day</a>
+    <a href="{% url 'poster_ncc' %}" class="event-button"><i class="fas fa-shield-alt"></i> Poster NCC</a>
+    <a href="{% url 'hon_walk' %}" class="event-button"><i class="fas fa-walking"></i> Hon Walk</a>
+    <a href="{% url 'deworming_day' %}" class="event-button"><i class="fas fa-pills"></i> Deworming Day</a>
+    <a href="{% url 'eco_guest' %}" class="event-button"><i class="fas fa-seedling"></i> Eco Guest Lect</a>
+    <a href="{% url 'guest_aryabhatta' %}" class="event-button"><i class="fas fa-atom"></i> Guest Aryabhatta</a>
+    <a href="{% url 'panchayati_raj' %}" class="event-button"><i class="fas fa-landmark"></i> Panchayati Raj</a>
+    <a href="{% url 'anti_drug' %}" class="event-button"><i class="fas fa-ban"></i> Anti Drug</a>
+    <a href="{% url 'freshers_general' %}" class="event-button"><i class="fas fa-users"></i> General Freshers</a>
+    <a href="{% url 'women_cell' %}" class="event-button"><i class="fas fa-venus"></i> Women Cell</a>
+    <a href="{% url 'guest_math' %}" class="event-button"><i class="fas fa-square-root-variable"></i> Guest Math Dept</a>
+    <a href="{% url 'guest_comm' %}" class="event-button"><i class="fas fa-chart-bar"></i> Guest Comm Dept</a>
+    <a href="{% url 'drug_seminar' %}" class="event-button"><i class="fas fa-prescription-bottle-alt"></i> Drug Seminar</a>
+    <a href="{% url 'tree_plantation' %}" class="event-button"><i class="fas fa-tree"></i> Tree Plantation</a>
+    <a href="{% url 'voter_awareness' %}" class="event-button"><i class="fas fa-vote-yea"></i> Voter Awareness</a>
+    <a href="{% url 'talent_hunt' %}" class="event-button"><i class="fas fa-star"></i> Talent Hunt</a>
+    <a href="{% url 'slogan_comp' %}" class="event-button"><i class="fas fa-comment-dots"></i> Slogan Comp</a>
+    <a href="{% url 'com_eng' %}" class="event-button"><i class="fas fa-book-open"></i> Comm Eng Dept</a>
+    <a href="{% url 'first_aid_day' %}" class="event-button"><i class="fas fa-briefcase-medical"></i> First Aid Day</a>
+    <a href="{% url 'literacy_day' %}" class="event-button"><i class="fas fa-book-reader"></i> Literacy Day</a>
+    <a href="{% url 'paralympic_winners' %}" class="event-button"><i class="fas fa-medal"></i> Paralympic Winners</a>
+    <a href="{% url 'guest_history' %}" class="event-button"><i class="fas fa-landmark-dome"></i> Guest History Dept</a>
+  </div>
+</body>
+</html>

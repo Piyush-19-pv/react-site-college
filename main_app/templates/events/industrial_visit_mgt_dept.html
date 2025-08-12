@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industrial Visit – Management Department</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" type="image/png" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fff7ed, #ffedd5);
+      color: #1e293b;
+      padding: 30px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+      animation: slideUp 0.7s ease-out;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      color: #78350f;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 17px;
+      color: #4b5563;
+      margin-bottom: 30px;
+    }
+
+    .image-box {
+      overflow: hidden;
+      border-radius: 16px;
+      margin-bottom: 25px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .image-box img:hover {
+      transform: scale(1.04);
+    }
+
+    .content {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #374151;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+
+    .button-wrap {
+      text-align: center;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #f97316;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(249, 115, 22, 0.3);
+    }
+
+    .read-more-btn:hover {
+      background-color: #ea580c;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .title { font-size: 26px; }
+      .subtitle { font-size: 15px; }
+      .content { font-size: 15px; }
+      .read-more-btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Industrial Visit – Management Department</div>
+    <div class="subtitle">Aggarwal College Ballabgarh, Faridabad</div>
+
+    <div class="image-box">
+      <img src="{% static 'evimagespdf2025/IndustrialVisittoAbhishekEnterprises170420251.jpg' %}" alt="Industrial Visit Image">
+    </div>
+
+    <div class="content">
+      The Management Department of Aggarwal College Ballabgarh organized an enriching Industrial Visit to Maruti Suzuki Plant, Gurugram. The visit aimed to bridge the gap between academic theories and industrial practices, giving students a real-time glimpse of corporate operations and management strategies.
+      <br><br>
+      The students explored departments like Quality Control, Assembly Line, Human Resources, and Logistics. They were amazed by the level of automation and how concepts like Just-In-Time (JIT), Kaizen, and Lean Manufacturing are implemented in practice.
+      <br><br>
+      Company officials gave insightful briefings on organizational hierarchy, supply chain models, and digital transformation within the plant. The experience helped students understand real-world challenges and managerial decision-making processes.
+      <br><br>
+      The faculty appreciated the hospitality of the plant and encouraged students to reflect and apply these learnings in future academic projects. Certificates were distributed, and the visit was concluded with a feedback session.
+    </div>
+
+    <div class="button-wrap">
+      <a href="{% static 'certificates/industrial_visit_mgt.pdf' %}" target="_blank" class="read-more-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon">
+        Read More / Download PDF
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

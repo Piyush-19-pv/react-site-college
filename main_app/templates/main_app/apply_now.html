@@ -1,0 +1,259 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply Now</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/apply.css' %}">
+<style>
+    /* ================== BASIC PAGE STYLING ================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #004e92, #000428);
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* ================== CONTAINER LAYOUT ================== */
+.container {
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+/* ================== MAP SECTION ================== */
+.map-section {
+    flex: 1;
+    min-width: 350px;
+}
+
+/* ================== FORM SECTION ================== */
+.form-section {
+    flex: 1;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    margin: auto;
+    max-width: 500px;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* ================== INPUT GROUP ================== */
+.input-group {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 18px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+.input-group:hover {
+    background: rgba(255, 255, 255, 0.18);
+    border-color: #ff4b2b;
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(255, 75, 43, 0.4);
+}
+
+.input-group i {
+    margin-right: 12px;
+    font-size: 18px;
+    color: #ff4b2b;
+}
+
+input, select, textarea {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+/* ================== SELECT FIELD STYLING ================== */
+select {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    padding: 8px;
+    border-radius: 8px;
+    appearance: none; /* Default arrow remove */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+/* Custom arrow icon for select */
+.input-group {
+    position: relative;
+}
+
+.input-group select {
+    padding-right: 35px;
+}
+
+.input-group::after {
+    content: "\f078"; /* Font Awesome down arrow */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 12px;
+    color: #ff4b2b;
+    pointer-events: none;
+}
+
+/* Dropdown options */
+select option {
+    background: #002952; /* Dark blue */
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+}
+
+/* Hover effect for options */
+select option:hover {
+    background: #ff4b2b;
+    color: white;
+}
+
+
+/* ================== BUTTON ================== */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.btn-submit:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 5px 20px rgba(255, 65, 108, 0.5);
+}
+
+/* ================== ANIMATIONS ================== */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* ================== RESPONSIVE ================== */
+@media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    .map-section {
+        order: 2;
+        height: 300px;
+    }
+    .form-section {
+        order: 1;
+        margin: 20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <!-- Left side Map -->
+    <div class="map-section">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.839847707028!2d77.32228169999999!3d28.339157800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdb99c016c215%3A0x98368e1d353eb5af!2sAggarwal%20College%20Ballabgarh!5e1!3m2!1sen!2sus!4v1727096931750!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
+        </iframe>
+    </div>
+
+    <!-- Right side Form -->
+    <div class="form-section">
+        <h2><i class="fa-solid fa-file-pen"></i> Apply Now</h2>
+        <form method="POST">
+            {% csrf_token %}
+            
+            <div class="input-group">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa-solid fa-user-tie"></i>
+                <input type="text" name="father_name" placeholder="Enter your father's name" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa-solid fa-phone"></i>
+                <input type="text" name="phone_number" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa-brands fa-whatsapp"></i>
+                <input type="text" name="whatsapp_number" placeholder="Enter your WhatsApp number" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa-solid fa-location-dot"></i>
+                <textarea name="address" placeholder="Enter your address" required></textarea>
+            </div>
+
+            <div class="input-group">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <select name="course" required>
+                    <option value="">-- Select your course --</option>
+                    <option value="BCA">BCA</option>
+                    <option value="MCA">MCA</option>
+                    <option value="B.Com">B.Com</option>
+                    <option value="M.Com">M.Com</option>
+                    <option value="BBA">BBA</option>
+                    <option value="MBA">MBA</option>
+                    <option value="B.Sc">B.Sc</option>
+                    <option value="M.Sc">M.Sc</option>
+                    <option value="BBA LL.B">BBA LL.B</option>
+                    <option value="BA LL.B">BA LL.B</option>
+                    <option value="LL.B">LL.B</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Submit</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
